@@ -4,6 +4,7 @@
 #include <opencv2/viz/vizcore.hpp>
 #include <kfusion/kinfu.hpp>
 #include <io/capture.hpp>
+#include <stdio.h>
 
 using namespace kfusion;
 
@@ -137,6 +138,19 @@ int main (int argc, char* argv[])
 
     OpenNISource capture;
     capture.open (0);
+
+    //OpenNI Inspection
+    // while (1){
+    //     cv::Mat depth, image;
+    //     capture.grab(depth, image);    
+    //     cv::Mat display;
+    //     depth.convertTo(display, CV_8U, 255.0/4000);
+    //     cv::namedWindow("Depth", CV_WINDOW_AUTOSIZE);
+    //     cv::moveWindow("Depth", 500,500);
+    //     cv::imshow("Depth", display);
+    //     cvWaitKey(1);
+    // }
+
     //capture.open("d:/onis/20111013-224932.oni");
     //capture.open("d:/onis/reg20111229-180846.oni");
     //capture.open("d:/onis/white1.oni");
@@ -149,7 +163,7 @@ int main (int argc, char* argv[])
 
     // executing
     try { app.execute (); }
-    catch (const std::bad_alloc& /*e*/) { std::cout << "Bad alloc" << std::endl; }
+    catch (const std::bad_alloc& e) { std::cout << "Bad alloc" << std::endl; }
     catch (const std::exception& /*e*/) { std::cout << "Exception" << std::endl; }
 
     return 0;
