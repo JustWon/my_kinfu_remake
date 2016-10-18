@@ -1,6 +1,7 @@
 #include <iostream>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/opencv.hpp>
 #include <opencv2/viz/vizcore.hpp>
 #include <kfusion/kinfu.hpp>
 #include <io/capture.hpp>
@@ -74,12 +75,38 @@ struct KinFuApp
         double time_ms = 0;
         bool has_image = false;
 
+        int view_count = 1;
+        int seq_count = 1;
         for (int i = 0; !exit_ && !viz.wasStopped(); ++i)
         {
             bool has_frame = capture_.grab(depth, image);
             if (!has_frame)
                 return std::cout << "Can't grab" << std::endl, false;
 
+            // sr4000 tof image experiment
+			if (view_count > 3) {
+				view_count = 1;
+				kinfu.reset();
+			}
+			if (seq_count > 100)
+			{
+				seq_count = 1;
+			}
+            char file_name[1024];
+			sprintf(file_name,"/home/dongwonshin/Desktop/my_codes/recon_based_multiview_depth/dataset/Input/tof%d/tof_%d_%03d.png", view_count, view_count, seq_count);
+			view_count++;
+			seq_count++;
+			cv::Mat tof_img = cv::imread(file_name, CV_LOAD_IMAGE_ANYDEPTH);
+			for (int y = 0 ; y < tof_img.rows ; y++)
+			for (int x = 0 ; x < tof_img.cols ; x++)
+			{
+				if (tof_img.at<ushort>(y,x) < 2500.0f)
+					tof_img.at<ushort>(y,x) = 0;
+				else
+					tof_img.at<ushort>(y,x) /= 3;
+
+			}
+			depth = tof_img;
             depth_device_.upload(depth.data, depth.step, depth.rows, depth.cols);
 
             {
@@ -108,6 +135,7 @@ struct KinFuApp
 
             //exit_ = exit_ || i > 100;
             viz.spinOnce(3, true);
+
         }
         return true;
     }
@@ -138,18 +166,6 @@ int main (int argc, char* argv[])
 
     OpenNISource capture;
     capture.open (0);
-
-    //OpenNI Inspection
-    // while (1){
-    //     cv::Mat depth, image;
-    //     capture.grab(depth, image);    
-    //     cv::Mat display;
-    //     depth.convertTo(display, CV_8U, 255.0/4000);
-    //     cv::namedWindow("Depth", CV_WINDOW_AUTOSIZE);
-    //     cv::moveWindow("Depth", 500,500);
-    //     cv::imshow("Depth", display);
-    //     cvWaitKey(1);
-    // }
 
     //capture.open("d:/onis/20111013-224932.oni");
     //capture.open("d:/onis/reg20111229-180846.oni");

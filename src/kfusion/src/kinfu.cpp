@@ -14,12 +14,17 @@ kfusion::KinFuParams kfusion::KinFuParams::default_params()
 
     KinFuParams p;
 
-    p.cols = 640;  //pixels
-    p.rows = 480;  //pixels
-    p.intr = Intr(525.f, 525.f, p.cols/2 - 0.5f, p.rows/2 - 0.5f);
+    //for sr4000 cam
+    p.cols = 176;  //pixels
+    p.rows = 144;  //pixels
+    p.intr = Intr(285.116372, 289.429555, 87.265182, 71.233192);
 
-    p.volume_dims = Vec3i::all(512);  //number of voxels
-    p.volume_size = Vec3f::all(3.f);  //meters
+//    p.cols = 640;  //pixels
+//    p.rows = 480;  //pixels
+//    p.intr = Intr(525.f, 525.f, p.cols/2 - 0.5f, p.rows/2 - 0.5f);
+
+    p.volume_dims = Vec3i::all(1024);  //number of voxels
+    p.volume_size = Vec3f::all(1.f);  //meters
     p.volume_pose = Affine3f().translate(Vec3f(-p.volume_size[0]/2, -p.volume_size[1]/2, 0.5f));
 
     p.bilateral_sigma_depth = 0.04f;  //meter
@@ -140,6 +145,7 @@ kfusion::Affine3f kfusion::KinFu::getCameraPose (int time) const
     return poses_[time];
 }
 
+// core parts
 bool kfusion::KinFu::operator()(const kfusion::cuda::Depth& depth, const kfusion::cuda::Image& /*image*/)
 {
     const KinFuParams& p = params_;
