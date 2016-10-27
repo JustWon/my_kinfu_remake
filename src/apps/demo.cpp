@@ -76,7 +76,7 @@ struct KinFuApp
         bool has_image = false;
 
         int view_count = 1;
-        int seq_count = 1;
+        int seq_count = 100;
         for (int i = 0; !exit_ && !viz.wasStopped(); ++i)
         {
             bool has_frame = capture_.grab(depth, image);
@@ -84,17 +84,19 @@ struct KinFuApp
                 return std::cout << "Can't grab" << std::endl, false;
 
             // kinect v2 tof image experiment
-			if (view_count > 3) {
+			if (view_count > 2) {
 				view_count = 1;
 				kinfu.reset();
 			}
-			if (seq_count > 100)
+			if (seq_count > 297)
 			{
-				seq_count = 1;
+				seq_count = 100;
 			}
             char file_name[1024];
-            sprintf(file_name,"/home/dongwonshin/Desktop/my_codes/recon_based_multiview_depth/dataset/Input/tof%d/tof_%d_%03d.png", view_count, view_count, seq_count);
-//			sprintf(file_name,"/home/dongwonshin/Desktop/20161027_kinectv2_png/cam%d/image%d.png", view_count, seq_count);
+            if (view_count == 1)
+            	sprintf(file_name,"/home/dongwonshin/Desktop/20161028_kinectv2_two_com_seq/cam%d/image%d.png", view_count, seq_count+2);
+            else if (view_count == 2)
+            	sprintf(file_name,"/home/dongwonshin/Desktop/20161028_kinectv2_two_com_seq/cam%d/image%d.png", view_count, seq_count);
 			view_count++;
 			seq_count++;
 			cv::Mat tof_img = cv::imread(file_name, CV_LOAD_IMAGE_ANYDEPTH);
@@ -102,10 +104,7 @@ struct KinFuApp
 			for (int y = 0 ; y < tof_img.rows ; y++)
 			for (int x = 0 ; x < tof_img.cols ; x++)
 			{
-				if (tof_img.at<ushort>(y,x) < 2300)
-					tof_img.at<ushort>(y,x) = 0;
-				else
-					tof_img.at<ushort>(y,x) /= 5;
+				tof_img.at<ushort>(y,x) /= 3;
 			}
 			depth = tof_img;
 
@@ -123,16 +122,20 @@ struct KinFuApp
             //cv::imshow("Image", image);
 
             if (!iteractive_mode_)
-                viz.setViewerPose(kinfu.getCameraPose());
+            {
+            	kfusion::Affine3f temp = kinfu.getCameraPose();
+//            	temp.matrix(0,3) += 1;
+                viz.setViewerPose(temp);
+            }
 
             int key = cv::waitKey(pause_ ? 0 : 3);
 
             switch(key)
             {
-            case 't': case 'T' : take_cloud(kinfu); break;
-            case 'i': case 'I' : iteractive_mode_ = !iteractive_mode_; break;
-            case 27: exit_ = true; break;
-            case 32: pause_ = !pause_; break;
+				case 't': case 'T' : take_cloud(kinfu); break;
+				case 'i': case 'I' : iteractive_mode_ = !iteractive_mode_; break;
+				case 27: exit_ = true; break;
+				case 32: pause_ = !pause_; break;
             }
 
             //exit_ = exit_ || i > 100;
