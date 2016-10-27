@@ -83,7 +83,7 @@ struct KinFuApp
             if (!has_frame)
                 return std::cout << "Can't grab" << std::endl, false;
 
-            // sr4000 tof image experiment
+            // kinect v2 tof image experiment
 			if (view_count > 3) {
 				view_count = 1;
 				kinfu.reset();
@@ -93,20 +93,22 @@ struct KinFuApp
 				seq_count = 1;
 			}
             char file_name[1024];
-			sprintf(file_name,"/home/dongwonshin/Desktop/my_codes/recon_based_multiview_depth/dataset/Input/tof%d/tof_%d_%03d.png", view_count, view_count, seq_count);
+            sprintf(file_name,"/home/dongwonshin/Desktop/my_codes/recon_based_multiview_depth/dataset/Input/tof%d/tof_%d_%03d.png", view_count, view_count, seq_count);
+//			sprintf(file_name,"/home/dongwonshin/Desktop/20161027_kinectv2_png/cam%d/image%d.png", view_count, seq_count);
 			view_count++;
 			seq_count++;
 			cv::Mat tof_img = cv::imread(file_name, CV_LOAD_IMAGE_ANYDEPTH);
+
 			for (int y = 0 ; y < tof_img.rows ; y++)
 			for (int x = 0 ; x < tof_img.cols ; x++)
 			{
-				if (tof_img.at<ushort>(y,x) < 2500.0f)
+				if (tof_img.at<ushort>(y,x) < 2300)
 					tof_img.at<ushort>(y,x) = 0;
 				else
-					tof_img.at<ushort>(y,x) /= 3;
-
+					tof_img.at<ushort>(y,x) /= 5;
 			}
 			depth = tof_img;
+
             depth_device_.upload(depth.data, depth.step, depth.rows, depth.cols);
 
             {

@@ -19,6 +19,11 @@ kfusion::KinFuParams kfusion::KinFuParams::default_params()
     p.rows = 144;  //pixels
     p.intr = Intr(285.116372, 289.429555, 87.265182, 71.233192);
 
+    //for kinectv2 cam
+//    p.cols = 512;  //pixels
+//	p.rows = 424;  //pixels
+//	p.intr = Intr(368.096588, 368.096588, 261.696594, 202.522202);
+
 //    p.cols = 640;  //pixels
 //    p.rows = 480;  //pixels
 //    p.intr = Intr(525.f, 525.f, p.cols/2 - 0.5f, p.rows/2 - 0.5f);
