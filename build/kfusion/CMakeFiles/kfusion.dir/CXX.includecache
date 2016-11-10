@@ -121,6 +121,8 @@ precomp.hpp
 /home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/precomp.hpp
 internal.hpp
 /home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/internal.hpp
+iostream
+-
 
 /home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/precomp.cpp
 precomp.hpp

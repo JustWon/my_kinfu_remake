@@ -1,0 +1,591 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Aff3f	kfusion/src/internal.hpp	/^        struct Aff3f { Mat3f R; Vec3f t; };$/;"	s	namespace:kfusion::device
+Affine3f	kfusion/include/kfusion/types.hpp	/^    typedef cv::Affine3f Affine3f;$/;"	t	namespace:kfusion
+All	kfusion/src/cuda/temp_utils.hpp	/^            static __kf_device__ bool All(int predicate, volatile int* cta_buffer)$/;"	f	struct:kfusion::device::Emulation
+Ballot	kfusion/src/cuda/temp_utils.hpp	/^            static __kf_device__ int Ballot(int predicate, volatile int* cta_buffer)$/;"	f	struct:kfusion::device::Emulation
+Block	kfusion/src/cuda/temp_utils.hpp	/^        struct Block$/;"	s	namespace:kfusion::device
+CV_XADD	kfusion/src/device_memory.cpp	/^    template<typename _Tp> static inline _Tp CV_XADD(_Tp* addr, _Tp delta)$/;"	f	file:
+CV_XADD	kfusion/src/device_memory.cpp	20;"	d	file:
+CV_XADD	kfusion/src/device_memory.cpp	23;"	d	file:
+CV_XADD	kfusion/src/device_memory.cpp	28;"	d	file:
+CV_XADD	kfusion/src/device_memory.cpp	30;"	d	file:
+CV_XADD	kfusion/src/device_memory.cpp	36;"	d	file:
+Cloud	kfusion/include/kfusion/types.hpp	/^        typedef cuda::DeviceArray2D<Point> Cloud;$/;"	t	namespace:kfusion::cuda
+ComputeIcpHelper	kfusion/src/internal.hpp	/^        struct ComputeIcpHelper$/;"	s	namespace:kfusion::device
+ComputeIcpHelper	kfusion/src/projective_icp.cpp	/^kfusion::device::ComputeIcpHelper::ComputeIcpHelper(float dist_thres, float angle_thres)$/;"	f	class:kfusion::device::ComputeIcpHelper
+CudaData	kfusion/include/kfusion/types.hpp	/^        typedef cuda::DeviceMemory CudaData;$/;"	t	namespace:kfusion::cuda
+Depth	kfusion/include/kfusion/types.hpp	/^        typedef cuda::DeviceArray2D<unsigned short> Depth;$/;"	t	namespace:kfusion::cuda
+Depth	kfusion/src/internal.hpp	/^        typedef DeviceArray2D<ushort> Depth;$/;"	t	namespace:kfusion::device
+DepthPyr	kfusion/include/kfusion/cuda/projective_icp.hpp	/^            typedef std::vector<Depth> DepthPyr;$/;"	t	class:kfusion::cuda::ProjectiveICP
+DevPtr	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ DevPtr() : data(0) {}$/;"	f	struct:kfusion::cuda::DevPtr
+DevPtr	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ DevPtr(T* data_arg) : data(data_arg) {}$/;"	f	struct:kfusion::cuda::DevPtr
+DevPtr	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^        template<typename T> struct DevPtr$/;"	s	namespace:kfusion::cuda
+DeviceArray	kfusion/include/kfusion/cuda/device_array.hpp	/^        class KF_EXPORTS DeviceArray : public DeviceMemory$/;"	c	namespace:kfusion::cuda
+DeviceArray	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray<T>::DeviceArray() {}$/;"	f	class:kfusion::cuda::DeviceArray
+DeviceArray	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray<T>::DeviceArray(T *ptr, size_t size) : DeviceMemory(ptr, size * elem_size) {}$/;"	f	class:kfusion::cuda::DeviceArray
+DeviceArray	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray<T>::DeviceArray(const DeviceArray& other) : DeviceMemory(other) {}$/;"	f	class:kfusion::cuda::DeviceArray
+DeviceArray	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray<T>::DeviceArray(size_t size) : DeviceMemory(size * elem_size) {}$/;"	f	class:kfusion::cuda::DeviceArray
+DeviceArray2D	kfusion/include/kfusion/cuda/device_array.hpp	/^        class KF_EXPORTS DeviceArray2D : public DeviceMemory2D$/;"	c	namespace:kfusion::cuda
+DeviceArray2D	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray2D<T>::DeviceArray2D() {}$/;"	f	class:kfusion::cuda::DeviceArray2D
+DeviceArray2D	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray2D<T>::DeviceArray2D(const DeviceArray2D& other) : DeviceMemory2D(other) {}$/;"	f	class:kfusion::cuda::DeviceArray2D
+DeviceArray2D	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray2D<T>::DeviceArray2D(int rows, int cols) : DeviceMemory2D(rows, cols * elem_size) {}$/;"	f	class:kfusion::cuda::DeviceArray2D
+DeviceArray2D	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray2D<T>::DeviceArray2D(int rows, int cols, void *data, size_t stepBytes) : DeviceMemory2D(rows, cols * elem_size, data, stepBytes) {}$/;"	f	class:kfusion::cuda::DeviceArray2D
+DeviceMemory	kfusion/include/kfusion/cuda/device_memory.hpp	/^        class KF_EXPORTS DeviceMemory$/;"	c	namespace:kfusion::cuda
+DeviceMemory	kfusion/src/device_memory.cpp	/^kfusion::cuda::DeviceMemory::DeviceMemory() : data_(0), sizeBytes_(0), refcount_(0) {}$/;"	f	class:kfusion::cuda::DeviceMemory
+DeviceMemory	kfusion/src/device_memory.cpp	/^kfusion::cuda::DeviceMemory::DeviceMemory(const DeviceMemory& other_arg)$/;"	f	class:kfusion::cuda::DeviceMemory
+DeviceMemory	kfusion/src/device_memory.cpp	/^kfusion::cuda::DeviceMemory::DeviceMemory(size_t sizeBtes_arg)  : data_(0), sizeBytes_(0), refcount_(0) { create(sizeBtes_arg); }$/;"	f	class:kfusion::cuda::DeviceMemory
+DeviceMemory	kfusion/src/device_memory.cpp	/^kfusion::cuda::DeviceMemory::DeviceMemory(void *ptr_arg, size_t sizeBytes_arg) : data_(ptr_arg), sizeBytes_(sizeBytes_arg), refcount_(0){}$/;"	f	class:kfusion::cuda::DeviceMemory
+DeviceMemory2D	kfusion/include/kfusion/cuda/device_memory.hpp	/^        class KF_EXPORTS DeviceMemory2D$/;"	c	namespace:kfusion::cuda
+DeviceMemory2D	kfusion/src/device_memory.cpp	/^kfusion::cuda::DeviceMemory2D::DeviceMemory2D() : data_(0), step_(0), colsBytes_(0), rows_(0), refcount_(0) {}$/;"	f	class:kfusion::cuda::DeviceMemory2D
+DeviceMemory2D	kfusion/src/device_memory.cpp	/^kfusion::cuda::DeviceMemory2D::DeviceMemory2D(const DeviceMemory2D& other_arg) :$/;"	f	class:kfusion::cuda::DeviceMemory2D
+DeviceMemory2D	kfusion/src/device_memory.cpp	/^kfusion::cuda::DeviceMemory2D::DeviceMemory2D(int rows_arg, int colsBytes_arg)$/;"	f	class:kfusion::cuda::DeviceMemory2D
+DeviceMemory2D	kfusion/src/device_memory.cpp	/^kfusion::cuda::DeviceMemory2D::DeviceMemory2D(int rows_arg, int colsBytes_arg, void *data_arg, size_t step_arg)$/;"	f	class:kfusion::cuda::DeviceMemory2D
+Dists	kfusion/include/kfusion/types.hpp	/^        typedef cuda::DeviceArray2D<unsigned short> Dists;$/;"	t	namespace:kfusion::cuda
+Dists	kfusion/src/internal.hpp	/^        typedef PtrStepSz<ushort> Dists;$/;"	t	namespace:kfusion::device
+EACH	kfusion/include/kfusion/types.hpp	/^        enum { EACH = 33 };$/;"	e	enum:kfusion::SampledScopeTime::__anon6
+Eigen33	kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ Eigen33(volatile float* mat_pkg_arg) : mat_pkg(mat_pkg_arg) {}$/;"	f	struct:kfusion::device::Eigen33
+Eigen33	kfusion/src/cuda/temp_utils.hpp	/^        struct Eigen33$/;"	s	namespace:kfusion::device
+Emulation	kfusion/src/cuda/temp_utils.hpp	/^        struct Emulation$/;"	s	namespace:kfusion::device
+Entry	kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^            struct Entry$/;"	s	class:kfusion::cuda::TsdfVolume
+Frame	kfusion/include/kfusion/types.hpp	/^        struct Frame$/;"	s	namespace:kfusion::cuda
+Image	kfusion/include/kfusion/types.hpp	/^        typedef cuda::DeviceArray2D<RGB> Image;$/;"	t	namespace:kfusion::cuda
+Image	kfusion/src/internal.hpp	/^        typedef DeviceArray2D<uchar4> Image;$/;"	t	namespace:kfusion::device
+Impl	kfusion/src/capture.cpp	/^struct kfusion::OpenNISource::Impl$/;"	s	class:kfusion::OpenNISource	file:
+Intr	kfusion/include/kfusion/types.hpp	/^    struct KF_EXPORTS Intr$/;"	s	namespace:kfusion
+Intr	kfusion/src/precomp.cpp	/^kfusion::Intr::Intr () {}$/;"	f	class:kfusion::Intr
+Intr	kfusion/src/precomp.cpp	/^kfusion::Intr::Intr (float fx_, float fy_, float cx_, float cy_) : fx(fx_), fy(fy_), cx(cx_), cy(cy_) {}$/;"	f	class:kfusion::Intr
+KF_EXPORTS	kfusion/include/kfusion/exports.hpp	4;"	d
+KF_EXPORTS	kfusion/include/kfusion/exports.hpp	6;"	d
+KeyboardCallback	apps/demo.cpp	/^    static void KeyboardCallback(const cv::viz::KeyboardEvent& event, void* pthis)$/;"	f	struct:KinFuApp
+KinFu	kfusion/include/kfusion/kinfu.hpp	/^    class KF_EXPORTS KinFu$/;"	c	namespace:kfusion
+KinFu	kfusion/src/kinfu.cpp	/^kfusion::KinFu::KinFu(const KinFuParams& params) : frame_counter_(0), params_(params)$/;"	f	class:kfusion::KinFu
+KinFuApp	apps/demo.cpp	/^    KinFuApp(OpenNISource& source) : exit_ (false),  iteractive_mode_(false), capture_ (source), pause_(false)$/;"	f	struct:KinFuApp
+KinFuApp	apps/demo.cpp	/^struct KinFuApp$/;"	s	file:
+KinFuParams	kfusion/include/kfusion/kinfu.hpp	/^    struct KF_EXPORTS KinFuParams$/;"	s	namespace:kfusion
+LOG_WARP_SIZE	kfusion/src/cuda/temp_utils.hpp	/^                LOG_WARP_SIZE = 5,$/;"	e	enum:kfusion::device::Warp::__anon11
+LdCs	kfusion/src/cuda/device.hpp	/^    template<> __kf_device__ ushort2 kfusion::device::gmem::LdCs(ushort2* ptr)$/;"	f	class:kfusion::device::gmem
+MAX_PYRAMID_LEVELS	kfusion/include/kfusion/cuda/projective_icp.hpp	/^            enum { MAX_PYRAMID_LEVELS = 4 };$/;"	e	enum:kfusion::cuda::ProjectiveICP::__anon9
+Mat33	kfusion/src/cuda/temp_utils.hpp	/^            typedef MiniMat<3> Mat33;$/;"	t	struct:kfusion::device::Eigen33
+Mat3f	kfusion/include/kfusion/types.hpp	/^    typedef cv::Matx33f Mat3f;$/;"	t	namespace:kfusion
+Mat3f	kfusion/src/internal.hpp	/^        struct Mat3f { float3 data[3]; };$/;"	s	namespace:kfusion::device
+Mat43	kfusion/src/cuda/temp_utils.hpp	/^            typedef MiniMat<4> Mat43;$/;"	t	struct:kfusion::device::Eigen33
+Mat6f	kfusion/src/projective_icp.cpp	/^    typedef cv::Matx66f Mat6f;$/;"	t	struct:kfusion::cuda::ProjectiveICP::StreamHelper	file:
+MiniMat	kfusion/src/cuda/temp_utils.hpp	/^            template<int Rows> struct MiniMat$/;"	s	struct:kfusion::device::Eigen33
+Normal	kfusion/include/kfusion/types.hpp	/^    typedef Point Normal;$/;"	t	namespace:kfusion
+Normal	kfusion/src/internal.hpp	/^        typedef float4 Normal;$/;"	t	namespace:kfusion::device
+Normals	kfusion/include/kfusion/types.hpp	/^        typedef cuda::DeviceArray2D<Normal> Normals;$/;"	t	namespace:kfusion::cuda
+Normals	kfusion/src/internal.hpp	/^        typedef DeviceArray2D<Normal> Normals;$/;"	t	namespace:kfusion::device
+NormalsPyr	kfusion/include/kfusion/cuda/projective_icp.hpp	/^            typedef std::vector<Normals> NormalsPyr;$/;"	t	class:kfusion::cuda::ProjectiveICP
+OpenNISource	kfusion/include/io/capture.hpp	/^    class KF_EXPORTS OpenNISource$/;"	c	namespace:kfusion
+OpenNISource	kfusion/src/capture.cpp	/^kfusion::OpenNISource::OpenNISource() : depth_focal_length_VGA (0.f), baseline (0.f),$/;"	f	class:kfusion::OpenNISource
+OpenNISource	kfusion/src/capture.cpp	/^kfusion::OpenNISource::OpenNISource(const string& filename, bool repeat \/*= false*\/) {open (filename, repeat); }$/;"	f	class:kfusion::OpenNISource
+OpenNISource	kfusion/src/capture.cpp	/^kfusion::OpenNISource::OpenNISource(int device) {open (device); }$/;"	f	class:kfusion::OpenNISource
+PASS1	kfusion/src/kinfu.cpp	244;"	d	file:
+PASS1	kfusion/src/kinfu.cpp	269;"	d	file:
+PASS1	kfusion/src/kinfu.cpp	287;"	d	file:
+PASS1	kfusion/src/kinfu.cpp	318;"	d	file:
+PROP_OPENNI_REGISTRATION_ON	kfusion/include/io/capture.hpp	/^        enum { PROP_OPENNI_REGISTRATION_ON  = 104 };$/;"	e	enum:kfusion::OpenNISource::__anon1
+PageLockHelper	kfusion/src/internal.hpp	/^            struct PageLockHelper$/;"	s	struct:kfusion::device::ComputeIcpHelper
+PageLockHelper	kfusion/src/projective_icp.cpp	/^    typedef device::ComputeIcpHelper::PageLockHelper PageLockHelper;$/;"	t	struct:kfusion::cuda::ProjectiveICP::StreamHelper	file:
+PixelRGB	kfusion/include/kfusion/types.hpp	/^    struct PixelRGB$/;"	s	namespace:kfusion
+Point	kfusion/include/kfusion/types.hpp	/^    struct Point$/;"	s	namespace:kfusion
+Point	kfusion/src/internal.hpp	/^        typedef float4 Point;$/;"	t	namespace:kfusion::device
+Points	kfusion/src/internal.hpp	/^        typedef DeviceArray2D<Point> Points;$/;"	t	namespace:kfusion::device
+PointsPyr	kfusion/include/kfusion/cuda/projective_icp.hpp	/^            typedef std::vector<Cloud> PointsPyr;$/;"	t	class:kfusion::cuda::ProjectiveICP
+ProjectiveICP	kfusion/include/kfusion/cuda/projective_icp.hpp	/^        class ProjectiveICP$/;"	c	namespace:kfusion::cuda
+ProjectiveICP	kfusion/src/projective_icp.cpp	/^kfusion::cuda::ProjectiveICP::ProjectiveICP() : angle_thres_(deg2rad(20.f)), dist_thres_(0.1f)$/;"	f	class:kfusion::cuda::ProjectiveICP
+Projector	kfusion/src/internal.hpp	/^            Projector(){}$/;"	f	struct:kfusion::device::Projector
+Projector	kfusion/src/internal.hpp	/^        struct Projector$/;"	s	namespace:kfusion::device
+Projector	kfusion/src/precomp.cpp	/^kfusion::device::Projector::Projector(float fx, float fy, float cx, float cy) : f(make_float2(fx, fy)), c(make_float2(cx, cy)) {}$/;"	f	class:kfusion::device::Projector
+Ptr	kfusion/include/kfusion/kinfu.hpp	/^        typedef cv::Ptr<KinFu> Ptr;$/;"	t	class:kfusion::KinFu
+PtrStep	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ PtrStep() : step(0) {}$/;"	f	struct:kfusion::cuda::PtrStep
+PtrStep	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ PtrStep(T* data_arg, size_t step_arg) : DevPtr<T>(data_arg), step(step_arg) {}$/;"	f	struct:kfusion::cuda::PtrStep
+PtrStep	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^        template<typename T>  struct PtrStep : public DevPtr<T>$/;"	s	namespace:kfusion::cuda
+PtrStepSz	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ PtrStepSz() : cols(0), rows(0) {}$/;"	f	struct:kfusion::cuda::PtrStepSz
+PtrStepSz	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ PtrStepSz(int rows_arg, int cols_arg, T* data_arg, size_t step_arg)$/;"	f	struct:kfusion::cuda::PtrStepSz
+PtrStepSz	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^        template <typename T> struct PtrStepSz : public PtrStep<T>$/;"	s	namespace:kfusion::cuda
+PtrSz	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ PtrSz() : size(0) {}$/;"	f	struct:kfusion::cuda::PtrSz
+PtrSz	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ PtrSz(T* data_arg, size_t size_arg) : DevPtr<T>(data_arg), size(size_arg) {}$/;"	f	struct:kfusion::cuda::PtrSz
+PtrSz	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^        template<typename T> struct PtrSz : public DevPtr<T>$/;"	s	namespace:kfusion::cuda
+R	kfusion/src/internal.hpp	/^        struct Aff3f { Mat3f R; Vec3f t; };$/;"	m	struct:kfusion::device::Aff3f
+REPORT_ERROR	kfusion/src/capture.cpp	38;"	d	file:
+RGB	kfusion/include/kfusion/types.hpp	/^    struct RGB$/;"	s	namespace:kfusion
+RGB24	kfusion/include/io/capture.hpp	/^        typedef kfusion::PixelRGB RGB24;$/;"	t	class:kfusion::OpenNISource
+Reprojector	kfusion/src/internal.hpp	/^            Reprojector() {}$/;"	f	struct:kfusion::device::Reprojector
+Reprojector	kfusion/src/internal.hpp	/^        struct Reprojector$/;"	s	namespace:kfusion::device
+Reprojector	kfusion/src/precomp.cpp	/^kfusion::device::Reprojector::Reprojector(float fx, float fy, float cx, float cy) : finv(make_float2(1.f\/fx, 1.f\/fy)), c(make_float2(cx, cy)) {}$/;"	f	class:kfusion::device::Reprojector
+STRIDE	kfusion/src/cuda/temp_utils.hpp	/^                STRIDE        = WARP_SIZE$/;"	e	enum:kfusion::device::Warp::__anon11
+SampledScopeTime	kfusion/include/kfusion/types.hpp	/^    struct KF_EXPORTS SampledScopeTime$/;"	s	namespace:kfusion
+SampledScopeTime	kfusion/src/core.cpp	/^kf::SampledScopeTime::SampledScopeTime(double& time_ms) : time_ms_(time_ms)$/;"	f	class:kf::SampledScopeTime
+ScopeTime	kfusion/include/kfusion/types.hpp	/^    struct KF_EXPORTS ScopeTime$/;"	s	namespace:kfusion
+ScopeTime	kfusion/src/core.cpp	/^kf::ScopeTime::ScopeTime(const char *name_) : name(name_)$/;"	f	class:kf::ScopeTime
+StCs	kfusion/src/cuda/device.hpp	/^    template<> __kf_device__ void kfusion::device::gmem::StCs(const ushort2& val, ushort2* ptr)$/;"	f	class:kfusion::device::gmem
+StreamHelper	kfusion/src/projective_icp.cpp	/^    StreamHelper() { cudaSafeCall( cudaStreamCreate(&stream) ); }$/;"	f	struct:kfusion::cuda::ProjectiveICP::StreamHelper
+StreamHelper	kfusion/src/projective_icp.cpp	/^struct kfusion::cuda::ProjectiveICP::StreamHelper$/;"	s	class:kfusion::cuda::ProjectiveICP	file:
+TextureBinder	kfusion/src/cuda/texture_binder.hpp	/^            TextureBinder(const A& arr, const struct texture<T, 2, readMode>& tex, const cudaChannelFormatDesc& desc) : texref(&tex)$/;"	f	class:kfusion::cuda::TextureBinder
+TextureBinder	kfusion/src/cuda/texture_binder.hpp	/^            TextureBinder(const DeviceArray2D<T>& arr, const struct texture<T, 2, readMode>& tex) : texref(&tex)$/;"	f	class:kfusion::cuda::TextureBinder
+TextureBinder	kfusion/src/cuda/texture_binder.hpp	/^            TextureBinder(const DeviceArray<T>& arr, const struct texture<T, 1, readMode> &tex) : texref(&tex)$/;"	f	class:kfusion::cuda::TextureBinder
+TextureBinder	kfusion/src/cuda/texture_binder.hpp	/^            TextureBinder(const PtrStepSz<T>& arr, const struct texture<T, 2, readMode>& tex) : texref(&tex)$/;"	f	class:kfusion::cuda::TextureBinder
+TextureBinder	kfusion/src/cuda/texture_binder.hpp	/^            TextureBinder(const PtrSz<T>& arr, const struct texture<T, 1, readMode> &tex) : texref(&tex)$/;"	f	class:kfusion::cuda::TextureBinder
+TextureBinder	kfusion/src/cuda/texture_binder.hpp	/^        class TextureBinder$/;"	c	namespace:kfusion::cuda
+TsdfVolume	kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^        class KF_EXPORTS TsdfVolume$/;"	c	namespace:kfusion::cuda
+TsdfVolume	kfusion/src/internal.hpp	/^        struct TsdfVolume$/;"	s	namespace:kfusion::device
+TsdfVolume	kfusion/src/precomp.cpp	/^kfusion::device::TsdfVolume::TsdfVolume(elem_type* _data, int3 _dims, float3 _voxel_size, float _trunc_dist, int _max_weight)$/;"	f	class:kfusion::device::TsdfVolume
+TsdfVolume	kfusion/src/tsdf_volume.cpp	/^kfusion::cuda::TsdfVolume::TsdfVolume(const Vec3i& dims) : data_(), trunc_dist_(0.03f), max_weight_(128), dims_(dims),$/;"	f	class:kfusion::cuda::TsdfVolume
+Vec3f	kfusion/include/kfusion/types.hpp	/^    typedef cv::Vec3f Vec3f;$/;"	t	namespace:kfusion
+Vec3f	kfusion/src/internal.hpp	/^        typedef float3 Vec3f;$/;"	t	namespace:kfusion::device
+Vec3i	kfusion/include/kfusion/types.hpp	/^    typedef cv::Vec3i Vec3i;$/;"	t	namespace:kfusion
+Vec3i	kfusion/src/internal.hpp	/^        typedef int3   Vec3i;$/;"	t	namespace:kfusion::device
+Vec6f	kfusion/src/projective_icp.cpp	/^    typedef cv::Vec6f Vec6f;$/;"	t	struct:kfusion::cuda::ProjectiveICP::StreamHelper	file:
+WARP_SIZE	kfusion/src/cuda/temp_utils.hpp	/^                WARP_SIZE     = 1 << LOG_WARP_SIZE,$/;"	e	enum:kfusion::device::Warp::__anon11
+Warp	kfusion/src/cuda/temp_utils.hpp	/^        struct Warp$/;"	s	namespace:kfusion::device
+_ASM_PTR_	kfusion/src/cuda/device.hpp	116;"	d
+_ASM_PTR_	kfusion/src/cuda/device.hpp	99;"	d
+_CRT_SECURE_NO_DEPRECATE	kfusion/src/capture.cpp	2;"	d	file:
+___cudaSafeCall	kfusion/src/safe_call.hpp	/^        static inline void ___cudaSafeCall(cudaError_t err, const char *file, const int line, const char *func = "")$/;"	f	namespace:kfusion::cuda
+__kf_device__	kfusion/include/kfusion/cuda/kernel_containers.hpp	5;"	d
+__kf_device__	kfusion/include/kfusion/cuda/kernel_containers.hpp	8;"	d
+__kf_hdevice__	kfusion/include/kfusion/cuda/kernel_containers.hpp	4;"	d
+__kf_hdevice__	kfusion/include/kfusion/cuda/kernel_containers.hpp	7;"	d
+aff	kfusion/src/internal.hpp	/^            Aff3f aff;$/;"	m	struct:kfusion::device::ComputeIcpHelper
+allocate_buffers	kfusion/src/kinfu.cpp	/^void kfusion::KinFu::allocate_buffers()$/;"	f	class:kfusion::KinFu
+angle_thres_	kfusion/include/kfusion/cuda/projective_icp.hpp	/^            float angle_thres_;$/;"	m	class:kfusion::cuda::ProjectiveICP
+applyAffine	kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::applyAffine(const Affine3f& affine) { pose_ = affine * pose_; }$/;"	f	class:kfusion::cuda::TsdfVolume
+b	kfusion/include/kfusion/types.hpp	/^            struct { unsigned char b, g, r; };$/;"	m	struct:kfusion::RGB::__anon4::__anon5
+b	kfusion/include/kfusion/types.hpp	/^        unsigned char r, g, b;$/;"	m	struct:kfusion::PixelRGB
+baseline	kfusion/include/io/capture.hpp	/^        float baseline;               \/\/ mm$/;"	m	class:kfusion::OpenNISource
+beg	kfusion/src/cuda/device.hpp	/^__kf_device__ kfusion::device::TsdfVolume::elem_type* kfusion::device::TsdfVolume::beg(int x, int y) const$/;"	f	class:kfusion::device::TsdfVolume
+bgra	kfusion/include/kfusion/types.hpp	/^            int bgra;$/;"	m	union:kfusion::RGB::__anon4
+bilateral_kernel_size	kfusion/include/kfusion/kinfu.hpp	/^        int   bilateral_kernel_size;   \/\/pixels$/;"	m	struct:kfusion::KinFuParams
+bilateral_sigma_depth	kfusion/include/kfusion/kinfu.hpp	/^        float bilateral_sigma_depth;   \/\/meters$/;"	m	struct:kfusion::KinFuParams
+bilateral_sigma_spatial	kfusion/include/kfusion/kinfu.hpp	/^        float bilateral_sigma_spatial;   \/\/pixels$/;"	m	struct:kfusion::KinFuParams
+binaryExclScan	kfusion/src/cuda/temp_utils.hpp	/^            static __kf_device__ int binaryExclScan(int ballot_mask)$/;"	f	struct:kfusion::device::Warp
+buffer_	kfusion/include/kfusion/cuda/projective_icp.hpp	/^            DeviceArray2D<float> buffer_;$/;"	m	class:kfusion::cuda::ProjectiveICP
+c	kfusion/src/internal.hpp	/^            float2 f, c, finv;$/;"	m	struct:kfusion::device::ComputeIcpHelper
+c	kfusion/src/internal.hpp	/^            float2 f, c;$/;"	m	struct:kfusion::device::Projector
+c	kfusion/src/internal.hpp	/^            float2 finv, c;$/;"	m	struct:kfusion::device::Reprojector
+c1	kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float12
+c1	kfusion/src/internal.hpp	/^        struct float8  { float x, y, z, w, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float8
+c2	kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float12
+c2	kfusion/src/internal.hpp	/^        struct float8  { float x, y, z, w, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float8
+c3	kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float12
+c3	kfusion/src/internal.hpp	/^        struct float8  { float x, y, z, w, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float8
+c4	kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float12
+c4	kfusion/src/internal.hpp	/^        struct float8  { float x, y, z, w, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float8
+capture_	apps/demo.cpp	/^    OpenNISource& capture_;$/;"	m	struct:KinFuApp	file:
+checkIfPreFermiGPU	kfusion/src/core.cpp	/^bool kf::cuda::checkIfPreFermiGPU(int device)$/;"	f	class:kf::cuda
+clear	kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::clear()$/;"	f	class:kfusion::cuda::TsdfVolume
+cloud_buffer	apps/demo.cpp	/^    cuda::DeviceArray<Point> cloud_buffer;$/;"	m	struct:KinFuApp	file:
+cols	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline int kfusion::cuda::DeviceArray2D<T>::cols() const { return DeviceMemory2D::colsBytes()\/elem_size; }$/;"	f	class:kfusion::cuda::DeviceArray2D
+cols	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            int cols;$/;"	m	struct:kfusion::cuda::PtrStepSz
+cols	kfusion/include/kfusion/kinfu.hpp	/^        int cols;  \/\/pixels$/;"	m	struct:kfusion::KinFuParams
+cols	kfusion/src/internal.hpp	/^            float rows, cols;$/;"	m	struct:kfusion::device::ComputeIcpHelper
+colsBytes	kfusion/src/device_memory.cpp	/^int kfusion::cuda::DeviceMemory2D::colsBytes() const { return colsBytes_; }$/;"	f	class:kfusion::cuda::DeviceMemory2D
+colsBytes_	kfusion/include/kfusion/cuda/device_memory.hpp	/^            int colsBytes_;$/;"	m	class:kfusion::cuda::DeviceMemory2D
+compute	kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ void compute(Mat33& tmp, Mat33& vec_tmp, Mat33& evecs, float3& evals)$/;"	f	struct:kfusion::device::Eigen33
+computeDists	kfusion/src/imgproc.cpp	/^void kfusion::cuda::computeDists(const Depth& depth, Dists& dists, const Intr& intr)$/;"	f	class:kfusion::cuda
+computeNormalsAndMaskDepth	kfusion/src/imgproc.cpp	/^void kfusion::cuda::computeNormalsAndMaskDepth(const Intr& intr, Depth& depth, Normals& normals)$/;"	f	class:kfusion::cuda
+computePointNormals	kfusion/src/imgproc.cpp	/^void kfusion::cuda::computePointNormals(const Intr& intr, const Depth& depth, Cloud& points, Normals& normals)$/;"	f	class:kfusion::cuda
+computeRoots2	kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ void computeRoots2(const float& b, const float& c, float3& roots)$/;"	f	namespace:kfusion::device
+computeRoots3	kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ void computeRoots3(float c0, float c1, float c2, float3& roots)$/;"	f	namespace:kfusion::device
+context	kfusion/src/capture.cpp	/^    Context context;$/;"	m	struct:kfusion::OpenNISource::Impl	file:
+convertSMVer2Cores	kfusion/src/core.cpp	/^    inline int convertSMVer2Cores(int major, int minor)$/;"	f	namespace:__anon10
+copyTo	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline void kfusion::cuda::DeviceArray2D<T>::copyTo(DeviceArray2D& other) const$/;"	f	class:kfusion::cuda::DeviceArray2D
+copyTo	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline void kfusion::cuda::DeviceArray<T>::copyTo(DeviceArray& other) const$/;"	f	class:kfusion::cuda::DeviceArray
+copyTo	kfusion/src/device_memory.cpp	/^void kfusion::cuda::DeviceMemory2D::copyTo(DeviceMemory2D& other) const$/;"	f	class:kfusion::cuda::DeviceMemory2D
+copyTo	kfusion/src/device_memory.cpp	/^void kfusion::cuda::DeviceMemory::copyTo(DeviceMemory& other) const$/;"	f	class:kfusion::cuda::DeviceMemory
+create	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline void kfusion::cuda::DeviceArray2D<T>::create(int rows, int cols)$/;"	f	class:kfusion::cuda::DeviceArray2D
+create	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline void kfusion::cuda::DeviceArray<T>::create(size_t size)$/;"	f	class:kfusion::cuda::DeviceArray
+create	kfusion/src/device_memory.cpp	/^void kfusion::cuda::DeviceMemory2D::create(int rows_arg, int colsBytes_arg)$/;"	f	class:kfusion::cuda::DeviceMemory2D
+create	kfusion/src/device_memory.cpp	/^void kfusion::cuda::DeviceMemory::create(size_t sizeBytes_arg)$/;"	f	class:kfusion::cuda::DeviceMemory
+create	kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::create(const Vec3i& dims)$/;"	f	class:kfusion::cuda::TsdfVolume
+cross	kfusion/src/cuda/temp_utils.hpp	/^        __kf_hdevice__ float3 cross(const float3& v1, const float3& v2)$/;"	f	namespace:kfusion::device
+cuda	kfusion/include/kfusion/cuda/device_array.hpp	/^    namespace cuda$/;"	n	namespace:kfusion
+cuda	kfusion/include/kfusion/cuda/device_memory.hpp	/^    namespace cuda$/;"	n	namespace:kfusion
+cuda	kfusion/include/kfusion/cuda/imgproc.hpp	/^    namespace cuda$/;"	n	namespace:kfusion
+cuda	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^    namespace cuda$/;"	n	namespace:kfusion
+cuda	kfusion/include/kfusion/cuda/projective_icp.hpp	/^    namespace cuda$/;"	n	namespace:kfusion
+cuda	kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^    namespace cuda$/;"	n	namespace:kfusion
+cuda	kfusion/include/kfusion/kinfu.hpp	/^    namespace cuda$/;"	n	namespace:kfusion
+cuda	kfusion/include/kfusion/types.hpp	/^    namespace cuda$/;"	n	namespace:kfusion
+cuda	kfusion/src/cuda/texture_binder.hpp	/^    namespace cuda$/;"	n	namespace:kfusion
+cuda	kfusion/src/safe_call.hpp	/^    namespace cuda$/;"	n	namespace:kfusion
+cudaSafeCall	kfusion/src/safe_call.hpp	14;"	d
+curr_	kfusion/include/kfusion/kinfu.hpp	/^        cuda::Frame curr_, prev_;$/;"	m	class:kfusion::KinFu
+cx	kfusion/include/kfusion/types.hpp	/^        float fx, fy, cx, cy;$/;"	m	struct:kfusion::Intr
+cy	kfusion/include/kfusion/types.hpp	/^        float fx, fy, cx, cy;$/;"	m	struct:kfusion::Intr
+data	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            T* data;$/;"	m	struct:kfusion::cuda::DevPtr
+data	kfusion/include/kfusion/types.hpp	/^            float data[4];$/;"	m	union:kfusion::Point::__anon2
+data	kfusion/src/cuda/temp_utils.hpp	/^                float3 data[Rows];$/;"	m	struct:kfusion::device::Eigen33::MiniMat
+data	kfusion/src/internal.hpp	/^                float* data;$/;"	m	struct:kfusion::device::ComputeIcpHelper::PageLockHelper
+data	kfusion/src/internal.hpp	/^            elem_type *const data;$/;"	m	struct:kfusion::device::TsdfVolume
+data	kfusion/src/internal.hpp	/^        struct Mat3f { float3 data[3]; };$/;"	m	struct:kfusion::device::Mat3f
+data	kfusion/src/tsdf_volume.cpp	/^CudaData kfusion::cuda::TsdfVolume::data() {  return data_; }$/;"	f	class:kfusion::cuda::TsdfVolume
+data	kfusion/src/tsdf_volume.cpp	/^const CudaData kfusion::cuda::TsdfVolume::data() const { return data_; }$/;"	f	class:kfusion::cuda::TsdfVolume
+data_	kfusion/include/kfusion/cuda/device_memory.hpp	/^            void *data_;$/;"	m	class:kfusion::cuda::DeviceMemory
+data_	kfusion/include/kfusion/cuda/device_memory.hpp	/^            void *data_;$/;"	m	class:kfusion::cuda::DeviceMemory2D
+data_	kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^            CudaData data_;$/;"	m	class:kfusion::cuda::TsdfVolume
+dcurr	kfusion/src/internal.hpp	/^            PtrStep<ushort> dcurr;$/;"	m	struct:kfusion::device::ComputeIcpHelper
+default_params	kfusion/src/kinfu.cpp	/^kfusion::KinFuParams kfusion::KinFuParams::default_params()$/;"	f	class:kfusion::KinFuParams
+deg2rad	kfusion/include/kfusion/types.hpp	/^    inline float deg2rad (float alpha) { return alpha * 0.017453293f; }$/;"	f	namespace:kfusion
+deg2rad	kfusion/src/kinfu.cpp	/^static inline float deg2rad (float alpha) { return alpha * 0.017453293f; }$/;"	f	file:
+depth	kfusion/src/capture.cpp	/^    DepthGenerator depth;$/;"	m	struct:kfusion::OpenNISource::Impl	file:
+depthBilateralFilter	kfusion/src/imgproc.cpp	/^void kfusion::cuda::depthBilateralFilter(const Depth& in, Depth& out, int kernel_size, float sigma_spatial, float sigma_depth)$/;"	f	class:kfusion::cuda
+depthBuildPyramid	kfusion/src/imgproc.cpp	/^void kfusion::cuda::depthBuildPyramid(const Depth& depth, Depth& pyramid, float sigma_depth)$/;"	f	class:kfusion::cuda
+depthMD	kfusion/src/capture.cpp	/^    DepthMetaData depthMD;$/;"	m	struct:kfusion::OpenNISource::Impl	file:
+depthTruncation	kfusion/src/imgproc.cpp	/^void kfusion::cuda::depthTruncation(Depth& depth, float threshold)$/;"	f	class:kfusion::cuda
+depth_device_	apps/demo.cpp	/^    cuda::Depth depth_device_;$/;"	m	struct:KinFuApp	file:
+depth_focal_length_VGA	kfusion/include/io/capture.hpp	/^        float depth_focal_length_VGA;$/;"	m	class:kfusion::OpenNISource
+depth_pyr	kfusion/include/kfusion/types.hpp	/^            std::vector<Depth> depth_pyr;$/;"	m	struct:kfusion::cuda::Frame
+depths_	kfusion/include/kfusion/kinfu.hpp	/^        cuda::Depth depths_;$/;"	m	class:kfusion::KinFu
+device	kfusion/include/kfusion/cuda/device_array.hpp	/^    namespace device$/;"	n	namespace:kfusion
+device	kfusion/include/kfusion/cuda/device_memory.hpp	/^    namespace device$/;"	n	namespace:kfusion
+device	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^    namespace device$/;"	n	namespace:kfusion
+device	kfusion/src/cuda/device.hpp	/^    namespace device$/;"	n	namespace:kfusion
+device	kfusion/src/cuda/temp_utils.hpp	/^    namespace device$/;"	n	namespace:kfusion
+device	kfusion/src/cuda/texture_binder.hpp	/^    namespace device$/;"	n	namespace:kfusion
+device	kfusion/src/internal.hpp	/^    namespace device$/;"	n	namespace:kfusion
+device	kfusion/src/safe_call.hpp	/^    namespace device$/;"	n	namespace:kfusion
+device_cast	kfusion/src/precomp.hpp	/^    inline D device_cast(const S& source)$/;"	f	namespace:kfusion
+device_cast	kfusion/src/precomp.hpp	/^    inline device::Aff3f device_cast<device::Aff3f, Affine3f>(const Affine3f& source)$/;"	f	namespace:kfusion
+dims	kfusion/src/internal.hpp	/^            const int3 dims;$/;"	m	struct:kfusion::device::TsdfVolume
+dims_	kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^            Vec3i dims_;$/;"	m	class:kfusion::cuda::TsdfVolume
+dist2_thres	kfusion/src/internal.hpp	/^            float dist2_thres;$/;"	m	struct:kfusion::device::ComputeIcpHelper
+dist_thres_	kfusion/include/kfusion/cuda/projective_icp.hpp	/^            float dist_thres_;$/;"	m	class:kfusion::cuda::ProjectiveICP
+dists_	kfusion/include/kfusion/kinfu.hpp	/^        cuda::Dists dists_;$/;"	m	class:kfusion::KinFu
+divUp	kfusion/src/safe_call.hpp	/^        static inline int divUp(int total, int grain) { return (total + grain - 1) \/ grain; }$/;"	f	namespace:kfusion::cuda
+dot	kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ float dot(const float3& v1, const float3& v2)$/;"	f	namespace:kfusion::device
+download	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline void kfusion::cuda::DeviceArray2D<T>::download(void *host_ptr, size_t host_step) const$/;"	f	class:kfusion::cuda::DeviceArray2D
+download	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline void kfusion::cuda::DeviceArray<T>::download(T *host_ptr) const$/;"	f	class:kfusion::cuda::DeviceArray
+download	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> template<class A> inline void kfusion::cuda::DeviceArray2D<T>::download(std::vector<T, A>& data, int& elem_step) const$/;"	f	class:kfusion::cuda::DeviceArray2D
+download	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> template<class A> inline void kfusion::cuda::DeviceArray<T>::download(std::vector<T, A>& data) const { data.resize(size()); if (!data.empty()) download(&data[0]); }$/;"	f	class:kfusion::cuda::DeviceArray
+download	kfusion/src/device_memory.cpp	/^void kfusion::cuda::DeviceMemory2D::download(void *host_ptr_arg, size_t host_step_arg) const$/;"	f	class:kfusion::cuda::DeviceMemory2D
+download	kfusion/src/device_memory.cpp	/^void kfusion::cuda::DeviceMemory::download(void *host_ptr_arg) const$/;"	f	class:kfusion::cuda::DeviceMemory
+elemSize	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ size_t elemSize() const { return elem_size; }$/;"	f	struct:kfusion::cuda::DevPtr
+elem_size	kfusion/include/kfusion/cuda/device_array.hpp	/^            enum { elem_size = sizeof(T) };$/;"	e	enum:kfusion::cuda::DeviceArray2D::__anon8
+elem_size	kfusion/include/kfusion/cuda/device_array.hpp	/^            enum { elem_size = sizeof(T) };$/;"	e	enum:kfusion::cuda::DeviceArray::__anon7
+elem_size	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            const static size_t elem_size = sizeof(elem_type);$/;"	m	struct:kfusion::cuda::DevPtr
+elem_step	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline size_t kfusion::cuda::DeviceArray2D<T>::elem_step() const { return DeviceMemory2D::step()\/elem_size; }$/;"	f	class:kfusion::cuda::DeviceArray2D
+elem_type	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            typedef T elem_type;$/;"	t	struct:kfusion::cuda::DevPtr
+elem_type	kfusion/src/internal.hpp	/^            typedef ushort2 elem_type;$/;"	t	struct:kfusion::device::TsdfVolume
+empty	kfusion/src/device_memory.cpp	/^bool kfusion::cuda::DeviceMemory2D::empty() const { return !data_; }$/;"	f	class:kfusion::cuda::DeviceMemory2D
+empty	kfusion/src/device_memory.cpp	/^bool kfusion::cuda::DeviceMemory::empty() const { return !data_; }$/;"	f	class:kfusion::cuda::DeviceMemory
+epsilon	kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ static float epsilon() { return 1.192092896e-07f\/*FLT_EPSILON*\/; };$/;"	f	struct:kfusion::device::numeric_limits
+error	kfusion/src/device_memory.cpp	/^void kfusion::cuda::error(const char *error_string, const char *file, const int line, const char *func)$/;"	f	class:kfusion::cuda
+estimateTransform	kfusion/src/projective_icp.cpp	/^bool kfusion::cuda::ProjectiveICP::estimateTransform(Affine3f& \/*affine*\/, const Intr& \/*intr*\/, const Frame& \/*curr*\/, const Frame& \/*prev*\/)$/;"	f	class:kfusion::cuda::ProjectiveICP
+estimateTransform	kfusion/src/projective_icp.cpp	/^bool kfusion::cuda::ProjectiveICP::estimateTransform(Affine3f& affine, const Intr& intr, const DepthPyr& dcurr, const NormalsPyr ncurr, const DepthPyr dprev, const NormalsPyr nprev)$/;"	f	class:kfusion::cuda::ProjectiveICP
+estimateTransform	kfusion/src/projective_icp.cpp	/^bool kfusion::cuda::ProjectiveICP::estimateTransform(Affine3f& affine, const Intr& intr, const PointsPyr& vcurr, const NormalsPyr ncurr, const PointsPyr vprev, const NormalsPyr nprev)$/;"	f	class:kfusion::cuda::ProjectiveICP
+execute	apps/demo.cpp	/^    bool execute()$/;"	f	struct:KinFuApp
+exit_	apps/demo.cpp	/^    bool exit_, iteractive_mode_;$/;"	m	struct:KinFuApp	file:
+f	kfusion/src/internal.hpp	/^            float2 f, c, finv;$/;"	m	struct:kfusion::device::ComputeIcpHelper
+f	kfusion/src/internal.hpp	/^            float2 f, c;$/;"	m	struct:kfusion::device::Projector
+fetchCloud	kfusion/src/tsdf_volume.cpp	/^DeviceArray<Point> kfusion::cuda::TsdfVolume::fetchCloud(DeviceArray<Point>& cloud_buffer) const$/;"	f	class:kfusion::cuda::TsdfVolume
+fetchNormals	kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::fetchNormals(const DeviceArray<Point>& cloud, DeviceArray<Normal>& normals) const$/;"	f	class:kfusion::cuda::TsdfVolume
+finv	kfusion/src/internal.hpp	/^            float2 f, c, finv;$/;"	m	struct:kfusion::device::ComputeIcpHelper
+finv	kfusion/src/internal.hpp	/^            float2 finv, c;$/;"	m	struct:kfusion::device::Reprojector
+flattenedThreadId	kfusion/src/cuda/temp_utils.hpp	/^            static __kf_device__ int flattenedThreadId()$/;"	f	struct:kfusion::device::Block
+float12	kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	s	namespace:kfusion::device
+float2half	kfusion/src/tsdf_volume.cpp	/^kfusion::cuda::TsdfVolume::Entry::half kfusion::cuda::TsdfVolume::Entry::float2half(float value)$/;"	f	class:kfusion::cuda::TsdfVolume::Entry
+float8	kfusion/src/internal.hpp	/^        struct float8  { float x, y, z, w, c1, c2, c3, c4; };$/;"	s	namespace:kfusion::device
+frame_counter_	kfusion/include/kfusion/kinfu.hpp	/^        int frame_counter_;$/;"	m	class:kfusion::KinFu
+fx	kfusion/include/kfusion/types.hpp	/^        float fx, fy, cx, cy;$/;"	m	struct:kfusion::Intr
+fy	kfusion/include/kfusion/types.hpp	/^        float fx, fy, cx, cy;$/;"	m	struct:kfusion::Intr
+g	kfusion/include/kfusion/types.hpp	/^            struct { unsigned char b, g, r; };$/;"	m	struct:kfusion::RGB::__anon4::__anon5
+g	kfusion/include/kfusion/types.hpp	/^        unsigned char r, g, b;$/;"	m	struct:kfusion::PixelRGB
+get	kfusion/src/projective_icp.cpp	/^    Mat6f get(Vec6f& b)$/;"	f	struct:kfusion::cuda::ProjectiveICP::StreamHelper
+getAngleThreshold	kfusion/src/projective_icp.cpp	/^float kfusion::cuda::ProjectiveICP::getAngleThreshold() const$/;"	f	class:kfusion::cuda::ProjectiveICP
+getCameraPose	kfusion/src/kinfu.cpp	/^kfusion::Affine3f kfusion::KinFu::getCameraPose (int time) const$/;"	f	class:kfusion::KinFu
+getCudaAttribute	kfusion/src/core.cpp	/^    template <class T> inline void getCudaAttribute(T *attribute, CUdevice_attribute device_attribute, int device)$/;"	f	namespace:__anon10
+getCudaEnabledDeviceCount	kfusion/src/core.cpp	/^int kf::cuda::getCudaEnabledDeviceCount()$/;"	f	class:kf::cuda
+getDeviceName	kfusion/src/core.cpp	/^std::string kf::cuda::getDeviceName(int device)$/;"	f	class:kf::cuda
+getDims	kfusion/src/tsdf_volume.cpp	/^Vec3i kfusion::cuda::TsdfVolume::getDims() const$/;"	f	class:kfusion::cuda::TsdfVolume
+getDistThreshold	kfusion/src/projective_icp.cpp	/^float kfusion::cuda::ProjectiveICP::getDistThreshold() const$/;"	f	class:kfusion::cuda::ProjectiveICP
+getGradientDeltaFactor	kfusion/src/tsdf_volume.cpp	/^float kfusion::cuda::TsdfVolume::getGradientDeltaFactor() const { return gradient_delta_factor_; }$/;"	f	class:kfusion::cuda::TsdfVolume
+getMaxWeight	kfusion/src/tsdf_volume.cpp	/^int kfusion::cuda::TsdfVolume::getMaxWeight() const { return max_weight_; }$/;"	f	class:kfusion::cuda::TsdfVolume
+getParams	kfusion/src/capture.cpp	/^void kfusion::OpenNISource::getParams ()$/;"	f	class:kfusion::OpenNISource
+getPose	kfusion/src/tsdf_volume.cpp	/^Affine3f kfusion::cuda::TsdfVolume::getPose() const  { return pose_; }$/;"	f	class:kfusion::cuda::TsdfVolume
+getRaycastStepFactor	kfusion/src/tsdf_volume.cpp	/^float kfusion::cuda::TsdfVolume::getRaycastStepFactor() const { return raycast_step_factor_; }$/;"	f	class:kfusion::cuda::TsdfVolume
+getSize	kfusion/src/tsdf_volume.cpp	/^Vec3f kfusion::cuda::TsdfVolume::getSize() const { return size_; }$/;"	f	class:kfusion::cuda::TsdfVolume
+getTime	kfusion/src/core.cpp	/^double kf::SampledScopeTime::getTime()$/;"	f	class:kf::SampledScopeTime
+getTruncDist	kfusion/src/tsdf_volume.cpp	/^float kfusion::cuda::TsdfVolume::getTruncDist() const { return trunc_dist_; }$/;"	f	class:kfusion::cuda::TsdfVolume
+getUsedLevelsNum	kfusion/src/projective_icp.cpp	/^int kfusion::cuda::ProjectiveICP::getUsedLevelsNum() const$/;"	f	class:kfusion::cuda::ProjectiveICP
+getVoxelSize	kfusion/src/tsdf_volume.cpp	/^Vec3f kfusion::cuda::TsdfVolume::getVoxelSize() const$/;"	f	class:kfusion::cuda::TsdfVolume
+gmem	kfusion/src/cuda/device.hpp	/^        struct gmem$/;"	s	namespace:kfusion::device
+grab	kfusion/src/capture.cpp	/^bool kfusion::OpenNISource::grab(cv::Mat& depth, cv::Mat& image)$/;"	f	class:kfusion::OpenNISource
+gradient_delta_factor	kfusion/include/kfusion/kinfu.hpp	/^        float gradient_delta_factor; \/\/ in voxel sizes$/;"	m	struct:kfusion::KinFuParams
+gradient_delta_factor_	kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^            float gradient_delta_factor_;$/;"	m	class:kfusion::cuda::TsdfVolume
+half	kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^                typedef unsigned short half;$/;"	t	struct:kfusion::cuda::TsdfVolume::Entry
+half2float	kfusion/src/tsdf_volume.cpp	/^float kfusion::cuda::TsdfVolume::Entry::half2float(half)$/;"	f	class:kfusion::cuda::TsdfVolume::Entry
+has_depth	kfusion/src/capture.cpp	/^    bool has_depth;$/;"	m	struct:kfusion::OpenNISource::Impl	file:
+has_image	kfusion/src/capture.cpp	/^    bool has_image;$/;"	m	struct:kfusion::OpenNISource::Impl	file:
+icp	kfusion/src/kinfu.cpp	/^const kfusion::cuda::ProjectiveICP& kfusion::KinFu::icp() const$/;"	f	class:kfusion::KinFu
+icp	kfusion/src/kinfu.cpp	/^kfusion::cuda::ProjectiveICP& kfusion::KinFu::icp()$/;"	f	class:kfusion::KinFu
+icp_	kfusion/include/kfusion/kinfu.hpp	/^        cv::Ptr<cuda::ProjectiveICP> icp_;$/;"	m	class:kfusion::KinFu
+icp_angle_thres	kfusion/include/kfusion/kinfu.hpp	/^        float icp_angle_thres;         \/\/radians$/;"	m	struct:kfusion::KinFuParams
+icp_dist_thres	kfusion/include/kfusion/kinfu.hpp	/^        float icp_dist_thres;          \/\/meters$/;"	m	struct:kfusion::KinFuParams
+icp_iter_num	kfusion/include/kfusion/kinfu.hpp	/^        std::vector<int> icp_iter_num; \/\/iterations for level index 0,1,..,3$/;"	m	struct:kfusion::KinFuParams
+icp_truncate_depth_dist	kfusion/include/kfusion/kinfu.hpp	/^        float icp_truncate_depth_dist; \/\/meters$/;"	m	struct:kfusion::KinFuParams
+id	kfusion/src/cuda/temp_utils.hpp	/^            static __kf_device__ unsigned int id()$/;"	f	struct:kfusion::device::Warp
+image	kfusion/src/capture.cpp	/^    ImageGenerator image;$/;"	m	struct:kfusion::OpenNISource::Impl	file:
+imageMD	kfusion/src/capture.cpp	/^    ImageMetaData imageMD;$/;"	m	struct:kfusion::OpenNISource::Impl	file:
+impl_	kfusion/include/io/capture.hpp	/^        cv::Ptr<Impl> impl_;$/;"	m	class:kfusion::OpenNISource
+integrate	kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::integrate(const Dists& dists, const Affine3f& camera_pose, const Intr& intr)$/;"	f	class:kfusion::cuda::TsdfVolume
+intr	kfusion/include/kfusion/kinfu.hpp	/^        Intr intr;  \/\/Camera parameters$/;"	m	struct:kfusion::KinFuParams
+isMuchSmallerThan	kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ static bool isMuchSmallerThan (float x, float y)$/;"	f	struct:kfusion::device::Eigen33
+iteractive_mode_	apps/demo.cpp	/^    bool exit_, iteractive_mode_;$/;"	m	struct:KinFuApp	file:
+iters_	kfusion/include/kfusion/cuda/projective_icp.hpp	/^            std::vector<int> iters_;$/;"	m	class:kfusion::cuda::ProjectiveICP
+kfusion	kfusion/include/io/capture.hpp	/^namespace kfusion$/;"	n
+kfusion	kfusion/include/kfusion/cuda/device_array.hpp	/^namespace kfusion$/;"	n
+kfusion	kfusion/include/kfusion/cuda/device_memory.hpp	/^namespace kfusion$/;"	n
+kfusion	kfusion/include/kfusion/cuda/imgproc.hpp	/^namespace kfusion$/;"	n
+kfusion	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^namespace kfusion$/;"	n
+kfusion	kfusion/include/kfusion/cuda/projective_icp.hpp	/^namespace kfusion$/;"	n
+kfusion	kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^namespace kfusion$/;"	n
+kfusion	kfusion/include/kfusion/kinfu.hpp	/^namespace kfusion$/;"	n
+kfusion	kfusion/include/kfusion/types.hpp	/^namespace kfusion$/;"	n
+kfusion	kfusion/src/cuda/device.hpp	/^namespace kfusion$/;"	n
+kfusion	kfusion/src/cuda/temp_utils.hpp	/^namespace kfusion$/;"	n
+kfusion	kfusion/src/cuda/texture_binder.hpp	/^namespace kfusion$/;"	n
+kfusion	kfusion/src/internal.hpp	/^namespace kfusion$/;"	n
+kfusion	kfusion/src/precomp.hpp	/^namespace kfusion$/;"	n
+kfusion	kfusion/src/safe_call.hpp	/^namespace kfusion$/;"	n
+kinfu_	apps/demo.cpp	/^    KinFu::Ptr kinfu_;$/;"	m	struct:KinFuApp	file:
+laneId	kfusion/src/cuda/temp_utils.hpp	/^            static __kf_device__ unsigned int laneId()$/;"	f	struct:kfusion::device::Warp
+laneMaskLt	kfusion/src/cuda/temp_utils.hpp	/^            static __kf_device__ int laneMaskLt()$/;"	f	struct:kfusion::device::Warp
+light_pose	kfusion/include/kfusion/kinfu.hpp	/^        Vec3f light_pose; \/\/meters$/;"	m	struct:kfusion::KinFuParams
+locked_buffer	kfusion/src/projective_icp.cpp	/^    PageLockHelper locked_buffer;$/;"	m	struct:kfusion::cuda::ProjectiveICP::StreamHelper	file:
+m00	kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ float m00() const { return mat_pkg[0]; }$/;"	f	struct:kfusion::device::Eigen33
+m01	kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ float m01() const { return mat_pkg[1]; }$/;"	f	struct:kfusion::device::Eigen33
+m02	kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ float m02() const { return mat_pkg[2]; }$/;"	f	struct:kfusion::device::Eigen33
+m10	kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ float m10() const { return mat_pkg[1]; }$/;"	f	struct:kfusion::device::Eigen33
+m11	kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ float m11() const { return mat_pkg[3]; }$/;"	f	struct:kfusion::device::Eigen33
+m12	kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ float m12() const { return mat_pkg[4]; }$/;"	f	struct:kfusion::device::Eigen33
+m20	kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ float m20() const { return mat_pkg[2]; }$/;"	f	struct:kfusion::device::Eigen33
+m21	kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ float m21() const { return mat_pkg[4]; }$/;"	f	struct:kfusion::device::Eigen33
+m22	kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ float m22() const { return mat_pkg[5]; }$/;"	f	struct:kfusion::device::Eigen33
+main	apps/demo.cpp	/^int main (int argc, char* argv[])$/;"	f
+mat_pkg	kfusion/src/cuda/temp_utils.hpp	/^            volatile float* mat_pkg;$/;"	m	struct:kfusion::device::Eigen33
+max	kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ static float max() { return 3.402823466e+38f\/*FLT_MAX*\/; };$/;"	f	struct:kfusion::device::numeric_limits
+max	kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ static unsigned short max() { return USHRT_MAX; };$/;"	f	struct:kfusion::device::numeric_limits
+max_depth	kfusion/include/io/capture.hpp	/^        unsigned short max_depth;     \/\/ mm$/;"	m	class:kfusion::OpenNISource
+max_weight	kfusion/src/internal.hpp	/^            const int max_weight;$/;"	m	struct:kfusion::device::TsdfVolume
+max_weight_	kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^            int max_weight_;$/;"	m	class:kfusion::cuda::TsdfVolume
+min	kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ static float min() { return 1.175494351e-38f\/*FLT_MIN*\/; };$/;"	f	struct:kfusion::device::numeric_limits
+min_cosine	kfusion/src/internal.hpp	/^            float min_cosine;$/;"	m	struct:kfusion::device::ComputeIcpHelper
+n4	kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float12
+name	kfusion/include/kfusion/types.hpp	/^        const char* name;$/;"	m	struct:kfusion::ScopeTime
+ncurr	kfusion/src/internal.hpp	/^            PtrStep<Normal> ncurr;$/;"	m	struct:kfusion::device::ComputeIcpHelper
+no_sample_value	kfusion/include/io/capture.hpp	/^        int shadow_value, no_sample_value;$/;"	m	class:kfusion::OpenNISource
+node	kfusion/src/capture.cpp	/^    ProductionNode node;$/;"	m	struct:kfusion::OpenNISource::Impl	file:
+norm	kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ float norm(const float3& v)$/;"	f	namespace:kfusion::device
+norm_sqr	kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ float norm_sqr(const float3& v)$/;"	f	namespace:kfusion::device
+normal_x	kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float12
+normal_y	kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float12
+normal_z	kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float12
+normalized	kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ float3 normalized(const float3& v)$/;"	f	namespace:kfusion::device
+normals_	kfusion/include/kfusion/kinfu.hpp	/^        cuda::Normals normals_;$/;"	m	class:kfusion::KinFu
+normals_pyr	kfusion/include/kfusion/types.hpp	/^            std::vector<Normals> normals_pyr;$/;"	m	struct:kfusion::cuda::Frame
+numeric_limits	kfusion/src/cuda/temp_utils.hpp	/^        template<> struct numeric_limits<float>$/;"	s	namespace:kfusion::device
+numeric_limits	kfusion/src/cuda/temp_utils.hpp	/^        template<> struct numeric_limits<unsigned short>$/;"	s	namespace:kfusion::device
+open	kfusion/src/capture.cpp	/^void kfusion::OpenNISource::open (int device)$/;"	f	class:kfusion::OpenNISource
+open	kfusion/src/capture.cpp	/^void kfusion::OpenNISource::open(const std::string& filename, bool repeat \/*= false*\/)$/;"	f	class:kfusion::OpenNISource
+operator ()	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__       T& operator()(int y, int x)       { return ptr(y)[x]; }$/;"	f	struct:kfusion::cuda::PtrStep
+operator ()	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ const T& operator()(int y, int x) const { return ptr(y)[x]; }$/;"	f	struct:kfusion::cuda::PtrStep
+operator ()	kfusion/src/cuda/device.hpp	/^            __kf_device__ double operator () (double l, double r) const  { return l + r; }$/;"	f	struct:kfusion::device::plus
+operator ()	kfusion/src/cuda/device.hpp	/^            __kf_device__ float operator () (float l, float r) const  { return l + r; }$/;"	f	struct:kfusion::device::plus
+operator ()	kfusion/src/cuda/device.hpp	/^__kf_device__ const kfusion::device::TsdfVolume::elem_type* kfusion::device::TsdfVolume::operator() (int x, int y, int z) const$/;"	f	class:kfusion::device::TsdfVolume
+operator ()	kfusion/src/cuda/device.hpp	/^__kf_device__ float2 kfusion::device::Projector::operator()(const float3& p) const$/;"	f	class:kfusion::device::Projector
+operator ()	kfusion/src/cuda/device.hpp	/^__kf_device__ float3 kfusion::device::Reprojector::operator()(int u, int v, float z) const$/;"	f	class:kfusion::device::Reprojector
+operator ()	kfusion/src/cuda/device.hpp	/^__kf_device__ kfusion::device::TsdfVolume::elem_type* kfusion::device::TsdfVolume::operator()(int x, int y, int z)$/;"	f	class:kfusion::device::TsdfVolume
+operator ()	kfusion/src/kinfu.cpp	/^bool kfusion::KinFu::operator()(const kfusion::cuda::Depth& depth, const kfusion::cuda::Image& \/*image*\/)$/;"	f	class:kfusion::KinFu
+operator ()	kfusion/src/precomp.cpp	/^kfusion::Intr kfusion::Intr::operator()(int level_index) const$/;"	f	class:kfusion::Intr
+operator *	kfusion/src/cuda/device.hpp	/^        __kf_device__ Vec3f operator*(const Aff3f& a, const Vec3f& v) { return a.R * v + a.t; }$/;"	f	namespace:kfusion::device
+operator *	kfusion/src/cuda/device.hpp	/^        __kf_device__ Vec3f operator*(const Mat3f& m, const Vec3f& v)$/;"	f	namespace:kfusion::device
+operator *	kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ float3 operator*(const float3& v1, const float3& v2)$/;"	f	namespace:kfusion::device
+operator *	kfusion/src/cuda/temp_utils.hpp	/^        __kf_hdevice__ float3 operator*(const float& v, const float3& v1)$/;"	f	namespace:kfusion::device
+operator *	kfusion/src/cuda/temp_utils.hpp	/^        __kf_hdevice__ float3 operator*(const float3& v1, const float& v)$/;"	f	namespace:kfusion::device
+operator *	kfusion/src/cuda/temp_utils.hpp	/^        __kf_hdevice__ float3 operator*(const float3& v1, const int3& v2)$/;"	f	namespace:kfusion::device
+operator *=	kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ float3& operator*=(float3& vec, const float& v)$/;"	f	namespace:kfusion::device
+operator +	kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ float3 operator+(const float3& v1, const float3& v2)$/;"	f	namespace:kfusion::device
+operator +=	kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ float3& operator+=(float3& v1, const float3& v2)$/;"	f	namespace:kfusion::device
+operator +=	kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ float3& operator+=(float3& vec, const float& v)$/;"	f	namespace:kfusion::device
+operator -	kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ float3 operator-(const float3& v1, const float3& v2)$/;"	f	namespace:kfusion::device
+operator /	kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ float3 operator\/(const float3& v1, const float3& v2)$/;"	f	namespace:kfusion::device
+operator /	kfusion/src/cuda/temp_utils.hpp	/^        __kf_hdevice__ float3 operator\/(const float& v, const float3& vec)$/;"	f	namespace:kfusion::device
+operator <<	kfusion/src/precomp.cpp	/^std::ostream& operator << (std::ostream& os, const kfusion::Intr& intr)$/;"	f
+operator =	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray2D<T>& kfusion::cuda::DeviceArray2D<T>::operator=(const DeviceArray2D& other)$/;"	f	class:kfusion::cuda::DeviceArray2D
+operator =	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray<T>& kfusion::cuda::DeviceArray<T>::operator=(const DeviceArray& other)$/;"	f	class:kfusion::cuda::DeviceArray
+operator =	kfusion/src/device_memory.cpp	/^kfusion::cuda::DeviceMemory& kfusion::cuda::DeviceMemory::operator = (const kfusion::cuda::DeviceMemory& other_arg)$/;"	f	class:kfusion::cuda::DeviceMemory
+operator =	kfusion/src/device_memory.cpp	/^kfusion::cuda::DeviceMemory2D& kfusion::cuda::DeviceMemory2D::operator = (const kfusion::cuda::DeviceMemory2D& other_arg)$/;"	f	class:kfusion::cuda::DeviceMemory2D
+operator T*	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray2D<T>::operator T*() { return ptr(); }$/;"	f	class:kfusion::cuda::DeviceArray2D
+operator T*	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray<T>::operator T*() { return ptr(); }$/;"	f	class:kfusion::cuda::DeviceArray
+operator T*	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ operator       T*()       { return data; }$/;"	f	struct:kfusion::cuda::DevPtr
+operator []	kfusion/src/cuda/temp_utils.hpp	/^                __kf_hdevice__ const float3& operator[](int i) const { return data[i]; }$/;"	f	struct:kfusion::device::Eigen33::MiniMat
+operator []	kfusion/src/cuda/temp_utils.hpp	/^                __kf_hdevice__ float3& operator[](int i) { return data[i]; }$/;"	f	struct:kfusion::device::Eigen33::MiniMat
+operator const T*	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray2D<T>::operator const T*() const { return ptr(); }$/;"	f	class:kfusion::cuda::DeviceArray2D
+operator const T*	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray<T>::operator const T*() const { return ptr(); }$/;"	f	class:kfusion::cuda::DeviceArray
+operator const T*	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ operator const T*() const { return data; }$/;"	f	struct:kfusion::cuda::DevPtr
+operator cudaStream_t	kfusion/src/projective_icp.cpp	/^    operator cudaStream_t() { return stream; }$/;"	f	struct:kfusion::cuda::ProjectiveICP::StreamHelper
+operator float*	kfusion/src/projective_icp.cpp	/^    operator float*() { return locked_buffer.data; }$/;"	f	struct:kfusion::cuda::ProjectiveICP::StreamHelper
+operator kfusion::cuda::PtrStep<U>	kfusion/include/kfusion/cuda/device_memory.hpp	/^template <class U> kfusion::cuda::DeviceMemory2D::operator kfusion::cuda::PtrStep<U>() const$/;"	f	class:kfusion::cuda::DeviceMemory2D
+operator kfusion::cuda::PtrStepSz<U>	kfusion/include/kfusion/cuda/device_memory.hpp	/^template <class U> kfusion::cuda::DeviceMemory2D::operator kfusion::cuda::PtrStepSz<U>() const$/;"	f	class:kfusion::cuda::DeviceMemory2D
+operator kfusion::cuda::PtrSz<U>	kfusion/include/kfusion/cuda/device_memory.hpp	/^template <class U> inline kfusion::cuda::DeviceMemory::operator kfusion::cuda::PtrSz<U>() const$/;"	f	class:kfusion::cuda::DeviceMemory
+pack_tsdf	kfusion/src/cuda/device.hpp	/^__kf_device__ ushort2 kfusion::device::pack_tsdf (float tsdf, int weight)$/;"	f	class:kfusion::device
+params	kfusion/src/kinfu.cpp	/^const kfusion::KinFuParams& kfusion::KinFu::params() const$/;"	f	class:kfusion::KinFu
+params	kfusion/src/kinfu.cpp	/^kfusion::KinFuParams& kfusion::KinFu::params()$/;"	f	class:kfusion::KinFu
+params_	kfusion/include/kfusion/kinfu.hpp	/^        KinFuParams params_;$/;"	m	class:kfusion::KinFu
+pause_	apps/demo.cpp	/^    bool pause_ \/*= false*\/;$/;"	m	struct:KinFuApp	file:
+pixelSize	kfusion/include/io/capture.hpp	/^        double pixelSize;             \/\/ mm$/;"	m	class:kfusion::OpenNISource
+player_	kfusion/src/capture.cpp	/^    Player player_;$/;"	m	struct:kfusion::OpenNISource::Impl	file:
+plus	kfusion/src/cuda/device.hpp	/^        struct plus$/;"	s	namespace:kfusion::device
+points_	kfusion/include/kfusion/kinfu.hpp	/^        cuda::Cloud points_;$/;"	m	class:kfusion::KinFu
+points_pyr	kfusion/include/kfusion/types.hpp	/^            std::vector<Cloud> points_pyr;$/;"	m	struct:kfusion::cuda::Frame
+pose_	kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^            Affine3f pose_;$/;"	m	class:kfusion::cuda::TsdfVolume
+poses_	kfusion/include/kfusion/kinfu.hpp	/^        std::vector<Affine3f> poses_;$/;"	m	class:kfusion::KinFu
+prev_	kfusion/include/kfusion/kinfu.hpp	/^        cuda::Frame curr_, prev_;$/;"	m	class:kfusion::KinFu
+printCudaDeviceInfo	kfusion/src/core.cpp	/^void kf::cuda::printCudaDeviceInfo(int device)$/;"	f	class:kf::cuda
+printShortCudaDeviceInfo	kfusion/src/core.cpp	/^void kf::cuda::printShortCudaDeviceInfo(int device)$/;"	f	class:kf::cuda
+ptr	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline       T* kfusion::cuda::DeviceArray2D<T>::ptr(int y)       { return DeviceMemory2D::ptr<T>(y); }$/;"	f	class:kfusion::cuda::DeviceArray2D
+ptr	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline       T* kfusion::cuda::DeviceArray<T>::ptr()       { return DeviceMemory::ptr<T>(); }$/;"	f	class:kfusion::cuda::DeviceArray
+ptr	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline const T* kfusion::cuda::DeviceArray2D<T>::ptr(int y) const { return DeviceMemory2D::ptr<T>(y); }$/;"	f	class:kfusion::cuda::DeviceArray2D
+ptr	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline const T* kfusion::cuda::DeviceArray<T>::ptr() const { return DeviceMemory::ptr<T>(); }$/;"	f	class:kfusion::cuda::DeviceArray
+ptr	kfusion/include/kfusion/cuda/device_memory.hpp	/^template<class T>        T* kfusion::cuda::DeviceMemory2D::ptr(int y_arg)       { return (      T*)((      char*)data_ + y_arg * step_); }$/;"	f	class:kfusion::cuda::DeviceMemory2D
+ptr	kfusion/include/kfusion/cuda/device_memory.hpp	/^template<class T>  const T* kfusion::cuda::DeviceMemory2D::ptr(int y_arg) const { return (const T*)((const char*)data_ + y_arg * step_); }$/;"	f	class:kfusion::cuda::DeviceMemory2D
+ptr	kfusion/include/kfusion/cuda/device_memory.hpp	/^template<class T> inline       T* kfusion::cuda::DeviceMemory::ptr()       { return (      T*)data_; }$/;"	f	class:kfusion::cuda::DeviceMemory
+ptr	kfusion/include/kfusion/cuda/device_memory.hpp	/^template<class T> inline const T* kfusion::cuda::DeviceMemory::ptr() const { return (const T*)data_; }$/;"	f	class:kfusion::cuda::DeviceMemory
+ptr	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__       T* ptr(int y = 0)       { return (      T*)( (      char*)DevPtr<T>::data + y * step); }$/;"	f	struct:kfusion::cuda::PtrStep
+ptr	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ const T* ptr(int y = 0) const { return (const T*)( (const char*)DevPtr<T>::data + y * step); }$/;"	f	struct:kfusion::cuda::PtrStep
+quiet_NaN	kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ static float quiet_NaN() { return __int_as_float(0x7fffffff); \/*CUDART_NAN_F*\/ };$/;"	f	struct:kfusion::device::numeric_limits
+r	kfusion/include/kfusion/types.hpp	/^            struct { unsigned char b, g, r; };$/;"	m	struct:kfusion::RGB::__anon4::__anon5
+r	kfusion/include/kfusion/types.hpp	/^        unsigned char r, g, b;$/;"	m	struct:kfusion::PixelRGB
+raycast	kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::raycast(const Affine3f& camera_pose, const Intr& intr, Cloud& points, Normals& normals)$/;"	f	class:kfusion::cuda::TsdfVolume
+raycast	kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::raycast(const Affine3f& camera_pose, const Intr& intr, Depth& depth, Normals& normals)$/;"	f	class:kfusion::cuda::TsdfVolume
+raycast_step_factor	kfusion/include/kfusion/kinfu.hpp	/^        float raycast_step_factor;   \/\/ in voxel sizes$/;"	m	struct:kfusion::KinFuParams
+raycast_step_factor_	kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^            float raycast_step_factor_;$/;"	m	class:kfusion::cuda::TsdfVolume
+reduce	kfusion/src/cuda/temp_utils.hpp	/^            static __kf_device__ T reduce(volatile T* buffer, T init, BinOp op)$/;"	f	struct:kfusion::device::Block
+reduce	kfusion/src/cuda/temp_utils.hpp	/^            static __kf_device__ void reduce(volatile T* buffer, BinOp op)$/;"	f	struct:kfusion::device::Block
+refcount_	kfusion/include/kfusion/cuda/device_memory.hpp	/^            int* refcount_;$/;"	m	class:kfusion::cuda::DeviceMemory
+refcount_	kfusion/include/kfusion/cuda/device_memory.hpp	/^            int* refcount_;$/;"	m	class:kfusion::cuda::DeviceMemory2D
+release	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline void kfusion::cuda::DeviceArray2D<T>::release()$/;"	f	class:kfusion::cuda::DeviceArray2D
+release	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline void kfusion::cuda::DeviceArray<T>::release()$/;"	f	class:kfusion::cuda::DeviceArray
+release	kfusion/src/capture.cpp	/^void kfusion::OpenNISource::release ()$/;"	f	class:kfusion::OpenNISource
+release	kfusion/src/device_memory.cpp	/^void kfusion::cuda::DeviceMemory2D::release()$/;"	f	class:kfusion::cuda::DeviceMemory2D
+release	kfusion/src/device_memory.cpp	/^void kfusion::cuda::DeviceMemory::release()$/;"	f	class:kfusion::cuda::DeviceMemory
+renderImage	kfusion/src/imgproc.cpp	/^void kfusion::cuda::renderImage(const Cloud& points, const Normals& normals, const Intr& intr, const Vec3f& light_pose, Image& image)$/;"	f	class:kfusion::cuda
+renderImage	kfusion/src/imgproc.cpp	/^void kfusion::cuda::renderImage(const Depth& depth, const Normals& normals, const Intr& intr, const Vec3f& light_pose, Image& image)$/;"	f	class:kfusion::cuda
+renderImage	kfusion/src/kinfu.cpp	/^void kfusion::KinFu::renderImage(cuda::Image& image, const Affine3f& pose, int flag)$/;"	f	class:kfusion::KinFu
+renderImage	kfusion/src/kinfu.cpp	/^void kfusion::KinFu::renderImage(cuda::Image& image, int flag)$/;"	f	class:kfusion::KinFu
+renderTangentColors	kfusion/src/imgproc.cpp	/^void kfusion::cuda::renderTangentColors(const Normals& normals, Image& image)$/;"	f	class:kfusion::cuda
+reset	kfusion/src/kinfu.cpp	/^void kfusion::KinFu::reset()$/;"	f	class:kfusion::KinFu
+resizeDepthNormals	kfusion/src/imgproc.cpp	/^void kfusion::cuda::resizeDepthNormals(const Depth& depth, const Normals& normals, Depth& depth_out, Normals& normals_out)$/;"	f	class:kfusion::cuda
+resizePointsNormals	kfusion/src/imgproc.cpp	/^void kfusion::cuda::resizePointsNormals(const Cloud& points, const Normals& normals, Cloud& points_out, Normals& normals_out)$/;"	f	class:kfusion::cuda
+row0	kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ float3 row0() const { return make_float3( m00(), m01(), m02() ); }$/;"	f	struct:kfusion::device::Eigen33
+row1	kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ float3 row1() const { return make_float3( m10(), m11(), m12() ); }$/;"	f	struct:kfusion::device::Eigen33
+row2	kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ float3 row2() const { return make_float3( m20(), m21(), m22() ); }$/;"	f	struct:kfusion::device::Eigen33
+rows	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline int kfusion::cuda::DeviceArray2D<T>::rows() const { return DeviceMemory2D::rows(); }$/;"	f	class:kfusion::cuda::DeviceArray2D
+rows	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            int rows;                                                                              $/;"	m	struct:kfusion::cuda::PtrStepSz
+rows	kfusion/include/kfusion/kinfu.hpp	/^        int rows;  \/\/pixels$/;"	m	struct:kfusion::KinFuParams
+rows	kfusion/src/device_memory.cpp	/^int kfusion::cuda::DeviceMemory2D::rows() const { return rows_; }$/;"	f	class:kfusion::cuda::DeviceMemory2D
+rows	kfusion/src/internal.hpp	/^            float rows, cols;$/;"	m	struct:kfusion::device::ComputeIcpHelper
+rows_	kfusion/include/kfusion/cuda/device_memory.hpp	/^            int rows_;$/;"	m	class:kfusion::cuda::DeviceMemory2D
+scriptNode	kfusion/src/capture.cpp	/^    ScriptNode scriptNode;$/;"	m	struct:kfusion::OpenNISource::Impl	file:
+setAngleThreshold	kfusion/src/projective_icp.cpp	/^void kfusion::cuda::ProjectiveICP::setAngleThreshold(float angle)$/;"	f	class:kfusion::cuda::ProjectiveICP
+setDevice	kfusion/src/core.cpp	/^void kf::cuda::setDevice(int device)$/;"	f	class:kf::cuda
+setDistThreshold	kfusion/src/projective_icp.cpp	/^void kfusion::cuda::ProjectiveICP::setDistThreshold(float distance)$/;"	f	class:kfusion::cuda::ProjectiveICP
+setGradientDeltaFactor	kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::setGradientDeltaFactor(float factor) { gradient_delta_factor_ = factor; }$/;"	f	class:kfusion::cuda::TsdfVolume
+setIterationsNum	kfusion/src/projective_icp.cpp	/^void kfusion::cuda::ProjectiveICP::setIterationsNum(const std::vector<int>& iters)$/;"	f	class:kfusion::cuda::ProjectiveICP
+setLevelIntr	kfusion/src/projective_icp.cpp	/^void kfusion::device::ComputeIcpHelper::setLevelIntr(int level_index, float fx, float fy, float cx, float cy)$/;"	f	class:kfusion::device::ComputeIcpHelper
+setMaxWeight	kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::setMaxWeight(int weight) { max_weight_ = weight; }$/;"	f	class:kfusion::cuda::TsdfVolume
+setPose	kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::setPose(const Affine3f& pose) { pose_ = pose; }$/;"	f	class:kfusion::cuda::TsdfVolume
+setRaycastStepFactor	kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::setRaycastStepFactor(float factor) { raycast_step_factor_ = factor; }$/;"	f	class:kfusion::cuda::TsdfVolume
+setRegistration	kfusion/src/capture.cpp	/^bool kfusion::OpenNISource::setRegistration (bool value)$/;"	f	class:kfusion::OpenNISource
+setSize	kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::setSize(const Vec3f& size)$/;"	f	class:kfusion::cuda::TsdfVolume
+setTruncDist	kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::setTruncDist(float distance)$/;"	f	class:kfusion::cuda::TsdfVolume
+shadow_value	kfusion/include/io/capture.hpp	/^        int shadow_value, no_sample_value;$/;"	m	class:kfusion::OpenNISource
+shelp_	kfusion/include/kfusion/cuda/projective_icp.hpp	/^            cv::Ptr<StreamHelper> shelp_;$/;"	m	class:kfusion::cuda::ProjectiveICP
+show_depth	apps/demo.cpp	/^    void show_depth(const cv::Mat& depth)$/;"	f	struct:KinFuApp
+show_raycasted	apps/demo.cpp	/^    void show_raycasted(KinFu& kinfu)$/;"	f	struct:KinFuApp
+size	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline size_t kfusion::cuda::DeviceArray<T>::size() const { return sizeBytes() \/ elem_size; }$/;"	f	class:kfusion::cuda::DeviceArray
+size	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            size_t size;$/;"	m	struct:kfusion::cuda::PtrSz
+sizeBytes	kfusion/src/device_memory.cpp	/^size_t kfusion::cuda::DeviceMemory::sizeBytes() const { return sizeBytes_; }$/;"	f	class:kfusion::cuda::DeviceMemory
+sizeBytes_	kfusion/include/kfusion/cuda/device_memory.hpp	/^            size_t sizeBytes_;$/;"	m	class:kfusion::cuda::DeviceMemory
+size_	kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^            Vec3f size_;$/;"	m	class:kfusion::cuda::TsdfVolume
+start	kfusion/include/kfusion/types.hpp	/^        double start;$/;"	m	struct:kfusion::SampledScopeTime
+start	kfusion/include/kfusion/types.hpp	/^        double start;$/;"	m	struct:kfusion::ScopeTime
+step	kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            size_t step;            $/;"	m	struct:kfusion::cuda::PtrStep
+step	kfusion/src/device_memory.cpp	/^size_t kfusion::cuda::DeviceMemory2D::step() const { return step_; }$/;"	f	class:kfusion::cuda::DeviceMemory2D
+step_	kfusion/include/kfusion/cuda/device_memory.hpp	/^            size_t step_;$/;"	m	class:kfusion::cuda::DeviceMemory2D
+strError	kfusion/src/capture.cpp	/^    XnChar strError[1024];$/;"	m	struct:kfusion::OpenNISource::Impl	file:
+stream	kfusion/src/projective_icp.cpp	/^    cudaStream_t stream;$/;"	m	struct:kfusion::cuda::ProjectiveICP::StreamHelper	file:
+stride	kfusion/src/cuda/temp_utils.hpp	/^            static __kf_device__ unsigned int stride()$/;"	f	struct:kfusion::device::Block
+swap	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> void  kfusion::cuda::DeviceArray2D<T>::swap(DeviceArray2D& other_arg) { DeviceMemory2D::swap(other_arg); }$/;"	f	class:kfusion::cuda::DeviceArray2D
+swap	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> void kfusion::cuda::DeviceArray<T>::swap(DeviceArray& other_arg) { DeviceMemory::swap(other_arg); }$/;"	f	class:kfusion::cuda::DeviceArray
+swap	kfusion/src/cuda/temp_utils.hpp	/^        template <class T> __kf_hdevice__ void swap(T& a, T& b) { T c(a); a=b; b=c; }$/;"	f	namespace:kfusion::device
+swap	kfusion/src/device_memory.cpp	/^void kfusion::cuda::DeviceMemory2D::swap(DeviceMemory2D& other_arg)$/;"	f	class:kfusion::cuda::DeviceMemory2D
+swap	kfusion/src/device_memory.cpp	/^void kfusion::cuda::DeviceMemory::swap(DeviceMemory& other_arg)$/;"	f	class:kfusion::cuda::DeviceMemory
+swap	kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::swap(CudaData& data) { data_.swap(data); }$/;"	f	class:kfusion::cuda::TsdfVolume
+t	kfusion/src/internal.hpp	/^        struct Aff3f { Mat3f R; Vec3f t; };$/;"	m	struct:kfusion::device::Aff3f
+take_cloud	apps/demo.cpp	/^    void take_cloud(KinFu& kinfu)$/;"	f	struct:KinFuApp
+texref	kfusion/src/cuda/texture_binder.hpp	/^            const struct textureReference *texref;$/;"	m	class:kfusion::cuda::TextureBinder	typeref:struct:kfusion::cuda::TextureBinder::textureReference
+time_ms_	kfusion/include/kfusion/types.hpp	/^        double& time_ms_;$/;"	m	struct:kfusion::SampledScopeTime
+tr	kfusion/src/cuda/device.hpp	/^        __kf_device__ Vec3f tr(const float4& v) { return make_float3(v.x, v.y, v.z); }$/;"	f	namespace:kfusion::device
+trunc_dist	kfusion/src/internal.hpp	/^            const float trunc_dist;$/;"	m	struct:kfusion::device::TsdfVolume
+trunc_dist_	kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^            float trunc_dist_;$/;"	m	class:kfusion::cuda::TsdfVolume
+tsdf	kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^                half tsdf;$/;"	m	struct:kfusion::cuda::TsdfVolume::Entry
+tsdf	kfusion/src/kinfu.cpp	/^const kfusion::cuda::TsdfVolume& kfusion::KinFu::tsdf() const$/;"	f	class:kfusion::KinFu
+tsdf	kfusion/src/kinfu.cpp	/^kfusion::cuda::TsdfVolume& kfusion::KinFu::tsdf()$/;"	f	class:kfusion::KinFu
+tsdf_max_weight	kfusion/include/kfusion/kinfu.hpp	/^        int tsdf_max_weight;               \/\/frames$/;"	m	struct:kfusion::KinFuParams
+tsdf_min_camera_movement	kfusion/include/kfusion/kinfu.hpp	/^        float tsdf_min_camera_movement; \/\/meters, integrate only if exceedes$/;"	m	struct:kfusion::KinFuParams
+tsdf_trunc_dist	kfusion/include/kfusion/kinfu.hpp	/^        float tsdf_trunc_dist;             \/\/meters;$/;"	m	struct:kfusion::KinFuParams
+type	kfusion/include/kfusion/cuda/device_array.hpp	/^            typedef T type;$/;"	t	class:kfusion::cuda::DeviceArray
+type	kfusion/include/kfusion/cuda/device_array.hpp	/^            typedef T type;$/;"	t	class:kfusion::cuda::DeviceArray2D
+uchar	kfusion/src/internal.hpp	/^        typedef unsigned char uchar;$/;"	t	namespace:kfusion::device
+unitOrthogonal	kfusion/src/cuda/temp_utils.hpp	/^            static __kf_device__ float3 unitOrthogonal (const float3& src)$/;"	f	struct:kfusion::device::Eigen33
+unpack_tsdf	kfusion/src/cuda/device.hpp	/^__kf_device__ float kfusion::device::unpack_tsdf (ushort2 value) { return __half2float (value.x); }$/;"	f	class:kfusion::device
+unpack_tsdf	kfusion/src/cuda/device.hpp	/^__kf_device__ float kfusion::device::unpack_tsdf(ushort2 value, int& weight)$/;"	f	class:kfusion::device
+upload	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline void kfusion::cuda::DeviceArray2D<T>::upload(const void *host_ptr, size_t host_step, int rows, int cols)$/;"	f	class:kfusion::cuda::DeviceArray2D
+upload	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline void kfusion::cuda::DeviceArray<T>::upload(const T *host_ptr, size_t size)$/;"	f	class:kfusion::cuda::DeviceArray
+upload	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> template<class A> inline void kfusion::cuda::DeviceArray2D<T>::upload(const std::vector<T, A>& data, int cols)$/;"	f	class:kfusion::cuda::DeviceArray2D
+upload	kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> template<class A> inline void kfusion::cuda::DeviceArray<T>::upload(const std::vector<T, A>& data) { upload(&data[0], data.size()); }$/;"	f	class:kfusion::cuda::DeviceArray
+upload	kfusion/src/device_memory.cpp	/^void kfusion::cuda::DeviceMemory2D::upload(const void *host_ptr_arg, size_t host_step_arg, int rows_arg, int colsBytes_arg)$/;"	f	class:kfusion::cuda::DeviceMemory2D
+upload	kfusion/src/device_memory.cpp	/^void kfusion::cuda::DeviceMemory::upload(const void *host_ptr_arg, size_t sizeBytes_arg)$/;"	f	class:kfusion::cuda::DeviceMemory
+use_points	kfusion/include/kfusion/types.hpp	/^            bool use_points;$/;"	m	struct:kfusion::cuda::Frame
+ushort	kfusion/src/internal.hpp	/^        typedef unsigned short ushort;$/;"	t	namespace:kfusion::device
+vcurr	kfusion/src/internal.hpp	/^            PtrStep<Point> vcurr;$/;"	m	struct:kfusion::device::ComputeIcpHelper
+view_device_	apps/demo.cpp	/^    cuda::Image view_device_;$/;"	m	struct:KinFuApp	file:
+view_host_	apps/demo.cpp	/^    cv::Mat view_host_;$/;"	m	struct:KinFuApp	file:
+viz	apps/demo.cpp	/^    cv::viz::Viz3d viz;$/;"	m	struct:KinFuApp	file:
+volume_	kfusion/include/kfusion/kinfu.hpp	/^        cv::Ptr<cuda::TsdfVolume> volume_;$/;"	m	class:kfusion::KinFu
+volume_dims	kfusion/include/kfusion/kinfu.hpp	/^        Vec3i volume_dims; \/\/number of voxels$/;"	m	struct:kfusion::KinFuParams
+volume_pose	kfusion/include/kfusion/kinfu.hpp	/^        Affine3f volume_pose; \/\/meters, inital pose$/;"	m	struct:kfusion::KinFuParams
+volume_size	kfusion/include/kfusion/kinfu.hpp	/^        Vec3f volume_size; \/\/meters$/;"	m	struct:kfusion::KinFuParams
+voxel_size	kfusion/src/internal.hpp	/^            const float3 voxel_size;$/;"	m	struct:kfusion::device::TsdfVolume
+w	kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float12
+w	kfusion/src/internal.hpp	/^        struct float8  { float x, y, z, w, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float8
+waitAllDefaultStream	kfusion/src/imgproc.cpp	/^void kfusion::cuda::waitAllDefaultStream()$/;"	f	class:kfusion::cuda
+warp_reduce	kfusion/src/cuda/temp_utils.hpp	/^            static __kf_device__ int warp_reduce ( volatile int *ptr , const unsigned int tid)$/;"	f	struct:kfusion::device::Emulation
+weight	kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^                unsigned short weight;$/;"	m	struct:kfusion::cuda::TsdfVolume::Entry
+x	kfusion/include/kfusion/types.hpp	/^            struct { float x, y, z; };$/;"	m	struct:kfusion::Point::__anon2::__anon3
+x	kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float12
+x	kfusion/src/internal.hpp	/^        struct float8  { float x, y, z, w, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float8
+y	kfusion/include/kfusion/types.hpp	/^            struct { float x, y, z; };$/;"	m	struct:kfusion::Point::__anon2::__anon3
+y	kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float12
+y	kfusion/src/internal.hpp	/^        struct float8  { float x, y, z, w, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float8
+z	kfusion/include/kfusion/types.hpp	/^            struct { float x, y, z; };$/;"	m	struct:kfusion::Point::__anon2::__anon3
+z	kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float12
+z	kfusion/src/internal.hpp	/^        struct float8  { float x, y, z, w, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float8
+zstep	kfusion/src/cuda/device.hpp	/^__kf_device__ kfusion::device::TsdfVolume::elem_type* kfusion::device::TsdfVolume::zstep(elem_type *const ptr) const$/;"	f	class:kfusion::device::TsdfVolume
+~DeviceMemory	kfusion/src/device_memory.cpp	/^kfusion::cuda::DeviceMemory::~DeviceMemory() { release(); }$/;"	f	class:kfusion::cuda::DeviceMemory
+~DeviceMemory2D	kfusion/src/device_memory.cpp	/^kfusion::cuda::DeviceMemory2D::~DeviceMemory2D() { release(); }$/;"	f	class:kfusion::cuda::DeviceMemory2D
+~OpenNISource	kfusion/src/capture.cpp	/^kfusion::OpenNISource::~OpenNISource() { release (); }$/;"	f	class:kfusion::OpenNISource
+~ProjectiveICP	kfusion/src/projective_icp.cpp	/^kfusion::cuda::ProjectiveICP::~ProjectiveICP() {}$/;"	f	class:kfusion::cuda::ProjectiveICP
+~SampledScopeTime	kfusion/src/core.cpp	/^kf::SampledScopeTime::~SampledScopeTime()$/;"	f	class:kf::SampledScopeTime
+~ScopeTime	kfusion/src/core.cpp	/^kf::ScopeTime::~ScopeTime()$/;"	f	class:kf::ScopeTime
+~StreamHelper	kfusion/src/projective_icp.cpp	/^    ~StreamHelper() { cudaSafeCall( cudaStreamDestroy(stream) ); }$/;"	f	struct:kfusion::cuda::ProjectiveICP::StreamHelper
+~TextureBinder	kfusion/src/cuda/texture_binder.hpp	/^            ~TextureBinder()$/;"	f	class:kfusion::cuda::TextureBinder
+~TsdfVolume	kfusion/src/tsdf_volume.cpp	/^kfusion::cuda::TsdfVolume::~TsdfVolume() {}$/;"	f	class:kfusion::cuda::TsdfVolume

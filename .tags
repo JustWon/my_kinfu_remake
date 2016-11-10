@@ -1,0 +1,980 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	404;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	407;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	410;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	414;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	416;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	418;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	422;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	425;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	428;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	433;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	436;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	439;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	443;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	391;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	394;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	397;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	401;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	403;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	405;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	409;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	412;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	415;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	420;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	423;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	426;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	430;"	d	file:
+Aff3f	src/kfusion/src/internal.hpp	/^        struct Aff3f { Mat3f R; Vec3f t; };$/;"	s	namespace:kfusion::device
+Affine3f	src/kfusion/include/kfusion/types.hpp	/^    typedef cv::Affine3f Affine3f;$/;"	t	namespace:kfusion
+All	src/kfusion/src/cuda/temp_utils.hpp	/^            static __kf_device__ bool All(int predicate, volatile int* cta_buffer)$/;"	f	struct:kfusion::device::Emulation
+Ballot	src/kfusion/src/cuda/temp_utils.hpp	/^            static __kf_device__ int Ballot(int predicate, volatile int* cta_buffer)$/;"	f	struct:kfusion::device::Emulation
+Block	src/kfusion/src/cuda/temp_utils.hpp	/^        struct Block$/;"	s	namespace:kfusion::device
+CMAKE_BINARY_DIR	build/Makefile	/^CMAKE_BINARY_DIR = \/home\/dongwonshin\/Desktop\/my_codes\/kinfu_remake\/build$/;"	m
+CMAKE_BINARY_DIR	build/apps/Makefile	/^CMAKE_BINARY_DIR = \/home\/dongwonshin\/Desktop\/my_codes\/kinfu_remake\/build$/;"	m
+CMAKE_BINARY_DIR	build/kfusion/Makefile	/^CMAKE_BINARY_DIR = \/home\/dongwonshin\/Desktop\/my_codes\/kinfu_remake\/build$/;"	m
+CMAKE_COMMAND	build/Makefile	/^CMAKE_COMMAND = \/usr\/local\/bin\/cmake$/;"	m
+CMAKE_COMMAND	build/apps/Makefile	/^CMAKE_COMMAND = \/usr\/local\/bin\/cmake$/;"	m
+CMAKE_COMMAND	build/kfusion/Makefile	/^CMAKE_COMMAND = \/usr\/local\/bin\/cmake$/;"	m
+CMAKE_SOURCE_DIR	build/Makefile	/^CMAKE_SOURCE_DIR = \/home\/dongwonshin\/Desktop\/my_codes\/kinfu_remake\/src$/;"	m
+CMAKE_SOURCE_DIR	build/apps/Makefile	/^CMAKE_SOURCE_DIR = \/home\/dongwonshin\/Desktop\/my_codes\/kinfu_remake\/src$/;"	m
+CMAKE_SOURCE_DIR	build/kfusion/Makefile	/^CMAKE_SOURCE_DIR = \/home\/dongwonshin\/Desktop\/my_codes\/kinfu_remake\/src$/;"	m
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	101;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	108;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	115;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	122;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	129;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	137;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	142;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	149;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	152;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	155;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	158;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	161;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	176;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	190;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	19;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	200;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	218;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	227;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	230;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	245;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	252;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	270;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	273;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	276;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	42;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	50;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	56;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	62;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	71;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	80;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	94;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	101;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	108;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	115;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	122;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	129;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	137;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	13;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	142;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	149;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	152;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	155;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	170;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	184;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	194;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	19;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	212;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	221;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	224;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	239;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	257;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	260;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	263;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	42;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	50;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	56;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	62;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	71;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	80;"	d	file:
+COMPILER_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	94;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	103;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	110;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	117;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	124;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	130;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	138;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	144;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	165;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	180;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	191;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	202;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	221;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	233;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	238;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	247;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	24;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	255;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	260;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	43;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	51;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	58;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	64;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	73;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	83;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	88;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	96;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	103;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	110;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	117;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	124;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	130;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	138;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	144;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	159;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	15;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	174;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	185;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	196;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	215;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	227;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	232;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	242;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	247;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	24;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	43;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	51;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	58;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	64;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	73;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	83;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	88;"	d	file:
+COMPILER_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	96;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	104;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	111;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	118;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	125;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	131;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	139;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	145;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	166;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	181;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	193;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	203;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	222;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	234;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	239;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	248;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	256;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	25;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	261;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	44;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	52;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	59;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	65;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	74;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	84;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	89;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	97;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	104;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	111;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	118;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	125;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	131;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	139;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	145;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	160;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	16;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	175;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	187;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	197;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	216;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	228;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	233;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	243;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	248;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	25;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	44;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	52;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	59;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	65;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	74;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	84;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	89;"	d	file:
+COMPILER_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	97;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	105;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	112;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	119;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	126;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	133;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	146;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	167;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	182;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	196;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	207;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	210;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	223;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	235;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	240;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	249;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	257;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	262;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	27;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	29;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	46;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	53;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	67;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	76;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	85;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	90;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	98;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	105;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	112;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	119;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	126;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	133;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	146;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	161;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	176;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	190;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	201;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	204;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	217;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	229;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	234;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	244;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	249;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	27;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	29;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	46;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	53;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	67;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	76;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	85;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	90;"	d	file:
+COMPILER_VERSION_PATCH	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	98;"	d	file:
+COMPILER_VERSION_TWEAK	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	173;"	d	file:
+COMPILER_VERSION_TWEAK	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	214;"	d	file:
+COMPILER_VERSION_TWEAK	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	33;"	d	file:
+COMPILER_VERSION_TWEAK	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	167;"	d	file:
+COMPILER_VERSION_TWEAK	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	208;"	d	file:
+COMPILER_VERSION_TWEAK	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	33;"	d	file:
+CV_XADD	src/kfusion/src/device_memory.cpp	/^    template<typename _Tp> static inline _Tp CV_XADD(_Tp* addr, _Tp delta)$/;"	f	file:
+CV_XADD	src/kfusion/src/device_memory.cpp	20;"	d	file:
+CV_XADD	src/kfusion/src/device_memory.cpp	23;"	d	file:
+CV_XADD	src/kfusion/src/device_memory.cpp	28;"	d	file:
+CV_XADD	src/kfusion/src/device_memory.cpp	30;"	d	file:
+CV_XADD	src/kfusion/src/device_memory.cpp	36;"	d	file:
+C_DIALECT	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	516;"	d	file:
+C_DIALECT	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	518;"	d	file:
+C_DIALECT	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	521;"	d	file:
+C_DIALECT	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	523;"	d	file:
+C_DIALECT	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	525;"	d	file:
+Cloud	src/kfusion/include/kfusion/types.hpp	/^        typedef cuda::DeviceArray2D<Point> Cloud;$/;"	t	namespace:kfusion::cuda
+ComputeIcpHelper	src/kfusion/src/internal.hpp	/^        struct ComputeIcpHelper$/;"	s	namespace:kfusion::device
+ComputeIcpHelper	src/kfusion/src/projective_icp.cpp	/^kfusion::device::ComputeIcpHelper::ComputeIcpHelper(float dist_thres, float angle_thres)$/;"	f	class:kfusion::device::ComputeIcpHelper
+CudaData	src/kfusion/include/kfusion/types.hpp	/^        typedef cuda::DeviceMemory CudaData;$/;"	t	namespace:kfusion::cuda
+DEC	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	447;"	d	file:
+DEC	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	434;"	d	file:
+Depth	src/kfusion/include/kfusion/types.hpp	/^        typedef cuda::DeviceArray2D<unsigned short> Depth;$/;"	t	namespace:kfusion::cuda
+Depth	src/kfusion/src/internal.hpp	/^        typedef DeviceArray2D<ushort> Depth;$/;"	t	namespace:kfusion::device
+DepthPyr	src/kfusion/include/kfusion/cuda/projective_icp.hpp	/^            typedef std::vector<Depth> DepthPyr;$/;"	t	class:kfusion::cuda::ProjectiveICP
+DevPtr	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ DevPtr() : data(0) {}$/;"	f	struct:kfusion::cuda::DevPtr
+DevPtr	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ DevPtr(T* data_arg) : data(data_arg) {}$/;"	f	struct:kfusion::cuda::DevPtr
+DevPtr	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^        template<typename T> struct DevPtr$/;"	s	namespace:kfusion::cuda
+DeviceArray	src/kfusion/include/kfusion/cuda/device_array.hpp	/^        class KF_EXPORTS DeviceArray : public DeviceMemory$/;"	c	namespace:kfusion::cuda
+DeviceArray	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray<T>::DeviceArray() {}$/;"	f	class:kfusion::cuda::DeviceArray
+DeviceArray	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray<T>::DeviceArray(T *ptr, size_t size) : DeviceMemory(ptr, size * elem_size) {}$/;"	f	class:kfusion::cuda::DeviceArray
+DeviceArray	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray<T>::DeviceArray(const DeviceArray& other) : DeviceMemory(other) {}$/;"	f	class:kfusion::cuda::DeviceArray
+DeviceArray	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray<T>::DeviceArray(size_t size) : DeviceMemory(size * elem_size) {}$/;"	f	class:kfusion::cuda::DeviceArray
+DeviceArray2D	src/kfusion/include/kfusion/cuda/device_array.hpp	/^        class KF_EXPORTS DeviceArray2D : public DeviceMemory2D$/;"	c	namespace:kfusion::cuda
+DeviceArray2D	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray2D<T>::DeviceArray2D() {}$/;"	f	class:kfusion::cuda::DeviceArray2D
+DeviceArray2D	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray2D<T>::DeviceArray2D(const DeviceArray2D& other) : DeviceMemory2D(other) {}$/;"	f	class:kfusion::cuda::DeviceArray2D
+DeviceArray2D	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray2D<T>::DeviceArray2D(int rows, int cols) : DeviceMemory2D(rows, cols * elem_size) {}$/;"	f	class:kfusion::cuda::DeviceArray2D
+DeviceArray2D	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray2D<T>::DeviceArray2D(int rows, int cols, void *data, size_t stepBytes) : DeviceMemory2D(rows, cols * elem_size, data, stepBytes) {}$/;"	f	class:kfusion::cuda::DeviceArray2D
+DeviceMemory	src/kfusion/include/kfusion/cuda/device_memory.hpp	/^        class KF_EXPORTS DeviceMemory$/;"	c	namespace:kfusion::cuda
+DeviceMemory	src/kfusion/src/device_memory.cpp	/^kfusion::cuda::DeviceMemory::DeviceMemory() : data_(0), sizeBytes_(0), refcount_(0) {}$/;"	f	class:kfusion::cuda::DeviceMemory
+DeviceMemory	src/kfusion/src/device_memory.cpp	/^kfusion::cuda::DeviceMemory::DeviceMemory(const DeviceMemory& other_arg)$/;"	f	class:kfusion::cuda::DeviceMemory
+DeviceMemory	src/kfusion/src/device_memory.cpp	/^kfusion::cuda::DeviceMemory::DeviceMemory(size_t sizeBtes_arg)  : data_(0), sizeBytes_(0), refcount_(0) { create(sizeBtes_arg); }$/;"	f	class:kfusion::cuda::DeviceMemory
+DeviceMemory	src/kfusion/src/device_memory.cpp	/^kfusion::cuda::DeviceMemory::DeviceMemory(void *ptr_arg, size_t sizeBytes_arg) : data_(ptr_arg), sizeBytes_(sizeBytes_arg), refcount_(0){}$/;"	f	class:kfusion::cuda::DeviceMemory
+DeviceMemory2D	src/kfusion/include/kfusion/cuda/device_memory.hpp	/^        class KF_EXPORTS DeviceMemory2D$/;"	c	namespace:kfusion::cuda
+DeviceMemory2D	src/kfusion/src/device_memory.cpp	/^kfusion::cuda::DeviceMemory2D::DeviceMemory2D() : data_(0), step_(0), colsBytes_(0), rows_(0), refcount_(0) {}$/;"	f	class:kfusion::cuda::DeviceMemory2D
+DeviceMemory2D	src/kfusion/src/device_memory.cpp	/^kfusion::cuda::DeviceMemory2D::DeviceMemory2D(const DeviceMemory2D& other_arg) :$/;"	f	class:kfusion::cuda::DeviceMemory2D
+DeviceMemory2D	src/kfusion/src/device_memory.cpp	/^kfusion::cuda::DeviceMemory2D::DeviceMemory2D(int rows_arg, int colsBytes_arg)$/;"	f	class:kfusion::cuda::DeviceMemory2D
+DeviceMemory2D	src/kfusion/src/device_memory.cpp	/^kfusion::cuda::DeviceMemory2D::DeviceMemory2D(int rows_arg, int colsBytes_arg, void *data_arg, size_t step_arg)$/;"	f	class:kfusion::cuda::DeviceMemory2D
+Dists	src/kfusion/include/kfusion/types.hpp	/^        typedef cuda::DeviceArray2D<unsigned short> Dists;$/;"	t	namespace:kfusion::cuda
+Dists	src/kfusion/src/internal.hpp	/^        typedef PtrStepSz<ushort> Dists;$/;"	t	namespace:kfusion::device
+EACH	src/kfusion/include/kfusion/types.hpp	/^        enum { EACH = 33 };$/;"	e	enum:kfusion::SampledScopeTime::__anon6
+EQUALS	build/Makefile	/^EQUALS = =$/;"	m
+EQUALS	build/apps/Makefile	/^EQUALS = =$/;"	m
+EQUALS	build/kfusion/Makefile	/^EQUALS = =$/;"	m
+Eigen33	src/kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ Eigen33(volatile float* mat_pkg_arg) : mat_pkg(mat_pkg_arg) {}$/;"	f	struct:kfusion::device::Eigen33
+Eigen33	src/kfusion/src/cuda/temp_utils.hpp	/^        struct Eigen33$/;"	s	namespace:kfusion::device
+Emulation	src/kfusion/src/cuda/temp_utils.hpp	/^        struct Emulation$/;"	s	namespace:kfusion::device
+Entry	src/kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^            struct Entry$/;"	s	class:kfusion::cuda::TsdfVolume
+Frame	src/kfusion/include/kfusion/types.hpp	/^        struct Frame$/;"	s	namespace:kfusion::cuda
+HEX	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	458;"	d	file:
+HEX	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	445;"	d	file:
+ID_VOID_MAIN	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	6;"	d	file:
+Image	src/kfusion/include/kfusion/types.hpp	/^        typedef cuda::DeviceArray2D<RGB> Image;$/;"	t	namespace:kfusion::cuda
+Image	src/kfusion/src/internal.hpp	/^        typedef DeviceArray2D<uchar4> Image;$/;"	t	namespace:kfusion::device
+Impl	src/kfusion/src/capture.cpp	/^struct kfusion::OpenNISource::Impl$/;"	s	class:kfusion::OpenNISource	file:
+Intr	src/kfusion/include/kfusion/types.hpp	/^    struct KF_EXPORTS Intr$/;"	s	namespace:kfusion
+Intr	src/kfusion/src/precomp.cpp	/^kfusion::Intr::Intr () {}$/;"	f	class:kfusion::Intr
+Intr	src/kfusion/src/precomp.cpp	/^kfusion::Intr::Intr (float fx_, float fy_, float cx_, float cy_) : fx(fx_), fy(fy_), cx(cx_), cy(cy_) {}$/;"	f	class:kfusion::Intr
+KF_EXPORTS	src/kfusion/include/kfusion/exports.hpp	4;"	d
+KF_EXPORTS	src/kfusion/include/kfusion/exports.hpp	6;"	d
+KeyboardCallback	src/apps/demo.cpp	/^    static void KeyboardCallback(const cv::viz::KeyboardEvent& event, void* pthis)$/;"	f	struct:KinFuApp
+KinFu	src/kfusion/include/kfusion/kinfu.hpp	/^    class KF_EXPORTS KinFu$/;"	c	namespace:kfusion
+KinFu	src/kfusion/src/kinfu.cpp	/^kfusion::KinFu::KinFu(const KinFuParams& params) : frame_counter_(0), params_(params)$/;"	f	class:kfusion::KinFu
+KinFuApp	src/apps/demo.cpp	/^    KinFuApp(OpenNISource& source) : exit_ (false),  iteractive_mode_(false), capture_ (source), pause_(false)$/;"	f	struct:KinFuApp
+KinFuApp	src/apps/demo.cpp	/^struct KinFuApp$/;"	s	file:
+KinFuParams	src/kfusion/include/kfusion/kinfu.hpp	/^    struct KF_EXPORTS KinFuParams$/;"	s	namespace:kfusion
+LOG_WARP_SIZE	src/kfusion/src/cuda/temp_utils.hpp	/^                LOG_WARP_SIZE = 5,$/;"	e	enum:kfusion::device::Warp::__anon11
+LdCs	src/kfusion/src/cuda/device.hpp	/^    template<> __kf_device__ ushort2 kfusion::device::gmem::LdCs(ushort2* ptr)$/;"	f	class:kfusion::device::gmem
+MAX_PYRAMID_LEVELS	src/kfusion/include/kfusion/cuda/projective_icp.hpp	/^            enum { MAX_PYRAMID_LEVELS = 4 };$/;"	e	enum:kfusion::cuda::ProjectiveICP::__anon9
+Mat33	src/kfusion/src/cuda/temp_utils.hpp	/^            typedef MiniMat<3> Mat33;$/;"	t	struct:kfusion::device::Eigen33
+Mat3f	src/kfusion/include/kfusion/types.hpp	/^    typedef cv::Matx33f Mat3f;$/;"	t	namespace:kfusion
+Mat3f	src/kfusion/src/internal.hpp	/^        struct Mat3f { float3 data[3]; };$/;"	s	namespace:kfusion::device
+Mat43	src/kfusion/src/cuda/temp_utils.hpp	/^            typedef MiniMat<4> Mat43;$/;"	t	struct:kfusion::device::Eigen33
+Mat6f	src/kfusion/src/projective_icp.cpp	/^    typedef cv::Matx66f Mat6f;$/;"	t	struct:kfusion::cuda::ProjectiveICP::StreamHelper	file:
+MiniMat	src/kfusion/src/cuda/temp_utils.hpp	/^            template<int Rows> struct MiniMat$/;"	s	struct:kfusion::device::Eigen33
+Normal	src/kfusion/include/kfusion/types.hpp	/^    typedef Point Normal;$/;"	t	namespace:kfusion
+Normal	src/kfusion/src/internal.hpp	/^        typedef float4 Normal;$/;"	t	namespace:kfusion::device
+Normals	src/kfusion/include/kfusion/types.hpp	/^        typedef cuda::DeviceArray2D<Normal> Normals;$/;"	t	namespace:kfusion::cuda
+Normals	src/kfusion/src/internal.hpp	/^        typedef DeviceArray2D<Normal> Normals;$/;"	t	namespace:kfusion::device
+NormalsPyr	src/kfusion/include/kfusion/cuda/projective_icp.hpp	/^            typedef std::vector<Normals> NormalsPyr;$/;"	t	class:kfusion::cuda::ProjectiveICP
+OpenNISource	src/kfusion/include/io/capture.hpp	/^    class KF_EXPORTS OpenNISource$/;"	c	namespace:kfusion
+OpenNISource	src/kfusion/src/capture.cpp	/^kfusion::OpenNISource::OpenNISource() : depth_focal_length_VGA (0.f), baseline (0.f),$/;"	f	class:kfusion::OpenNISource
+OpenNISource	src/kfusion/src/capture.cpp	/^kfusion::OpenNISource::OpenNISource(const string& filename, bool repeat \/*= false*\/) {open (filename, repeat); }$/;"	f	class:kfusion::OpenNISource
+OpenNISource	src/kfusion/src/capture.cpp	/^kfusion::OpenNISource::OpenNISource(int device) {open (device); }$/;"	f	class:kfusion::OpenNISource
+PASS1	src/kfusion/src/kinfu.cpp	244;"	d	file:
+PASS1	src/kfusion/src/kinfu.cpp	269;"	d	file:
+PASS1	src/kfusion/src/kinfu.cpp	287;"	d	file:
+PASS1	src/kfusion/src/kinfu.cpp	318;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	301;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	304;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	307;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	310;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	313;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	316;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	319;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	322;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	325;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	328;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	331;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	334;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	337;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	340;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	343;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	346;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	349;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	352;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	355;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	358;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	361;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	364;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	367;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	370;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	373;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	377;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	380;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	383;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	386;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	389;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	393;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	288;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	291;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	294;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	297;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	300;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	303;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	306;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	309;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	312;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	315;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	318;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	321;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	324;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	327;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	330;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	333;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	336;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	339;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	342;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	345;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	348;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	351;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	354;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	357;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	360;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	364;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	367;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	370;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	373;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	376;"	d	file:
+PLATFORM_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	380;"	d	file:
+PROP_OPENNI_REGISTRATION_ON	src/kfusion/include/io/capture.hpp	/^        enum { PROP_OPENNI_REGISTRATION_ON  = 104 };$/;"	e	enum:kfusion::OpenNISource::__anon1
+PageLockHelper	src/kfusion/src/internal.hpp	/^            struct PageLockHelper$/;"	s	struct:kfusion::device::ComputeIcpHelper
+PageLockHelper	src/kfusion/src/projective_icp.cpp	/^    typedef device::ComputeIcpHelper::PageLockHelper PageLockHelper;$/;"	t	struct:kfusion::cuda::ProjectiveICP::StreamHelper	file:
+PixelRGB	src/kfusion/include/kfusion/types.hpp	/^    struct PixelRGB$/;"	s	namespace:kfusion
+Point	src/kfusion/include/kfusion/types.hpp	/^    struct Point$/;"	s	namespace:kfusion
+Point	src/kfusion/src/internal.hpp	/^        typedef float4 Point;$/;"	t	namespace:kfusion::device
+Points	src/kfusion/src/internal.hpp	/^        typedef DeviceArray2D<Point> Points;$/;"	t	namespace:kfusion::device
+PointsPyr	src/kfusion/include/kfusion/cuda/projective_icp.hpp	/^            typedef std::vector<Cloud> PointsPyr;$/;"	t	class:kfusion::cuda::ProjectiveICP
+ProjectiveICP	src/kfusion/include/kfusion/cuda/projective_icp.hpp	/^        class ProjectiveICP$/;"	c	namespace:kfusion::cuda
+ProjectiveICP	src/kfusion/src/projective_icp.cpp	/^kfusion::cuda::ProjectiveICP::ProjectiveICP() : angle_thres_(deg2rad(20.f)), dist_thres_(0.1f)$/;"	f	class:kfusion::cuda::ProjectiveICP
+Projector	src/kfusion/src/internal.hpp	/^            Projector(){}$/;"	f	struct:kfusion::device::Projector
+Projector	src/kfusion/src/internal.hpp	/^        struct Projector$/;"	s	namespace:kfusion::device
+Projector	src/kfusion/src/precomp.cpp	/^kfusion::device::Projector::Projector(float fx, float fy, float cx, float cy) : f(make_float2(fx, fy)), c(make_float2(cx, cy)) {}$/;"	f	class:kfusion::device::Projector
+Ptr	src/kfusion/include/kfusion/kinfu.hpp	/^        typedef cv::Ptr<KinFu> Ptr;$/;"	t	class:kfusion::KinFu
+PtrStep	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ PtrStep() : step(0) {}$/;"	f	struct:kfusion::cuda::PtrStep
+PtrStep	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ PtrStep(T* data_arg, size_t step_arg) : DevPtr<T>(data_arg), step(step_arg) {}$/;"	f	struct:kfusion::cuda::PtrStep
+PtrStep	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^        template<typename T>  struct PtrStep : public DevPtr<T>$/;"	s	namespace:kfusion::cuda
+PtrStepSz	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ PtrStepSz() : cols(0), rows(0) {}$/;"	f	struct:kfusion::cuda::PtrStepSz
+PtrStepSz	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ PtrStepSz(int rows_arg, int cols_arg, T* data_arg, size_t step_arg)$/;"	f	struct:kfusion::cuda::PtrStepSz
+PtrStepSz	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^        template <typename T> struct PtrStepSz : public PtrStep<T>$/;"	s	namespace:kfusion::cuda
+PtrSz	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ PtrSz() : size(0) {}$/;"	f	struct:kfusion::cuda::PtrSz
+PtrSz	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ PtrSz(T* data_arg, size_t size_arg) : DevPtr<T>(data_arg), size(size_arg) {}$/;"	f	struct:kfusion::cuda::PtrSz
+PtrSz	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^        template<typename T> struct PtrSz : public DevPtr<T>$/;"	s	namespace:kfusion::cuda
+R	src/kfusion/src/internal.hpp	/^        struct Aff3f { Mat3f R; Vec3f t; };$/;"	m	struct:kfusion::device::Aff3f
+REPORT_ERROR	src/kfusion/src/capture.cpp	38;"	d	file:
+RGB	src/kfusion/include/kfusion/types.hpp	/^    struct RGB$/;"	s	namespace:kfusion
+RGB24	src/kfusion/include/io/capture.hpp	/^        typedef kfusion::PixelRGB RGB24;$/;"	t	class:kfusion::OpenNISource
+RM	build/Makefile	/^RM = \/usr\/local\/bin\/cmake -E remove -f$/;"	m
+RM	build/apps/Makefile	/^RM = \/usr\/local\/bin\/cmake -E remove -f$/;"	m
+RM	build/kfusion/Makefile	/^RM = \/usr\/local\/bin\/cmake -E remove -f$/;"	m
+Reprojector	src/kfusion/src/internal.hpp	/^            Reprojector() {}$/;"	f	struct:kfusion::device::Reprojector
+Reprojector	src/kfusion/src/internal.hpp	/^        struct Reprojector$/;"	s	namespace:kfusion::device
+Reprojector	src/kfusion/src/precomp.cpp	/^kfusion::device::Reprojector::Reprojector(float fx, float fy, float cx, float cy) : finv(make_float2(1.f\/fx, 1.f\/fy)), c(make_float2(cx, cy)) {}$/;"	f	class:kfusion::device::Reprojector
+SHELL	build/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SHELL	build/apps/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SHELL	build/kfusion/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SIMULATE_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	163;"	d	file:
+SIMULATE_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	178;"	d	file:
+SIMULATE_ID	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	21;"	d	file:
+SIMULATE_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	157;"	d	file:
+SIMULATE_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	172;"	d	file:
+SIMULATE_ID	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	21;"	d	file:
+SIMULATE_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	170;"	d	file:
+SIMULATE_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	185;"	d	file:
+SIMULATE_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	37;"	d	file:
+SIMULATE_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	164;"	d	file:
+SIMULATE_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	179;"	d	file:
+SIMULATE_VERSION_MAJOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	37;"	d	file:
+SIMULATE_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	171;"	d	file:
+SIMULATE_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	186;"	d	file:
+SIMULATE_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	38;"	d	file:
+SIMULATE_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	165;"	d	file:
+SIMULATE_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	180;"	d	file:
+SIMULATE_VERSION_MINOR	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	38;"	d	file:
+STRIDE	src/kfusion/src/cuda/temp_utils.hpp	/^                STRIDE        = WARP_SIZE$/;"	e	enum:kfusion::device::Warp::__anon11
+STRINGIFY	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	297;"	d	file:
+STRINGIFY	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	284;"	d	file:
+STRINGIFY_HELPER	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	296;"	d	file:
+STRINGIFY_HELPER	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	283;"	d	file:
+SUFFIXES	build/Makefile	/^SUFFIXES =$/;"	m
+SUFFIXES	build/apps/Makefile	/^SUFFIXES =$/;"	m
+SUFFIXES	build/kfusion/Makefile	/^SUFFIXES =$/;"	m
+SampledScopeTime	src/kfusion/include/kfusion/types.hpp	/^    struct KF_EXPORTS SampledScopeTime$/;"	s	namespace:kfusion
+SampledScopeTime	src/kfusion/src/core.cpp	/^kf::SampledScopeTime::SampledScopeTime(double& time_ms) : time_ms_(time_ms)$/;"	f	class:kf::SampledScopeTime
+ScopeTime	src/kfusion/include/kfusion/types.hpp	/^    struct KF_EXPORTS ScopeTime$/;"	s	namespace:kfusion
+ScopeTime	src/kfusion/src/core.cpp	/^kf::ScopeTime::ScopeTime(const char *name_) : name(name_)$/;"	f	class:kf::ScopeTime
+StCs	src/kfusion/src/cuda/device.hpp	/^    template<> __kf_device__ void kfusion::device::gmem::StCs(const ushort2& val, ushort2* ptr)$/;"	f	class:kfusion::device::gmem
+StreamHelper	src/kfusion/src/projective_icp.cpp	/^    StreamHelper() { cudaSafeCall( cudaStreamCreate(&stream) ); }$/;"	f	struct:kfusion::cuda::ProjectiveICP::StreamHelper
+StreamHelper	src/kfusion/src/projective_icp.cpp	/^struct kfusion::cuda::ProjectiveICP::StreamHelper$/;"	s	class:kfusion::cuda::ProjectiveICP	file:
+TextureBinder	src/kfusion/src/cuda/texture_binder.hpp	/^            TextureBinder(const A& arr, const struct texture<T, 2, readMode>& tex, const cudaChannelFormatDesc& desc) : texref(&tex)$/;"	f	class:kfusion::cuda::TextureBinder
+TextureBinder	src/kfusion/src/cuda/texture_binder.hpp	/^            TextureBinder(const DeviceArray2D<T>& arr, const struct texture<T, 2, readMode>& tex) : texref(&tex)$/;"	f	class:kfusion::cuda::TextureBinder
+TextureBinder	src/kfusion/src/cuda/texture_binder.hpp	/^            TextureBinder(const DeviceArray<T>& arr, const struct texture<T, 1, readMode> &tex) : texref(&tex)$/;"	f	class:kfusion::cuda::TextureBinder
+TextureBinder	src/kfusion/src/cuda/texture_binder.hpp	/^            TextureBinder(const PtrStepSz<T>& arr, const struct texture<T, 2, readMode>& tex) : texref(&tex)$/;"	f	class:kfusion::cuda::TextureBinder
+TextureBinder	src/kfusion/src/cuda/texture_binder.hpp	/^            TextureBinder(const PtrSz<T>& arr, const struct texture<T, 1, readMode> &tex) : texref(&tex)$/;"	f	class:kfusion::cuda::TextureBinder
+TextureBinder	src/kfusion/src/cuda/texture_binder.hpp	/^        class TextureBinder$/;"	c	namespace:kfusion::cuda
+TsdfVolume	src/kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^        class KF_EXPORTS TsdfVolume$/;"	c	namespace:kfusion::cuda
+TsdfVolume	src/kfusion/src/internal.hpp	/^        struct TsdfVolume$/;"	s	namespace:kfusion::device
+TsdfVolume	src/kfusion/src/precomp.cpp	/^kfusion::device::TsdfVolume::TsdfVolume(elem_type* _data, int3 _dims, float3 _voxel_size, float _trunc_dist, int _max_weight)$/;"	f	class:kfusion::device::TsdfVolume
+TsdfVolume	src/kfusion/src/tsdf_volume.cpp	/^kfusion::cuda::TsdfVolume::TsdfVolume(const Vec3i& dims) : data_(), trunc_dist_(0.03f), max_weight_(128), dims_(dims),$/;"	f	class:kfusion::cuda::TsdfVolume
+Vec3f	src/kfusion/include/kfusion/types.hpp	/^    typedef cv::Vec3f Vec3f;$/;"	t	namespace:kfusion
+Vec3f	src/kfusion/src/internal.hpp	/^        typedef float3 Vec3f;$/;"	t	namespace:kfusion::device
+Vec3i	src/kfusion/include/kfusion/types.hpp	/^    typedef cv::Vec3i Vec3i;$/;"	t	namespace:kfusion
+Vec3i	src/kfusion/src/internal.hpp	/^        typedef int3   Vec3i;$/;"	t	namespace:kfusion::device
+Vec6f	src/kfusion/src/projective_icp.cpp	/^    typedef cv::Vec6f Vec6f;$/;"	t	struct:kfusion::cuda::ProjectiveICP::StreamHelper	file:
+WARP_SIZE	src/kfusion/src/cuda/temp_utils.hpp	/^                WARP_SIZE     = 1 << LOG_WARP_SIZE,$/;"	e	enum:kfusion::device::Warp::__anon11
+Warp	src/kfusion/src/cuda/temp_utils.hpp	/^        struct Warp$/;"	s	namespace:kfusion::device
+_ASM_PTR_	src/kfusion/src/cuda/device.hpp	116;"	d
+_ASM_PTR_	src/kfusion/src/cuda/device.hpp	99;"	d
+_CRT_SECURE_NO_DEPRECATE	src/kfusion/src/capture.cpp	2;"	d	file:
+___cudaSafeCall	src/kfusion/src/safe_call.hpp	/^        static inline void ___cudaSafeCall(cudaError_t err, const char *file, const int line, const char *func = "")$/;"	f	namespace:kfusion::cuda
+__kf_device__	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	5;"	d
+__kf_device__	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	8;"	d
+__kf_hdevice__	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	4;"	d
+__kf_hdevice__	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	7;"	d
+aff	src/kfusion/src/internal.hpp	/^            Aff3f aff;$/;"	m	struct:kfusion::device::ComputeIcpHelper
+allocate_buffers	src/kfusion/src/kinfu.cpp	/^void kfusion::KinFu::allocate_buffers()$/;"	f	class:kfusion::KinFu
+angle_thres_	src/kfusion/include/kfusion/cuda/projective_icp.hpp	/^            float angle_thres_;$/;"	m	class:kfusion::cuda::ProjectiveICP
+applyAffine	src/kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::applyAffine(const Affine3f& affine) { pose_ = affine * pose_; }$/;"	f	class:kfusion::cuda::TsdfVolume
+b	src/kfusion/include/kfusion/types.hpp	/^            struct { unsigned char b, g, r; };$/;"	m	struct:kfusion::RGB::__anon4::__anon5
+b	src/kfusion/include/kfusion/types.hpp	/^        unsigned char r, g, b;$/;"	m	struct:kfusion::PixelRGB
+baseline	src/kfusion/include/io/capture.hpp	/^        float baseline;               \/\/ mm$/;"	m	class:kfusion::OpenNISource
+beg	src/kfusion/src/cuda/device.hpp	/^__kf_device__ kfusion::device::TsdfVolume::elem_type* kfusion::device::TsdfVolume::beg(int x, int y) const$/;"	f	class:kfusion::device::TsdfVolume
+bgra	src/kfusion/include/kfusion/types.hpp	/^            int bgra;$/;"	m	union:kfusion::RGB::__anon4
+bilateral_kernel_size	src/kfusion/include/kfusion/kinfu.hpp	/^        int   bilateral_kernel_size;   \/\/pixels$/;"	m	struct:kfusion::KinFuParams
+bilateral_sigma_depth	src/kfusion/include/kfusion/kinfu.hpp	/^        float bilateral_sigma_depth;   \/\/meters$/;"	m	struct:kfusion::KinFuParams
+bilateral_sigma_spatial	src/kfusion/include/kfusion/kinfu.hpp	/^        float bilateral_sigma_spatial;   \/\/pixels$/;"	m	struct:kfusion::KinFuParams
+binaryExclScan	src/kfusion/src/cuda/temp_utils.hpp	/^            static __kf_device__ int binaryExclScan(int ballot_mask)$/;"	f	struct:kfusion::device::Warp
+buffer_	src/kfusion/include/kfusion/cuda/projective_icp.hpp	/^            DeviceArray2D<float> buffer_;$/;"	m	class:kfusion::cuda::ProjectiveICP
+c	src/kfusion/src/internal.hpp	/^            float2 f, c, finv;$/;"	m	struct:kfusion::device::ComputeIcpHelper
+c	src/kfusion/src/internal.hpp	/^            float2 f, c;$/;"	m	struct:kfusion::device::Projector
+c	src/kfusion/src/internal.hpp	/^            float2 finv, c;$/;"	m	struct:kfusion::device::Reprojector
+c1	src/kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float12
+c1	src/kfusion/src/internal.hpp	/^        struct float8  { float x, y, z, w, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float8
+c2	src/kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float12
+c2	src/kfusion/src/internal.hpp	/^        struct float8  { float x, y, z, w, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float8
+c3	src/kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float12
+c3	src/kfusion/src/internal.hpp	/^        struct float8  { float x, y, z, w, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float8
+c4	src/kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float12
+c4	src/kfusion/src/internal.hpp	/^        struct float8  { float x, y, z, w, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float8
+capture_	src/apps/demo.cpp	/^    OpenNISource& capture_;$/;"	m	struct:KinFuApp	file:
+checkIfPreFermiGPU	src/kfusion/src/core.cpp	/^bool kf::cuda::checkIfPreFermiGPU(int device)$/;"	f	class:kf::cuda
+clear	src/kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::clear()$/;"	f	class:kfusion::cuda::TsdfVolume
+cloud_buffer	src/apps/demo.cpp	/^    cuda::DeviceArray<Point> cloud_buffer;$/;"	m	struct:KinFuApp	file:
+cols	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline int kfusion::cuda::DeviceArray2D<T>::cols() const { return DeviceMemory2D::colsBytes()\/elem_size; }$/;"	f	class:kfusion::cuda::DeviceArray2D
+cols	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            int cols;$/;"	m	struct:kfusion::cuda::PtrStepSz
+cols	src/kfusion/include/kfusion/kinfu.hpp	/^        int cols;  \/\/pixels$/;"	m	struct:kfusion::KinFuParams
+cols	src/kfusion/src/internal.hpp	/^            float rows, cols;$/;"	m	struct:kfusion::device::ComputeIcpHelper
+colsBytes	src/kfusion/src/device_memory.cpp	/^int kfusion::cuda::DeviceMemory2D::colsBytes() const { return colsBytes_; }$/;"	f	class:kfusion::cuda::DeviceMemory2D
+colsBytes_	src/kfusion/include/kfusion/cuda/device_memory.hpp	/^            int colsBytes_;$/;"	m	class:kfusion::cuda::DeviceMemory2D
+compute	src/kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ void compute(Mat33& tmp, Mat33& vec_tmp, Mat33& evecs, float3& evals)$/;"	f	struct:kfusion::device::Eigen33
+computeDists	src/kfusion/src/imgproc.cpp	/^void kfusion::cuda::computeDists(const Depth& depth, Dists& dists, const Intr& intr)$/;"	f	class:kfusion::cuda
+computeNormalsAndMaskDepth	src/kfusion/src/imgproc.cpp	/^void kfusion::cuda::computeNormalsAndMaskDepth(const Intr& intr, Depth& depth, Normals& normals)$/;"	f	class:kfusion::cuda
+computePointNormals	src/kfusion/src/imgproc.cpp	/^void kfusion::cuda::computePointNormals(const Intr& intr, const Depth& depth, Cloud& points, Normals& normals)$/;"	f	class:kfusion::cuda
+computeRoots2	src/kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ void computeRoots2(const float& b, const float& c, float3& roots)$/;"	f	namespace:kfusion::device
+computeRoots3	src/kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ void computeRoots3(float c0, float c1, float c2, float3& roots)$/;"	f	namespace:kfusion::device
+const	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	10;"	d	file:
+context	src/kfusion/src/capture.cpp	/^    Context context;$/;"	m	struct:kfusion::OpenNISource::Impl	file:
+convertSMVer2Cores	src/kfusion/src/core.cpp	/^    inline int convertSMVer2Cores(int major, int minor)$/;"	f	namespace:__anon10
+copyTo	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline void kfusion::cuda::DeviceArray2D<T>::copyTo(DeviceArray2D& other) const$/;"	f	class:kfusion::cuda::DeviceArray2D
+copyTo	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline void kfusion::cuda::DeviceArray<T>::copyTo(DeviceArray& other) const$/;"	f	class:kfusion::cuda::DeviceArray
+copyTo	src/kfusion/src/device_memory.cpp	/^void kfusion::cuda::DeviceMemory2D::copyTo(DeviceMemory2D& other) const$/;"	f	class:kfusion::cuda::DeviceMemory2D
+copyTo	src/kfusion/src/device_memory.cpp	/^void kfusion::cuda::DeviceMemory::copyTo(DeviceMemory& other) const$/;"	f	class:kfusion::cuda::DeviceMemory
+create	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline void kfusion::cuda::DeviceArray2D<T>::create(int rows, int cols)$/;"	f	class:kfusion::cuda::DeviceArray2D
+create	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline void kfusion::cuda::DeviceArray<T>::create(size_t size)$/;"	f	class:kfusion::cuda::DeviceArray
+create	src/kfusion/src/device_memory.cpp	/^void kfusion::cuda::DeviceMemory2D::create(int rows_arg, int colsBytes_arg)$/;"	f	class:kfusion::cuda::DeviceMemory2D
+create	src/kfusion/src/device_memory.cpp	/^void kfusion::cuda::DeviceMemory::create(size_t sizeBytes_arg)$/;"	f	class:kfusion::cuda::DeviceMemory
+create	src/kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::create(const Vec3i& dims)$/;"	f	class:kfusion::cuda::TsdfVolume
+cross	src/kfusion/src/cuda/temp_utils.hpp	/^        __kf_hdevice__ float3 cross(const float3& v1, const float3& v2)$/;"	f	namespace:kfusion::device
+cuda	src/kfusion/include/kfusion/cuda/device_array.hpp	/^    namespace cuda$/;"	n	namespace:kfusion
+cuda	src/kfusion/include/kfusion/cuda/device_memory.hpp	/^    namespace cuda$/;"	n	namespace:kfusion
+cuda	src/kfusion/include/kfusion/cuda/imgproc.hpp	/^    namespace cuda$/;"	n	namespace:kfusion
+cuda	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^    namespace cuda$/;"	n	namespace:kfusion
+cuda	src/kfusion/include/kfusion/cuda/projective_icp.hpp	/^    namespace cuda$/;"	n	namespace:kfusion
+cuda	src/kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^    namespace cuda$/;"	n	namespace:kfusion
+cuda	src/kfusion/include/kfusion/kinfu.hpp	/^    namespace cuda$/;"	n	namespace:kfusion
+cuda	src/kfusion/include/kfusion/types.hpp	/^    namespace cuda$/;"	n	namespace:kfusion
+cuda	src/kfusion/src/cuda/texture_binder.hpp	/^    namespace cuda$/;"	n	namespace:kfusion
+cuda	src/kfusion/src/safe_call.hpp	/^    namespace cuda$/;"	n	namespace:kfusion
+cudaSafeCall	src/kfusion/src/safe_call.hpp	14;"	d
+curr_	src/kfusion/include/kfusion/kinfu.hpp	/^        cuda::Frame curr_, prev_;$/;"	m	class:kfusion::KinFu
+cx	src/kfusion/include/kfusion/types.hpp	/^        float fx, fy, cx, cy;$/;"	m	struct:kfusion::Intr
+cy	src/kfusion/include/kfusion/types.hpp	/^        float fx, fy, cx, cy;$/;"	m	struct:kfusion::Intr
+data	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            T* data;$/;"	m	struct:kfusion::cuda::DevPtr
+data	src/kfusion/include/kfusion/types.hpp	/^            float data[4];$/;"	m	union:kfusion::Point::__anon2
+data	src/kfusion/src/cuda/temp_utils.hpp	/^                float3 data[Rows];$/;"	m	struct:kfusion::device::Eigen33::MiniMat
+data	src/kfusion/src/internal.hpp	/^                float* data;$/;"	m	struct:kfusion::device::ComputeIcpHelper::PageLockHelper
+data	src/kfusion/src/internal.hpp	/^            elem_type *const data;$/;"	m	struct:kfusion::device::TsdfVolume
+data	src/kfusion/src/internal.hpp	/^        struct Mat3f { float3 data[3]; };$/;"	m	struct:kfusion::device::Mat3f
+data	src/kfusion/src/tsdf_volume.cpp	/^CudaData kfusion::cuda::TsdfVolume::data() {  return data_; }$/;"	f	class:kfusion::cuda::TsdfVolume
+data	src/kfusion/src/tsdf_volume.cpp	/^const CudaData kfusion::cuda::TsdfVolume::data() const { return data_; }$/;"	f	class:kfusion::cuda::TsdfVolume
+data_	src/kfusion/include/kfusion/cuda/device_memory.hpp	/^            void *data_;$/;"	m	class:kfusion::cuda::DeviceMemory
+data_	src/kfusion/include/kfusion/cuda/device_memory.hpp	/^            void *data_;$/;"	m	class:kfusion::cuda::DeviceMemory2D
+data_	src/kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^            CudaData data_;$/;"	m	class:kfusion::cuda::TsdfVolume
+dcurr	src/kfusion/src/internal.hpp	/^            PtrStep<ushort> dcurr;$/;"	m	struct:kfusion::device::ComputeIcpHelper
+default_params	src/kfusion/src/kinfu.cpp	/^kfusion::KinFuParams kfusion::KinFuParams::default_params()$/;"	f	class:kfusion::KinFuParams
+deg2rad	src/kfusion/include/kfusion/types.hpp	/^    inline float deg2rad (float alpha) { return alpha * 0.017453293f; }$/;"	f	namespace:kfusion
+deg2rad	src/kfusion/src/kinfu.cpp	/^static inline float deg2rad (float alpha) { return alpha * 0.017453293f; }$/;"	f	file:
+depth	src/kfusion/src/capture.cpp	/^    DepthGenerator depth;$/;"	m	struct:kfusion::OpenNISource::Impl	file:
+depthBilateralFilter	src/kfusion/src/imgproc.cpp	/^void kfusion::cuda::depthBilateralFilter(const Depth& in, Depth& out, int kernel_size, float sigma_spatial, float sigma_depth)$/;"	f	class:kfusion::cuda
+depthBuildPyramid	src/kfusion/src/imgproc.cpp	/^void kfusion::cuda::depthBuildPyramid(const Depth& depth, Depth& pyramid, float sigma_depth)$/;"	f	class:kfusion::cuda
+depthMD	src/kfusion/src/capture.cpp	/^    DepthMetaData depthMD;$/;"	m	struct:kfusion::OpenNISource::Impl	file:
+depthTruncation	src/kfusion/src/imgproc.cpp	/^void kfusion::cuda::depthTruncation(Depth& depth, float threshold)$/;"	f	class:kfusion::cuda
+depth_device_	src/apps/demo.cpp	/^    cuda::Depth depth_device_;$/;"	m	struct:KinFuApp	file:
+depth_focal_length_VGA	src/kfusion/include/io/capture.hpp	/^        float depth_focal_length_VGA;$/;"	m	class:kfusion::OpenNISource
+depth_pyr	src/kfusion/include/kfusion/types.hpp	/^            std::vector<Depth> depth_pyr;$/;"	m	struct:kfusion::cuda::Frame
+depths_	src/kfusion/include/kfusion/kinfu.hpp	/^        cuda::Depth depths_;$/;"	m	class:kfusion::KinFu
+device	src/kfusion/include/kfusion/cuda/device_array.hpp	/^    namespace device$/;"	n	namespace:kfusion
+device	src/kfusion/include/kfusion/cuda/device_memory.hpp	/^    namespace device$/;"	n	namespace:kfusion
+device	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^    namespace device$/;"	n	namespace:kfusion
+device	src/kfusion/src/cuda/device.hpp	/^    namespace device$/;"	n	namespace:kfusion
+device	src/kfusion/src/cuda/temp_utils.hpp	/^    namespace device$/;"	n	namespace:kfusion
+device	src/kfusion/src/cuda/texture_binder.hpp	/^    namespace device$/;"	n	namespace:kfusion
+device	src/kfusion/src/internal.hpp	/^    namespace device$/;"	n	namespace:kfusion
+device	src/kfusion/src/safe_call.hpp	/^    namespace device$/;"	n	namespace:kfusion
+device_cast	src/kfusion/src/precomp.hpp	/^    inline D device_cast(const S& source)$/;"	f	namespace:kfusion
+device_cast	src/kfusion/src/precomp.hpp	/^    inline device::Aff3f device_cast<device::Aff3f, Affine3f>(const Affine3f& source)$/;"	f	namespace:kfusion
+dims	src/kfusion/src/internal.hpp	/^            const int3 dims;$/;"	m	struct:kfusion::device::TsdfVolume
+dims_	src/kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^            Vec3i dims_;$/;"	m	class:kfusion::cuda::TsdfVolume
+dist2_thres	src/kfusion/src/internal.hpp	/^            float dist2_thres;$/;"	m	struct:kfusion::device::ComputeIcpHelper
+dist_thres_	src/kfusion/include/kfusion/cuda/projective_icp.hpp	/^            float dist_thres_;$/;"	m	class:kfusion::cuda::ProjectiveICP
+dists_	src/kfusion/include/kfusion/kinfu.hpp	/^        cuda::Dists dists_;$/;"	m	class:kfusion::KinFu
+divUp	src/kfusion/src/safe_call.hpp	/^        static inline int divUp(int total, int grain) { return (total + grain - 1) \/ grain; }$/;"	f	namespace:kfusion::cuda
+dot	src/kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ float dot(const float3& v1, const float3& v2)$/;"	f	namespace:kfusion::device
+download	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline void kfusion::cuda::DeviceArray2D<T>::download(void *host_ptr, size_t host_step) const$/;"	f	class:kfusion::cuda::DeviceArray2D
+download	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline void kfusion::cuda::DeviceArray<T>::download(T *host_ptr) const$/;"	f	class:kfusion::cuda::DeviceArray
+download	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> template<class A> inline void kfusion::cuda::DeviceArray2D<T>::download(std::vector<T, A>& data, int& elem_step) const$/;"	f	class:kfusion::cuda::DeviceArray2D
+download	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> template<class A> inline void kfusion::cuda::DeviceArray<T>::download(std::vector<T, A>& data) const { data.resize(size()); if (!data.empty()) download(&data[0]); }$/;"	f	class:kfusion::cuda::DeviceArray
+download	src/kfusion/src/device_memory.cpp	/^void kfusion::cuda::DeviceMemory2D::download(void *host_ptr_arg, size_t host_step_arg) const$/;"	f	class:kfusion::cuda::DeviceMemory2D
+download	src/kfusion/src/device_memory.cpp	/^void kfusion::cuda::DeviceMemory::download(void *host_ptr_arg) const$/;"	f	class:kfusion::cuda::DeviceMemory
+elemSize	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ size_t elemSize() const { return elem_size; }$/;"	f	struct:kfusion::cuda::DevPtr
+elem_size	src/kfusion/include/kfusion/cuda/device_array.hpp	/^            enum { elem_size = sizeof(T) };$/;"	e	enum:kfusion::cuda::DeviceArray2D::__anon8
+elem_size	src/kfusion/include/kfusion/cuda/device_array.hpp	/^            enum { elem_size = sizeof(T) };$/;"	e	enum:kfusion::cuda::DeviceArray::__anon7
+elem_size	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            const static size_t elem_size = sizeof(elem_type);$/;"	m	struct:kfusion::cuda::DevPtr
+elem_step	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline size_t kfusion::cuda::DeviceArray2D<T>::elem_step() const { return DeviceMemory2D::step()\/elem_size; }$/;"	f	class:kfusion::cuda::DeviceArray2D
+elem_type	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            typedef T elem_type;$/;"	t	struct:kfusion::cuda::DevPtr
+elem_type	src/kfusion/src/internal.hpp	/^            typedef ushort2 elem_type;$/;"	t	struct:kfusion::device::TsdfVolume
+empty	src/kfusion/src/device_memory.cpp	/^bool kfusion::cuda::DeviceMemory2D::empty() const { return !data_; }$/;"	f	class:kfusion::cuda::DeviceMemory2D
+empty	src/kfusion/src/device_memory.cpp	/^bool kfusion::cuda::DeviceMemory::empty() const { return !data_; }$/;"	f	class:kfusion::cuda::DeviceMemory
+epsilon	src/kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ static float epsilon() { return 1.192092896e-07f\/*FLT_EPSILON*\/; };$/;"	f	struct:kfusion::device::numeric_limits
+error	src/kfusion/src/device_memory.cpp	/^void kfusion::cuda::error(const char *error_string, const char *file, const int line, const char *func)$/;"	f	class:kfusion::cuda
+estimateTransform	src/kfusion/src/projective_icp.cpp	/^bool kfusion::cuda::ProjectiveICP::estimateTransform(Affine3f& \/*affine*\/, const Intr& \/*intr*\/, const Frame& \/*curr*\/, const Frame& \/*prev*\/)$/;"	f	class:kfusion::cuda::ProjectiveICP
+estimateTransform	src/kfusion/src/projective_icp.cpp	/^bool kfusion::cuda::ProjectiveICP::estimateTransform(Affine3f& affine, const Intr& intr, const DepthPyr& dcurr, const NormalsPyr ncurr, const DepthPyr dprev, const NormalsPyr nprev)$/;"	f	class:kfusion::cuda::ProjectiveICP
+estimateTransform	src/kfusion/src/projective_icp.cpp	/^bool kfusion::cuda::ProjectiveICP::estimateTransform(Affine3f& affine, const Intr& intr, const PointsPyr& vcurr, const NormalsPyr ncurr, const PointsPyr vprev, const NormalsPyr nprev)$/;"	f	class:kfusion::cuda::ProjectiveICP
+execute	src/apps/demo.cpp	/^    bool execute()$/;"	f	struct:KinFuApp
+exit_	src/apps/demo.cpp	/^    bool exit_, iteractive_mode_;$/;"	m	struct:KinFuApp	file:
+f	src/kfusion/src/internal.hpp	/^            float2 f, c, finv;$/;"	m	struct:kfusion::device::ComputeIcpHelper
+f	src/kfusion/src/internal.hpp	/^            float2 f, c;$/;"	m	struct:kfusion::device::Projector
+features	build/CMakeFiles/feature_tests.c	/^  const char features[] = {"\\n"$/;"	v
+features	build/CMakeFiles/feature_tests.cxx	/^  const char features[] = {"\\n"$/;"	v
+fetchCloud	src/kfusion/src/tsdf_volume.cpp	/^DeviceArray<Point> kfusion::cuda::TsdfVolume::fetchCloud(DeviceArray<Point>& cloud_buffer) const$/;"	f	class:kfusion::cuda::TsdfVolume
+fetchNormals	src/kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::fetchNormals(const DeviceArray<Point>& cloud, DeviceArray<Normal>& normals) const$/;"	f	class:kfusion::cuda::TsdfVolume
+finv	src/kfusion/src/internal.hpp	/^            float2 f, c, finv;$/;"	m	struct:kfusion::device::ComputeIcpHelper
+finv	src/kfusion/src/internal.hpp	/^            float2 finv, c;$/;"	m	struct:kfusion::device::Reprojector
+flattenedThreadId	src/kfusion/src/cuda/temp_utils.hpp	/^            static __kf_device__ int flattenedThreadId()$/;"	f	struct:kfusion::device::Block
+float12	src/kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	s	namespace:kfusion::device
+float2half	src/kfusion/src/tsdf_volume.cpp	/^kfusion::cuda::TsdfVolume::Entry::half kfusion::cuda::TsdfVolume::Entry::float2half(float value)$/;"	f	class:kfusion::cuda::TsdfVolume::Entry
+float8	src/kfusion/src/internal.hpp	/^        struct float8  { float x, y, z, w, c1, c2, c3, c4; };$/;"	s	namespace:kfusion::device
+frame_counter_	src/kfusion/include/kfusion/kinfu.hpp	/^        int frame_counter_;$/;"	m	class:kfusion::KinFu
+fx	src/kfusion/include/kfusion/types.hpp	/^        float fx, fy, cx, cy;$/;"	m	struct:kfusion::Intr
+fy	src/kfusion/include/kfusion/types.hpp	/^        float fx, fy, cx, cy;$/;"	m	struct:kfusion::Intr
+g	src/kfusion/include/kfusion/types.hpp	/^            struct { unsigned char b, g, r; };$/;"	m	struct:kfusion::RGB::__anon4::__anon5
+g	src/kfusion/include/kfusion/types.hpp	/^        unsigned char r, g, b;$/;"	m	struct:kfusion::PixelRGB
+get	src/kfusion/src/projective_icp.cpp	/^    Mat6f get(Vec6f& b)$/;"	f	struct:kfusion::cuda::ProjectiveICP::StreamHelper
+getAngleThreshold	src/kfusion/src/projective_icp.cpp	/^float kfusion::cuda::ProjectiveICP::getAngleThreshold() const$/;"	f	class:kfusion::cuda::ProjectiveICP
+getCameraPose	src/kfusion/src/kinfu.cpp	/^kfusion::Affine3f kfusion::KinFu::getCameraPose (int time) const$/;"	f	class:kfusion::KinFu
+getCudaAttribute	src/kfusion/src/core.cpp	/^    template <class T> inline void getCudaAttribute(T *attribute, CUdevice_attribute device_attribute, int device)$/;"	f	namespace:__anon10
+getCudaEnabledDeviceCount	src/kfusion/src/core.cpp	/^int kf::cuda::getCudaEnabledDeviceCount()$/;"	f	class:kf::cuda
+getDeviceName	src/kfusion/src/core.cpp	/^std::string kf::cuda::getDeviceName(int device)$/;"	f	class:kf::cuda
+getDims	src/kfusion/src/tsdf_volume.cpp	/^Vec3i kfusion::cuda::TsdfVolume::getDims() const$/;"	f	class:kfusion::cuda::TsdfVolume
+getDistThreshold	src/kfusion/src/projective_icp.cpp	/^float kfusion::cuda::ProjectiveICP::getDistThreshold() const$/;"	f	class:kfusion::cuda::ProjectiveICP
+getGradientDeltaFactor	src/kfusion/src/tsdf_volume.cpp	/^float kfusion::cuda::TsdfVolume::getGradientDeltaFactor() const { return gradient_delta_factor_; }$/;"	f	class:kfusion::cuda::TsdfVolume
+getMaxWeight	src/kfusion/src/tsdf_volume.cpp	/^int kfusion::cuda::TsdfVolume::getMaxWeight() const { return max_weight_; }$/;"	f	class:kfusion::cuda::TsdfVolume
+getParams	src/kfusion/src/capture.cpp	/^void kfusion::OpenNISource::getParams ()$/;"	f	class:kfusion::OpenNISource
+getPose	src/kfusion/src/tsdf_volume.cpp	/^Affine3f kfusion::cuda::TsdfVolume::getPose() const  { return pose_; }$/;"	f	class:kfusion::cuda::TsdfVolume
+getRaycastStepFactor	src/kfusion/src/tsdf_volume.cpp	/^float kfusion::cuda::TsdfVolume::getRaycastStepFactor() const { return raycast_step_factor_; }$/;"	f	class:kfusion::cuda::TsdfVolume
+getSize	src/kfusion/src/tsdf_volume.cpp	/^Vec3f kfusion::cuda::TsdfVolume::getSize() const { return size_; }$/;"	f	class:kfusion::cuda::TsdfVolume
+getTime	src/kfusion/src/core.cpp	/^double kf::SampledScopeTime::getTime()$/;"	f	class:kf::SampledScopeTime
+getTruncDist	src/kfusion/src/tsdf_volume.cpp	/^float kfusion::cuda::TsdfVolume::getTruncDist() const { return trunc_dist_; }$/;"	f	class:kfusion::cuda::TsdfVolume
+getUsedLevelsNum	src/kfusion/src/projective_icp.cpp	/^int kfusion::cuda::ProjectiveICP::getUsedLevelsNum() const$/;"	f	class:kfusion::cuda::ProjectiveICP
+getVoxelSize	src/kfusion/src/tsdf_volume.cpp	/^Vec3f kfusion::cuda::TsdfVolume::getVoxelSize() const$/;"	f	class:kfusion::cuda::TsdfVolume
+gmem	src/kfusion/src/cuda/device.hpp	/^        struct gmem$/;"	s	namespace:kfusion::device
+grab	src/kfusion/src/capture.cpp	/^bool kfusion::OpenNISource::grab(cv::Mat& depth, cv::Mat& image)$/;"	f	class:kfusion::OpenNISource
+gradient_delta_factor	src/kfusion/include/kfusion/kinfu.hpp	/^        float gradient_delta_factor; \/\/ in voxel sizes$/;"	m	struct:kfusion::KinFuParams
+gradient_delta_factor_	src/kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^            float gradient_delta_factor_;$/;"	m	class:kfusion::cuda::TsdfVolume
+half	src/kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^                typedef unsigned short half;$/;"	t	struct:kfusion::cuda::TsdfVolume::Entry
+half2float	src/kfusion/src/tsdf_volume.cpp	/^float kfusion::cuda::TsdfVolume::Entry::half2float(half)$/;"	f	class:kfusion::cuda::TsdfVolume::Entry
+has_depth	src/kfusion/src/capture.cpp	/^    bool has_depth;$/;"	m	struct:kfusion::OpenNISource::Impl	file:
+has_image	src/kfusion/src/capture.cpp	/^    bool has_image;$/;"	m	struct:kfusion::OpenNISource::Impl	file:
+icp	src/kfusion/src/kinfu.cpp	/^const kfusion::cuda::ProjectiveICP& kfusion::KinFu::icp() const$/;"	f	class:kfusion::KinFu
+icp	src/kfusion/src/kinfu.cpp	/^kfusion::cuda::ProjectiveICP& kfusion::KinFu::icp()$/;"	f	class:kfusion::KinFu
+icp_	src/kfusion/include/kfusion/kinfu.hpp	/^        cv::Ptr<cuda::ProjectiveICP> icp_;$/;"	m	class:kfusion::KinFu
+icp_angle_thres	src/kfusion/include/kfusion/kinfu.hpp	/^        float icp_angle_thres;         \/\/radians$/;"	m	struct:kfusion::KinFuParams
+icp_dist_thres	src/kfusion/include/kfusion/kinfu.hpp	/^        float icp_dist_thres;          \/\/meters$/;"	m	struct:kfusion::KinFuParams
+icp_iter_num	src/kfusion/include/kfusion/kinfu.hpp	/^        std::vector<int> icp_iter_num; \/\/iterations for level index 0,1,..,3$/;"	m	struct:kfusion::KinFuParams
+icp_truncate_depth_dist	src/kfusion/include/kfusion/kinfu.hpp	/^        float icp_truncate_depth_dist; \/\/meters$/;"	m	struct:kfusion::KinFuParams
+id	src/kfusion/src/cuda/temp_utils.hpp	/^            static __kf_device__ unsigned int id()$/;"	f	struct:kfusion::device::Warp
+image	src/kfusion/src/capture.cpp	/^    ImageGenerator image;$/;"	m	struct:kfusion::OpenNISource::Impl	file:
+imageMD	src/kfusion/src/capture.cpp	/^    ImageMetaData imageMD;$/;"	m	struct:kfusion::OpenNISource::Impl	file:
+impl_	src/kfusion/include/io/capture.hpp	/^        cv::Ptr<Impl> impl_;$/;"	m	class:kfusion::OpenNISource
+info_arch	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
+info_arch	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
+info_compiler	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_compiler	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_cray	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	/^char const *info_cray = "INFO" ":" "compiler_wrapper[CrayPrgEnv]";$/;"	v
+info_cray	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const *info_cray = "INFO" ":" "compiler_wrapper[CrayPrgEnv]";$/;"	v
+info_language_dialect_default	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	/^const char* info_language_dialect_default =$/;"	v
+info_language_dialect_default	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^const char* info_language_dialect_default = "INFO" ":" "dialect_default["$/;"	v
+info_platform	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+info_platform	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+info_simulate	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v
+info_simulate	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v
+info_simulate_version	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	/^char const info_simulate_version[] = {$/;"	v
+info_simulate_version	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_simulate_version[] = {$/;"	v
+info_version	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	/^char const info_version[] = {$/;"	v
+info_version	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_version[] = {$/;"	v
+integrate	src/kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::integrate(const Dists& dists, const Affine3f& camera_pose, const Intr& intr)$/;"	f	class:kfusion::cuda::TsdfVolume
+intr	src/kfusion/include/kfusion/kinfu.hpp	/^        Intr intr;  \/\/Camera parameters$/;"	m	struct:kfusion::KinFuParams
+isMuchSmallerThan	src/kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ static bool isMuchSmallerThan (float x, float y)$/;"	f	struct:kfusion::device::Eigen33
+iteractive_mode_	src/apps/demo.cpp	/^    bool exit_, iteractive_mode_;$/;"	m	struct:KinFuApp	file:
+iters_	src/kfusion/include/kfusion/cuda/projective_icp.hpp	/^            std::vector<int> iters_;$/;"	m	class:kfusion::cuda::ProjectiveICP
+kfusion	src/kfusion/include/io/capture.hpp	/^namespace kfusion$/;"	n
+kfusion	src/kfusion/include/kfusion/cuda/device_array.hpp	/^namespace kfusion$/;"	n
+kfusion	src/kfusion/include/kfusion/cuda/device_memory.hpp	/^namespace kfusion$/;"	n
+kfusion	src/kfusion/include/kfusion/cuda/imgproc.hpp	/^namespace kfusion$/;"	n
+kfusion	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^namespace kfusion$/;"	n
+kfusion	src/kfusion/include/kfusion/cuda/projective_icp.hpp	/^namespace kfusion$/;"	n
+kfusion	src/kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^namespace kfusion$/;"	n
+kfusion	src/kfusion/include/kfusion/kinfu.hpp	/^namespace kfusion$/;"	n
+kfusion	src/kfusion/include/kfusion/types.hpp	/^namespace kfusion$/;"	n
+kfusion	src/kfusion/src/cuda/device.hpp	/^namespace kfusion$/;"	n
+kfusion	src/kfusion/src/cuda/temp_utils.hpp	/^namespace kfusion$/;"	n
+kfusion	src/kfusion/src/cuda/texture_binder.hpp	/^namespace kfusion$/;"	n
+kfusion	src/kfusion/src/internal.hpp	/^namespace kfusion$/;"	n
+kfusion	src/kfusion/src/precomp.hpp	/^namespace kfusion$/;"	n
+kfusion	src/kfusion/src/safe_call.hpp	/^namespace kfusion$/;"	n
+kinfu_	src/apps/demo.cpp	/^    KinFu::Ptr kinfu_;$/;"	m	struct:KinFuApp	file:
+laneId	src/kfusion/src/cuda/temp_utils.hpp	/^            static __kf_device__ unsigned int laneId()$/;"	f	struct:kfusion::device::Warp
+laneMaskLt	src/kfusion/src/cuda/temp_utils.hpp	/^            static __kf_device__ int laneMaskLt()$/;"	f	struct:kfusion::device::Warp
+light_pose	src/kfusion/include/kfusion/kinfu.hpp	/^        Vec3f light_pose; \/\/meters$/;"	m	struct:kfusion::KinFuParams
+locked_buffer	src/kfusion/src/projective_icp.cpp	/^    PageLockHelper locked_buffer;$/;"	m	struct:kfusion::cuda::ProjectiveICP::StreamHelper	file:
+m00	src/kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ float m00() const { return mat_pkg[0]; }$/;"	f	struct:kfusion::device::Eigen33
+m01	src/kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ float m01() const { return mat_pkg[1]; }$/;"	f	struct:kfusion::device::Eigen33
+m02	src/kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ float m02() const { return mat_pkg[2]; }$/;"	f	struct:kfusion::device::Eigen33
+m10	src/kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ float m10() const { return mat_pkg[1]; }$/;"	f	struct:kfusion::device::Eigen33
+m11	src/kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ float m11() const { return mat_pkg[3]; }$/;"	f	struct:kfusion::device::Eigen33
+m12	src/kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ float m12() const { return mat_pkg[4]; }$/;"	f	struct:kfusion::device::Eigen33
+m20	src/kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ float m20() const { return mat_pkg[2]; }$/;"	f	struct:kfusion::device::Eigen33
+m21	src/kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ float m21() const { return mat_pkg[4]; }$/;"	f	struct:kfusion::device::Eigen33
+m22	src/kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ float m22() const { return mat_pkg[5]; }$/;"	f	struct:kfusion::device::Eigen33
+main	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	/^int main(argc, argv) int argc; char *argv[];$/;"	f
+main	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
+main	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	build/CMakeFiles/feature_tests.c	/^int main(int argc, char** argv) { (void)argv; return features[argc]; }$/;"	f
+main	build/CMakeFiles/feature_tests.cxx	/^int main(int argc, char** argv) { (void)argv; return features[argc]; }$/;"	f
+main	src/apps/demo.cpp	/^int main (int argc, char* argv[])$/;"	f
+mat_pkg	src/kfusion/src/cuda/temp_utils.hpp	/^            volatile float* mat_pkg;$/;"	m	struct:kfusion::device::Eigen33
+max	src/kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ static float max() { return 3.402823466e+38f\/*FLT_MAX*\/; };$/;"	f	struct:kfusion::device::numeric_limits
+max	src/kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ static unsigned short max() { return USHRT_MAX; };$/;"	f	struct:kfusion::device::numeric_limits
+max_depth	src/kfusion/include/io/capture.hpp	/^        unsigned short max_depth;     \/\/ mm$/;"	m	class:kfusion::OpenNISource
+max_weight	src/kfusion/src/internal.hpp	/^            const int max_weight;$/;"	m	struct:kfusion::device::TsdfVolume
+max_weight_	src/kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^            int max_weight_;$/;"	m	class:kfusion::cuda::TsdfVolume
+min	src/kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ static float min() { return 1.175494351e-38f\/*FLT_MIN*\/; };$/;"	f	struct:kfusion::device::numeric_limits
+min_cosine	src/kfusion/src/internal.hpp	/^            float min_cosine;$/;"	m	struct:kfusion::device::ComputeIcpHelper
+n4	src/kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float12
+name	src/kfusion/include/kfusion/types.hpp	/^        const char* name;$/;"	m	struct:kfusion::ScopeTime
+ncurr	src/kfusion/src/internal.hpp	/^            PtrStep<Normal> ncurr;$/;"	m	struct:kfusion::device::ComputeIcpHelper
+no_sample_value	src/kfusion/include/io/capture.hpp	/^        int shadow_value, no_sample_value;$/;"	m	class:kfusion::OpenNISource
+node	src/kfusion/src/capture.cpp	/^    ProductionNode node;$/;"	m	struct:kfusion::OpenNISource::Impl	file:
+norm	src/kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ float norm(const float3& v)$/;"	f	namespace:kfusion::device
+norm_sqr	src/kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ float norm_sqr(const float3& v)$/;"	f	namespace:kfusion::device
+normal_x	src/kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float12
+normal_y	src/kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float12
+normal_z	src/kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float12
+normalized	src/kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ float3 normalized(const float3& v)$/;"	f	namespace:kfusion::device
+normals_	src/kfusion/include/kfusion/kinfu.hpp	/^        cuda::Normals normals_;$/;"	m	class:kfusion::KinFu
+normals_pyr	src/kfusion/include/kfusion/types.hpp	/^            std::vector<Normals> normals_pyr;$/;"	m	struct:kfusion::cuda::Frame
+numeric_limits	src/kfusion/src/cuda/temp_utils.hpp	/^        template<> struct numeric_limits<float>$/;"	s	namespace:kfusion::device
+numeric_limits	src/kfusion/src/cuda/temp_utils.hpp	/^        template<> struct numeric_limits<unsigned short>$/;"	s	namespace:kfusion::device
+open	src/kfusion/src/capture.cpp	/^void kfusion::OpenNISource::open (int device)$/;"	f	class:kfusion::OpenNISource
+open	src/kfusion/src/capture.cpp	/^void kfusion::OpenNISource::open(const std::string& filename, bool repeat \/*= false*\/)$/;"	f	class:kfusion::OpenNISource
+operator ()	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__       T& operator()(int y, int x)       { return ptr(y)[x]; }$/;"	f	struct:kfusion::cuda::PtrStep
+operator ()	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ const T& operator()(int y, int x) const { return ptr(y)[x]; }$/;"	f	struct:kfusion::cuda::PtrStep
+operator ()	src/kfusion/src/cuda/device.hpp	/^            __kf_device__ double operator () (double l, double r) const  { return l + r; }$/;"	f	struct:kfusion::device::plus
+operator ()	src/kfusion/src/cuda/device.hpp	/^            __kf_device__ float operator () (float l, float r) const  { return l + r; }$/;"	f	struct:kfusion::device::plus
+operator ()	src/kfusion/src/cuda/device.hpp	/^__kf_device__ const kfusion::device::TsdfVolume::elem_type* kfusion::device::TsdfVolume::operator() (int x, int y, int z) const$/;"	f	class:kfusion::device::TsdfVolume
+operator ()	src/kfusion/src/cuda/device.hpp	/^__kf_device__ float2 kfusion::device::Projector::operator()(const float3& p) const$/;"	f	class:kfusion::device::Projector
+operator ()	src/kfusion/src/cuda/device.hpp	/^__kf_device__ float3 kfusion::device::Reprojector::operator()(int u, int v, float z) const$/;"	f	class:kfusion::device::Reprojector
+operator ()	src/kfusion/src/cuda/device.hpp	/^__kf_device__ kfusion::device::TsdfVolume::elem_type* kfusion::device::TsdfVolume::operator()(int x, int y, int z)$/;"	f	class:kfusion::device::TsdfVolume
+operator ()	src/kfusion/src/kinfu.cpp	/^bool kfusion::KinFu::operator()(const kfusion::cuda::Depth& depth, const kfusion::cuda::Image& \/*image*\/)$/;"	f	class:kfusion::KinFu
+operator ()	src/kfusion/src/precomp.cpp	/^kfusion::Intr kfusion::Intr::operator()(int level_index) const$/;"	f	class:kfusion::Intr
+operator *	src/kfusion/src/cuda/device.hpp	/^        __kf_device__ Vec3f operator*(const Aff3f& a, const Vec3f& v) { return a.R * v + a.t; }$/;"	f	namespace:kfusion::device
+operator *	src/kfusion/src/cuda/device.hpp	/^        __kf_device__ Vec3f operator*(const Mat3f& m, const Vec3f& v)$/;"	f	namespace:kfusion::device
+operator *	src/kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ float3 operator*(const float3& v1, const float3& v2)$/;"	f	namespace:kfusion::device
+operator *	src/kfusion/src/cuda/temp_utils.hpp	/^        __kf_hdevice__ float3 operator*(const float& v, const float3& v1)$/;"	f	namespace:kfusion::device
+operator *	src/kfusion/src/cuda/temp_utils.hpp	/^        __kf_hdevice__ float3 operator*(const float3& v1, const float& v)$/;"	f	namespace:kfusion::device
+operator *	src/kfusion/src/cuda/temp_utils.hpp	/^        __kf_hdevice__ float3 operator*(const float3& v1, const int3& v2)$/;"	f	namespace:kfusion::device
+operator *=	src/kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ float3& operator*=(float3& vec, const float& v)$/;"	f	namespace:kfusion::device
+operator +	src/kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ float3 operator+(const float3& v1, const float3& v2)$/;"	f	namespace:kfusion::device
+operator +=	src/kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ float3& operator+=(float3& v1, const float3& v2)$/;"	f	namespace:kfusion::device
+operator +=	src/kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ float3& operator+=(float3& vec, const float& v)$/;"	f	namespace:kfusion::device
+operator -	src/kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ float3 operator-(const float3& v1, const float3& v2)$/;"	f	namespace:kfusion::device
+operator /	src/kfusion/src/cuda/temp_utils.hpp	/^        __kf_device__ float3 operator\/(const float3& v1, const float3& v2)$/;"	f	namespace:kfusion::device
+operator /	src/kfusion/src/cuda/temp_utils.hpp	/^        __kf_hdevice__ float3 operator\/(const float& v, const float3& vec)$/;"	f	namespace:kfusion::device
+operator <<	src/kfusion/src/precomp.cpp	/^std::ostream& operator << (std::ostream& os, const kfusion::Intr& intr)$/;"	f
+operator =	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray2D<T>& kfusion::cuda::DeviceArray2D<T>::operator=(const DeviceArray2D& other)$/;"	f	class:kfusion::cuda::DeviceArray2D
+operator =	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray<T>& kfusion::cuda::DeviceArray<T>::operator=(const DeviceArray& other)$/;"	f	class:kfusion::cuda::DeviceArray
+operator =	src/kfusion/src/device_memory.cpp	/^kfusion::cuda::DeviceMemory& kfusion::cuda::DeviceMemory::operator = (const kfusion::cuda::DeviceMemory& other_arg)$/;"	f	class:kfusion::cuda::DeviceMemory
+operator =	src/kfusion/src/device_memory.cpp	/^kfusion::cuda::DeviceMemory2D& kfusion::cuda::DeviceMemory2D::operator = (const kfusion::cuda::DeviceMemory2D& other_arg)$/;"	f	class:kfusion::cuda::DeviceMemory2D
+operator T*	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray2D<T>::operator T*() { return ptr(); }$/;"	f	class:kfusion::cuda::DeviceArray2D
+operator T*	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray<T>::operator T*() { return ptr(); }$/;"	f	class:kfusion::cuda::DeviceArray
+operator T*	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ operator       T*()       { return data; }$/;"	f	struct:kfusion::cuda::DevPtr
+operator []	src/kfusion/src/cuda/temp_utils.hpp	/^                __kf_hdevice__ const float3& operator[](int i) const { return data[i]; }$/;"	f	struct:kfusion::device::Eigen33::MiniMat
+operator []	src/kfusion/src/cuda/temp_utils.hpp	/^                __kf_hdevice__ float3& operator[](int i) { return data[i]; }$/;"	f	struct:kfusion::device::Eigen33::MiniMat
+operator const T*	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray2D<T>::operator const T*() const { return ptr(); }$/;"	f	class:kfusion::cuda::DeviceArray2D
+operator const T*	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline kfusion::cuda::DeviceArray<T>::operator const T*() const { return ptr(); }$/;"	f	class:kfusion::cuda::DeviceArray
+operator const T*	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ operator const T*() const { return data; }$/;"	f	struct:kfusion::cuda::DevPtr
+operator cudaStream_t	src/kfusion/src/projective_icp.cpp	/^    operator cudaStream_t() { return stream; }$/;"	f	struct:kfusion::cuda::ProjectiveICP::StreamHelper
+operator float*	src/kfusion/src/projective_icp.cpp	/^    operator float*() { return locked_buffer.data; }$/;"	f	struct:kfusion::cuda::ProjectiveICP::StreamHelper
+operator kfusion::cuda::PtrStep<U>	src/kfusion/include/kfusion/cuda/device_memory.hpp	/^template <class U> kfusion::cuda::DeviceMemory2D::operator kfusion::cuda::PtrStep<U>() const$/;"	f	class:kfusion::cuda::DeviceMemory2D
+operator kfusion::cuda::PtrStepSz<U>	src/kfusion/include/kfusion/cuda/device_memory.hpp	/^template <class U> kfusion::cuda::DeviceMemory2D::operator kfusion::cuda::PtrStepSz<U>() const$/;"	f	class:kfusion::cuda::DeviceMemory2D
+operator kfusion::cuda::PtrSz<U>	src/kfusion/include/kfusion/cuda/device_memory.hpp	/^template <class U> inline kfusion::cuda::DeviceMemory::operator kfusion::cuda::PtrSz<U>() const$/;"	f	class:kfusion::cuda::DeviceMemory
+pack_tsdf	src/kfusion/src/cuda/device.hpp	/^__kf_device__ ushort2 kfusion::device::pack_tsdf (float tsdf, int weight)$/;"	f	class:kfusion::device
+params	src/kfusion/src/kinfu.cpp	/^const kfusion::KinFuParams& kfusion::KinFu::params() const$/;"	f	class:kfusion::KinFu
+params	src/kfusion/src/kinfu.cpp	/^kfusion::KinFuParams& kfusion::KinFu::params()$/;"	f	class:kfusion::KinFu
+params_	src/kfusion/include/kfusion/kinfu.hpp	/^        KinFuParams params_;$/;"	m	class:kfusion::KinFu
+pause_	src/apps/demo.cpp	/^    bool pause_ \/*= false*\/;$/;"	m	struct:KinFuApp	file:
+pixelSize	src/kfusion/include/io/capture.hpp	/^        double pixelSize;             \/\/ mm$/;"	m	class:kfusion::OpenNISource
+player_	src/kfusion/src/capture.cpp	/^    Player player_;$/;"	m	struct:kfusion::OpenNISource::Impl	file:
+plus	src/kfusion/src/cuda/device.hpp	/^        struct plus$/;"	s	namespace:kfusion::device
+points_	src/kfusion/include/kfusion/kinfu.hpp	/^        cuda::Cloud points_;$/;"	m	class:kfusion::KinFu
+points_pyr	src/kfusion/include/kfusion/types.hpp	/^            std::vector<Cloud> points_pyr;$/;"	m	struct:kfusion::cuda::Frame
+pose_	src/kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^            Affine3f pose_;$/;"	m	class:kfusion::cuda::TsdfVolume
+poses_	src/kfusion/include/kfusion/kinfu.hpp	/^        std::vector<Affine3f> poses_;$/;"	m	class:kfusion::KinFu
+prev_	src/kfusion/include/kfusion/kinfu.hpp	/^        cuda::Frame curr_, prev_;$/;"	m	class:kfusion::KinFu
+printCudaDeviceInfo	src/kfusion/src/core.cpp	/^void kf::cuda::printCudaDeviceInfo(int device)$/;"	f	class:kf::cuda
+printShortCudaDeviceInfo	src/kfusion/src/core.cpp	/^void kf::cuda::printShortCudaDeviceInfo(int device)$/;"	f	class:kf::cuda
+ptr	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline       T* kfusion::cuda::DeviceArray2D<T>::ptr(int y)       { return DeviceMemory2D::ptr<T>(y); }$/;"	f	class:kfusion::cuda::DeviceArray2D
+ptr	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline       T* kfusion::cuda::DeviceArray<T>::ptr()       { return DeviceMemory::ptr<T>(); }$/;"	f	class:kfusion::cuda::DeviceArray
+ptr	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline const T* kfusion::cuda::DeviceArray2D<T>::ptr(int y) const { return DeviceMemory2D::ptr<T>(y); }$/;"	f	class:kfusion::cuda::DeviceArray2D
+ptr	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline const T* kfusion::cuda::DeviceArray<T>::ptr() const { return DeviceMemory::ptr<T>(); }$/;"	f	class:kfusion::cuda::DeviceArray
+ptr	src/kfusion/include/kfusion/cuda/device_memory.hpp	/^template<class T>        T* kfusion::cuda::DeviceMemory2D::ptr(int y_arg)       { return (      T*)((      char*)data_ + y_arg * step_); }$/;"	f	class:kfusion::cuda::DeviceMemory2D
+ptr	src/kfusion/include/kfusion/cuda/device_memory.hpp	/^template<class T>  const T* kfusion::cuda::DeviceMemory2D::ptr(int y_arg) const { return (const T*)((const char*)data_ + y_arg * step_); }$/;"	f	class:kfusion::cuda::DeviceMemory2D
+ptr	src/kfusion/include/kfusion/cuda/device_memory.hpp	/^template<class T> inline       T* kfusion::cuda::DeviceMemory::ptr()       { return (      T*)data_; }$/;"	f	class:kfusion::cuda::DeviceMemory
+ptr	src/kfusion/include/kfusion/cuda/device_memory.hpp	/^template<class T> inline const T* kfusion::cuda::DeviceMemory::ptr() const { return (const T*)data_; }$/;"	f	class:kfusion::cuda::DeviceMemory
+ptr	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__       T* ptr(int y = 0)       { return (      T*)( (      char*)DevPtr<T>::data + y * step); }$/;"	f	struct:kfusion::cuda::PtrStep
+ptr	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            __kf_hdevice__ const T* ptr(int y = 0) const { return (const T*)( (const char*)DevPtr<T>::data + y * step); }$/;"	f	struct:kfusion::cuda::PtrStep
+qnxnto	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
+qnxnto	build/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
+quiet_NaN	src/kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ static float quiet_NaN() { return __int_as_float(0x7fffffff); \/*CUDART_NAN_F*\/ };$/;"	f	struct:kfusion::device::numeric_limits
+r	src/kfusion/include/kfusion/types.hpp	/^            struct { unsigned char b, g, r; };$/;"	m	struct:kfusion::RGB::__anon4::__anon5
+r	src/kfusion/include/kfusion/types.hpp	/^        unsigned char r, g, b;$/;"	m	struct:kfusion::PixelRGB
+raycast	src/kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::raycast(const Affine3f& camera_pose, const Intr& intr, Cloud& points, Normals& normals)$/;"	f	class:kfusion::cuda::TsdfVolume
+raycast	src/kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::raycast(const Affine3f& camera_pose, const Intr& intr, Depth& depth, Normals& normals)$/;"	f	class:kfusion::cuda::TsdfVolume
+raycast_step_factor	src/kfusion/include/kfusion/kinfu.hpp	/^        float raycast_step_factor;   \/\/ in voxel sizes$/;"	m	struct:kfusion::KinFuParams
+raycast_step_factor_	src/kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^            float raycast_step_factor_;$/;"	m	class:kfusion::cuda::TsdfVolume
+reduce	src/kfusion/src/cuda/temp_utils.hpp	/^            static __kf_device__ T reduce(volatile T* buffer, T init, BinOp op)$/;"	f	struct:kfusion::device::Block
+reduce	src/kfusion/src/cuda/temp_utils.hpp	/^            static __kf_device__ void reduce(volatile T* buffer, BinOp op)$/;"	f	struct:kfusion::device::Block
+refcount_	src/kfusion/include/kfusion/cuda/device_memory.hpp	/^            int* refcount_;$/;"	m	class:kfusion::cuda::DeviceMemory
+refcount_	src/kfusion/include/kfusion/cuda/device_memory.hpp	/^            int* refcount_;$/;"	m	class:kfusion::cuda::DeviceMemory2D
+release	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline void kfusion::cuda::DeviceArray2D<T>::release()$/;"	f	class:kfusion::cuda::DeviceArray2D
+release	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline void kfusion::cuda::DeviceArray<T>::release()$/;"	f	class:kfusion::cuda::DeviceArray
+release	src/kfusion/src/capture.cpp	/^void kfusion::OpenNISource::release ()$/;"	f	class:kfusion::OpenNISource
+release	src/kfusion/src/device_memory.cpp	/^void kfusion::cuda::DeviceMemory2D::release()$/;"	f	class:kfusion::cuda::DeviceMemory2D
+release	src/kfusion/src/device_memory.cpp	/^void kfusion::cuda::DeviceMemory::release()$/;"	f	class:kfusion::cuda::DeviceMemory
+renderImage	src/kfusion/src/imgproc.cpp	/^void kfusion::cuda::renderImage(const Cloud& points, const Normals& normals, const Intr& intr, const Vec3f& light_pose, Image& image)$/;"	f	class:kfusion::cuda
+renderImage	src/kfusion/src/imgproc.cpp	/^void kfusion::cuda::renderImage(const Depth& depth, const Normals& normals, const Intr& intr, const Vec3f& light_pose, Image& image)$/;"	f	class:kfusion::cuda
+renderImage	src/kfusion/src/kinfu.cpp	/^void kfusion::KinFu::renderImage(cuda::Image& image, const Affine3f& pose, int flag)$/;"	f	class:kfusion::KinFu
+renderImage	src/kfusion/src/kinfu.cpp	/^void kfusion::KinFu::renderImage(cuda::Image& image, int flag)$/;"	f	class:kfusion::KinFu
+renderTangentColors	src/kfusion/src/imgproc.cpp	/^void kfusion::cuda::renderTangentColors(const Normals& normals, Image& image)$/;"	f	class:kfusion::cuda
+reset	src/kfusion/src/kinfu.cpp	/^void kfusion::KinFu::reset()$/;"	f	class:kfusion::KinFu
+resizeDepthNormals	src/kfusion/src/imgproc.cpp	/^void kfusion::cuda::resizeDepthNormals(const Depth& depth, const Normals& normals, Depth& depth_out, Normals& normals_out)$/;"	f	class:kfusion::cuda
+resizePointsNormals	src/kfusion/src/imgproc.cpp	/^void kfusion::cuda::resizePointsNormals(const Cloud& points, const Normals& normals, Cloud& points_out, Normals& normals_out)$/;"	f	class:kfusion::cuda
+row0	src/kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ float3 row0() const { return make_float3( m00(), m01(), m02() ); }$/;"	f	struct:kfusion::device::Eigen33
+row1	src/kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ float3 row1() const { return make_float3( m10(), m11(), m12() ); }$/;"	f	struct:kfusion::device::Eigen33
+row2	src/kfusion/src/cuda/temp_utils.hpp	/^            __kf_device__ float3 row2() const { return make_float3( m20(), m21(), m22() ); }$/;"	f	struct:kfusion::device::Eigen33
+rows	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline int kfusion::cuda::DeviceArray2D<T>::rows() const { return DeviceMemory2D::rows(); }$/;"	f	class:kfusion::cuda::DeviceArray2D
+rows	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            int rows;                                                                              $/;"	m	struct:kfusion::cuda::PtrStepSz
+rows	src/kfusion/include/kfusion/kinfu.hpp	/^        int rows;  \/\/pixels$/;"	m	struct:kfusion::KinFuParams
+rows	src/kfusion/src/device_memory.cpp	/^int kfusion::cuda::DeviceMemory2D::rows() const { return rows_; }$/;"	f	class:kfusion::cuda::DeviceMemory2D
+rows	src/kfusion/src/internal.hpp	/^            float rows, cols;$/;"	m	struct:kfusion::device::ComputeIcpHelper
+rows_	src/kfusion/include/kfusion/cuda/device_memory.hpp	/^            int rows_;$/;"	m	class:kfusion::cuda::DeviceMemory2D
+scriptNode	src/kfusion/src/capture.cpp	/^    ScriptNode scriptNode;$/;"	m	struct:kfusion::OpenNISource::Impl	file:
+setAngleThreshold	src/kfusion/src/projective_icp.cpp	/^void kfusion::cuda::ProjectiveICP::setAngleThreshold(float angle)$/;"	f	class:kfusion::cuda::ProjectiveICP
+setDevice	src/kfusion/src/core.cpp	/^void kf::cuda::setDevice(int device)$/;"	f	class:kf::cuda
+setDistThreshold	src/kfusion/src/projective_icp.cpp	/^void kfusion::cuda::ProjectiveICP::setDistThreshold(float distance)$/;"	f	class:kfusion::cuda::ProjectiveICP
+setGradientDeltaFactor	src/kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::setGradientDeltaFactor(float factor) { gradient_delta_factor_ = factor; }$/;"	f	class:kfusion::cuda::TsdfVolume
+setIterationsNum	src/kfusion/src/projective_icp.cpp	/^void kfusion::cuda::ProjectiveICP::setIterationsNum(const std::vector<int>& iters)$/;"	f	class:kfusion::cuda::ProjectiveICP
+setLevelIntr	src/kfusion/src/projective_icp.cpp	/^void kfusion::device::ComputeIcpHelper::setLevelIntr(int level_index, float fx, float fy, float cx, float cy)$/;"	f	class:kfusion::device::ComputeIcpHelper
+setMaxWeight	src/kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::setMaxWeight(int weight) { max_weight_ = weight; }$/;"	f	class:kfusion::cuda::TsdfVolume
+setPose	src/kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::setPose(const Affine3f& pose) { pose_ = pose; }$/;"	f	class:kfusion::cuda::TsdfVolume
+setRaycastStepFactor	src/kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::setRaycastStepFactor(float factor) { raycast_step_factor_ = factor; }$/;"	f	class:kfusion::cuda::TsdfVolume
+setRegistration	src/kfusion/src/capture.cpp	/^bool kfusion::OpenNISource::setRegistration (bool value)$/;"	f	class:kfusion::OpenNISource
+setSize	src/kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::setSize(const Vec3f& size)$/;"	f	class:kfusion::cuda::TsdfVolume
+setTruncDist	src/kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::setTruncDist(float distance)$/;"	f	class:kfusion::cuda::TsdfVolume
+shadow_value	src/kfusion/include/io/capture.hpp	/^        int shadow_value, no_sample_value;$/;"	m	class:kfusion::OpenNISource
+shelp_	src/kfusion/include/kfusion/cuda/projective_icp.hpp	/^            cv::Ptr<StreamHelper> shelp_;$/;"	m	class:kfusion::cuda::ProjectiveICP
+show_depth	src/apps/demo.cpp	/^    void show_depth(const cv::Mat& depth)$/;"	f	struct:KinFuApp
+show_raycasted	src/apps/demo.cpp	/^    void show_raycasted(KinFu& kinfu)$/;"	f	struct:KinFuApp
+size	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline size_t kfusion::cuda::DeviceArray<T>::size() const { return sizeBytes() \/ elem_size; }$/;"	f	class:kfusion::cuda::DeviceArray
+size	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            size_t size;$/;"	m	struct:kfusion::cuda::PtrSz
+sizeBytes	src/kfusion/src/device_memory.cpp	/^size_t kfusion::cuda::DeviceMemory::sizeBytes() const { return sizeBytes_; }$/;"	f	class:kfusion::cuda::DeviceMemory
+sizeBytes_	src/kfusion/include/kfusion/cuda/device_memory.hpp	/^            size_t sizeBytes_;$/;"	m	class:kfusion::cuda::DeviceMemory
+size_	src/kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^            Vec3f size_;$/;"	m	class:kfusion::cuda::TsdfVolume
+start	src/kfusion/include/kfusion/types.hpp	/^        double start;$/;"	m	struct:kfusion::SampledScopeTime
+start	src/kfusion/include/kfusion/types.hpp	/^        double start;$/;"	m	struct:kfusion::ScopeTime
+step	src/kfusion/include/kfusion/cuda/kernel_containers.hpp	/^            size_t step;            $/;"	m	struct:kfusion::cuda::PtrStep
+step	src/kfusion/src/device_memory.cpp	/^size_t kfusion::cuda::DeviceMemory2D::step() const { return step_; }$/;"	f	class:kfusion::cuda::DeviceMemory2D
+step_	src/kfusion/include/kfusion/cuda/device_memory.hpp	/^            size_t step_;$/;"	m	class:kfusion::cuda::DeviceMemory2D
+strError	src/kfusion/src/capture.cpp	/^    XnChar strError[1024];$/;"	m	struct:kfusion::OpenNISource::Impl	file:
+stream	src/kfusion/src/projective_icp.cpp	/^    cudaStream_t stream;$/;"	m	struct:kfusion::cuda::ProjectiveICP::StreamHelper	file:
+stride	src/kfusion/src/cuda/temp_utils.hpp	/^            static __kf_device__ unsigned int stride()$/;"	f	struct:kfusion::device::Block
+swap	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> void  kfusion::cuda::DeviceArray2D<T>::swap(DeviceArray2D& other_arg) { DeviceMemory2D::swap(other_arg); }$/;"	f	class:kfusion::cuda::DeviceArray2D
+swap	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> void kfusion::cuda::DeviceArray<T>::swap(DeviceArray& other_arg) { DeviceMemory::swap(other_arg); }$/;"	f	class:kfusion::cuda::DeviceArray
+swap	src/kfusion/src/cuda/temp_utils.hpp	/^        template <class T> __kf_hdevice__ void swap(T& a, T& b) { T c(a); a=b; b=c; }$/;"	f	namespace:kfusion::device
+swap	src/kfusion/src/device_memory.cpp	/^void kfusion::cuda::DeviceMemory2D::swap(DeviceMemory2D& other_arg)$/;"	f	class:kfusion::cuda::DeviceMemory2D
+swap	src/kfusion/src/device_memory.cpp	/^void kfusion::cuda::DeviceMemory::swap(DeviceMemory& other_arg)$/;"	f	class:kfusion::cuda::DeviceMemory
+swap	src/kfusion/src/tsdf_volume.cpp	/^void kfusion::cuda::TsdfVolume::swap(CudaData& data) { data_.swap(data); }$/;"	f	class:kfusion::cuda::TsdfVolume
+t	src/kfusion/src/internal.hpp	/^        struct Aff3f { Mat3f R; Vec3f t; };$/;"	m	struct:kfusion::device::Aff3f
+take_cloud	src/apps/demo.cpp	/^    void take_cloud(KinFu& kinfu)$/;"	f	struct:KinFuApp
+texref	src/kfusion/src/cuda/texture_binder.hpp	/^            const struct textureReference *texref;$/;"	m	class:kfusion::cuda::TextureBinder	typeref:struct:kfusion::cuda::TextureBinder::textureReference
+time_ms_	src/kfusion/include/kfusion/types.hpp	/^        double& time_ms_;$/;"	m	struct:kfusion::SampledScopeTime
+tr	src/kfusion/src/cuda/device.hpp	/^        __kf_device__ Vec3f tr(const float4& v) { return make_float3(v.x, v.y, v.z); }$/;"	f	namespace:kfusion::device
+trunc_dist	src/kfusion/src/internal.hpp	/^            const float trunc_dist;$/;"	m	struct:kfusion::device::TsdfVolume
+trunc_dist_	src/kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^            float trunc_dist_;$/;"	m	class:kfusion::cuda::TsdfVolume
+tsdf	src/kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^                half tsdf;$/;"	m	struct:kfusion::cuda::TsdfVolume::Entry
+tsdf	src/kfusion/src/kinfu.cpp	/^const kfusion::cuda::TsdfVolume& kfusion::KinFu::tsdf() const$/;"	f	class:kfusion::KinFu
+tsdf	src/kfusion/src/kinfu.cpp	/^kfusion::cuda::TsdfVolume& kfusion::KinFu::tsdf()$/;"	f	class:kfusion::KinFu
+tsdf_max_weight	src/kfusion/include/kfusion/kinfu.hpp	/^        int tsdf_max_weight;               \/\/frames$/;"	m	struct:kfusion::KinFuParams
+tsdf_min_camera_movement	src/kfusion/include/kfusion/kinfu.hpp	/^        float tsdf_min_camera_movement; \/\/meters, integrate only if exceedes$/;"	m	struct:kfusion::KinFuParams
+tsdf_trunc_dist	src/kfusion/include/kfusion/kinfu.hpp	/^        float tsdf_trunc_dist;             \/\/meters;$/;"	m	struct:kfusion::KinFuParams
+type	src/kfusion/include/kfusion/cuda/device_array.hpp	/^            typedef T type;$/;"	t	class:kfusion::cuda::DeviceArray
+type	src/kfusion/include/kfusion/cuda/device_array.hpp	/^            typedef T type;$/;"	t	class:kfusion::cuda::DeviceArray2D
+uchar	src/kfusion/src/internal.hpp	/^        typedef unsigned char uchar;$/;"	t	namespace:kfusion::device
+unitOrthogonal	src/kfusion/src/cuda/temp_utils.hpp	/^            static __kf_device__ float3 unitOrthogonal (const float3& src)$/;"	f	struct:kfusion::device::Eigen33
+unpack_tsdf	src/kfusion/src/cuda/device.hpp	/^__kf_device__ float kfusion::device::unpack_tsdf (ushort2 value) { return __half2float (value.x); }$/;"	f	class:kfusion::device
+unpack_tsdf	src/kfusion/src/cuda/device.hpp	/^__kf_device__ float kfusion::device::unpack_tsdf(ushort2 value, int& weight)$/;"	f	class:kfusion::device
+upload	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline void kfusion::cuda::DeviceArray2D<T>::upload(const void *host_ptr, size_t host_step, int rows, int cols)$/;"	f	class:kfusion::cuda::DeviceArray2D
+upload	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> inline void kfusion::cuda::DeviceArray<T>::upload(const T *host_ptr, size_t size)$/;"	f	class:kfusion::cuda::DeviceArray
+upload	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> template<class A> inline void kfusion::cuda::DeviceArray2D<T>::upload(const std::vector<T, A>& data, int cols)$/;"	f	class:kfusion::cuda::DeviceArray2D
+upload	src/kfusion/include/kfusion/cuda/device_array.hpp	/^template<class T> template<class A> inline void kfusion::cuda::DeviceArray<T>::upload(const std::vector<T, A>& data) { upload(&data[0], data.size()); }$/;"	f	class:kfusion::cuda::DeviceArray
+upload	src/kfusion/src/device_memory.cpp	/^void kfusion::cuda::DeviceMemory2D::upload(const void *host_ptr_arg, size_t host_step_arg, int rows_arg, int colsBytes_arg)$/;"	f	class:kfusion::cuda::DeviceMemory2D
+upload	src/kfusion/src/device_memory.cpp	/^void kfusion::cuda::DeviceMemory::upload(const void *host_ptr_arg, size_t sizeBytes_arg)$/;"	f	class:kfusion::cuda::DeviceMemory
+use_points	src/kfusion/include/kfusion/types.hpp	/^            bool use_points;$/;"	m	struct:kfusion::cuda::Frame
+ushort	src/kfusion/src/internal.hpp	/^        typedef unsigned short ushort;$/;"	t	namespace:kfusion::device
+vcurr	src/kfusion/src/internal.hpp	/^            PtrStep<Point> vcurr;$/;"	m	struct:kfusion::device::ComputeIcpHelper
+view_device_	src/apps/demo.cpp	/^    cuda::Image view_device_;$/;"	m	struct:KinFuApp	file:
+view_host_	src/apps/demo.cpp	/^    cv::Mat view_host_;$/;"	m	struct:KinFuApp	file:
+viz	src/apps/demo.cpp	/^    cv::viz::Viz3d viz;$/;"	m	struct:KinFuApp	file:
+volatile	build/CMakeFiles/3.6.0/CompilerIdC/CMakeCCompilerId.c	11;"	d	file:
+volume_	src/kfusion/include/kfusion/kinfu.hpp	/^        cv::Ptr<cuda::TsdfVolume> volume_;$/;"	m	class:kfusion::KinFu
+volume_dims	src/kfusion/include/kfusion/kinfu.hpp	/^        Vec3i volume_dims; \/\/number of voxels$/;"	m	struct:kfusion::KinFuParams
+volume_pose	src/kfusion/include/kfusion/kinfu.hpp	/^        Affine3f volume_pose; \/\/meters, inital pose$/;"	m	struct:kfusion::KinFuParams
+volume_size	src/kfusion/include/kfusion/kinfu.hpp	/^        Vec3f volume_size; \/\/meters$/;"	m	struct:kfusion::KinFuParams
+voxel_size	src/kfusion/src/internal.hpp	/^            const float3 voxel_size;$/;"	m	struct:kfusion::device::TsdfVolume
+w	src/kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float12
+w	src/kfusion/src/internal.hpp	/^        struct float8  { float x, y, z, w, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float8
+waitAllDefaultStream	src/kfusion/src/imgproc.cpp	/^void kfusion::cuda::waitAllDefaultStream()$/;"	f	class:kfusion::cuda
+warp_reduce	src/kfusion/src/cuda/temp_utils.hpp	/^            static __kf_device__ int warp_reduce ( volatile int *ptr , const unsigned int tid)$/;"	f	struct:kfusion::device::Emulation
+weight	src/kfusion/include/kfusion/cuda/tsdf_volume.hpp	/^                unsigned short weight;$/;"	m	struct:kfusion::cuda::TsdfVolume::Entry
+x	src/kfusion/include/kfusion/types.hpp	/^            struct { float x, y, z; };$/;"	m	struct:kfusion::Point::__anon2::__anon3
+x	src/kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float12
+x	src/kfusion/src/internal.hpp	/^        struct float8  { float x, y, z, w, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float8
+y	src/kfusion/include/kfusion/types.hpp	/^            struct { float x, y, z; };$/;"	m	struct:kfusion::Point::__anon2::__anon3
+y	src/kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float12
+y	src/kfusion/src/internal.hpp	/^        struct float8  { float x, y, z, w, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float8
+z	src/kfusion/include/kfusion/types.hpp	/^            struct { float x, y, z; };$/;"	m	struct:kfusion::Point::__anon2::__anon3
+z	src/kfusion/src/internal.hpp	/^        struct float12 { float x, y, z, w, normal_x, normal_y, normal_z, n4, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float12
+z	src/kfusion/src/internal.hpp	/^        struct float8  { float x, y, z, w, c1, c2, c3, c4; };$/;"	m	struct:kfusion::device::float8
+zstep	src/kfusion/src/cuda/device.hpp	/^__kf_device__ kfusion::device::TsdfVolume::elem_type* kfusion::device::TsdfVolume::zstep(elem_type *const ptr) const$/;"	f	class:kfusion::device::TsdfVolume
+~DeviceMemory	src/kfusion/src/device_memory.cpp	/^kfusion::cuda::DeviceMemory::~DeviceMemory() { release(); }$/;"	f	class:kfusion::cuda::DeviceMemory
+~DeviceMemory2D	src/kfusion/src/device_memory.cpp	/^kfusion::cuda::DeviceMemory2D::~DeviceMemory2D() { release(); }$/;"	f	class:kfusion::cuda::DeviceMemory2D
+~OpenNISource	src/kfusion/src/capture.cpp	/^kfusion::OpenNISource::~OpenNISource() { release (); }$/;"	f	class:kfusion::OpenNISource
+~ProjectiveICP	src/kfusion/src/projective_icp.cpp	/^kfusion::cuda::ProjectiveICP::~ProjectiveICP() {}$/;"	f	class:kfusion::cuda::ProjectiveICP
+~SampledScopeTime	src/kfusion/src/core.cpp	/^kf::SampledScopeTime::~SampledScopeTime()$/;"	f	class:kf::SampledScopeTime
+~ScopeTime	src/kfusion/src/core.cpp	/^kf::ScopeTime::~ScopeTime()$/;"	f	class:kf::ScopeTime
+~StreamHelper	src/kfusion/src/projective_icp.cpp	/^    ~StreamHelper() { cudaSafeCall( cudaStreamDestroy(stream) ); }$/;"	f	struct:kfusion::cuda::ProjectiveICP::StreamHelper
+~TextureBinder	src/kfusion/src/cuda/texture_binder.hpp	/^            ~TextureBinder()$/;"	f	class:kfusion::cuda::TextureBinder
+~TsdfVolume	src/kfusion/src/tsdf_volume.cpp	/^kfusion::cuda::TsdfVolume::~TsdfVolume() {}$/;"	f	class:kfusion::cuda::TsdfVolume

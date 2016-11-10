@@ -23,6 +23,8 @@ io/capture.hpp
 -
 stdio.h
 -
+string
+-
 
 /home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/include/io/capture.hpp
 kfusion/kinfu.hpp

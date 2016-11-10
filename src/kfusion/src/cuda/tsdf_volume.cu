@@ -1,5 +1,6 @@
 #include "device.hpp"
 #include "texture_binder.hpp"
+#include <iostream>
 
 using namespace kfusion::device;
 
@@ -276,6 +277,8 @@ namespace kfusion
                 } /* for (;;) */
             }
 
+			// this would run.
+			// this is important.
             __kf_device__
             void operator()(PtrStepSz<Point> points, PtrStep<Normal> normals) const
             {
@@ -395,6 +398,7 @@ void kfusion::device::raycast(const TsdfVolume& volume, const Aff3f& aff, const 
 }
 
 
+// this would run
 void kfusion::device::raycast(const TsdfVolume& volume, const Aff3f& aff, const Mat3f& Rinv, const Reprojector& reproj,
                               Points& points, Normals& normals, float raycaster_step_factor, float gradient_delta_factor)
 {

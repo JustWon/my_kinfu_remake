@@ -1,0 +1,24 @@
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+KeyboardCallback	demo.cpp	/^    static void KeyboardCallback(const cv::viz::KeyboardEvent& event, void* pthis)$/;"	f	struct:KinFuApp
+KinFuApp	demo.cpp	/^    KinFuApp(OpenNISource& source) : exit_ (false),  iteractive_mode_(false), capture_ (source), pause_(false)$/;"	f	struct:KinFuApp
+KinFuApp	demo.cpp	/^struct KinFuApp$/;"	s	file:
+capture_	demo.cpp	/^    OpenNISource& capture_;$/;"	m	struct:KinFuApp	file:
+cloud_buffer	demo.cpp	/^    cuda::DeviceArray<Point> cloud_buffer;$/;"	m	struct:KinFuApp	file:
+depth_device_	demo.cpp	/^    cuda::Depth depth_device_;$/;"	m	struct:KinFuApp	file:
+execute	demo.cpp	/^    bool execute()$/;"	f	struct:KinFuApp
+exit_	demo.cpp	/^    bool exit_, iteractive_mode_;$/;"	m	struct:KinFuApp	file:
+iteractive_mode_	demo.cpp	/^    bool exit_, iteractive_mode_;$/;"	m	struct:KinFuApp	file:
+kinfu_	demo.cpp	/^    KinFu::Ptr kinfu_;$/;"	m	struct:KinFuApp	file:
+main	demo.cpp	/^int main (int argc, char* argv[])$/;"	f
+pause_	demo.cpp	/^    bool pause_ \/*= false*\/;$/;"	m	struct:KinFuApp	file:
+show_depth	demo.cpp	/^    void show_depth(const cv::Mat& depth)$/;"	f	struct:KinFuApp
+show_raycasted	demo.cpp	/^    void show_raycasted(KinFu& kinfu)$/;"	f	struct:KinFuApp
+take_cloud	demo.cpp	/^    void take_cloud(KinFu& kinfu)$/;"	f	struct:KinFuApp
+view_device_	demo.cpp	/^    cuda::Image view_device_;$/;"	m	struct:KinFuApp	file:
+view_host_	demo.cpp	/^    cv::Mat view_host_;$/;"	m	struct:KinFuApp	file:
+viz	demo.cpp	/^    cv::viz::Viz3d viz;$/;"	m	struct:KinFuApp	file:
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/

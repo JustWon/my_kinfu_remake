@@ -1,4 +1,5 @@
 #include "device.hpp"
+#include <iostream>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// Depth bilateral filter
@@ -227,10 +228,12 @@ namespace kfusion
 
             if (z00 * z01 * z10 != 0)
             {
+            	// at this point, the extrinsic parameter should be imposed.
                 float3 v00 = reproj(x,   y, z00);
                 float3 v01 = reproj(x+1, y, z01);
                 float3 v10 = reproj(x, y+1, z10);
-
+				
+				// cross product for normal 
                 float3 n = normalized( cross (v01 - v00, v10 - v00) );
                 normals(y, x) = make_float4(-n.x, -n.y, -n.z, 0.f);
                 points(y, x) = make_float4(v00.x, v00.y, v00.z, 0.f);
@@ -344,6 +347,7 @@ namespace kfusion
 {
     namespace device
     {
+    	// calcuate mean value from x2 size map (3d point, normal)
         __global__ void resize_points_normals_kernel(const PtrStep<Point> vsrc, const PtrStep<Normal> nsrc, PtrStepSz<Point> vdst, PtrStep<Normal> ndst)
         {
             int x = threadIdx.x + blockIdx.x * blockDim.x;
@@ -351,7 +355,8 @@ namespace kfusion
 
             if (x >= vdst.cols || y >= vdst.rows)
                 return;
-
+			
+			// init with nan value
             const float qnan = numeric_limits<float>::quiet_NaN ();
             vdst(y, x) = ndst(y, x) = make_float4(qnan, qnan, qnan, 0.f);
 
@@ -365,6 +370,7 @@ namespace kfusion
 
             if (!isnan(d00.x * d01.x * d10.x * d11.x))
             {
+            	// mean value
                 float3 d = (d00 + d01 + d10 + d11) * 0.25f;
                 vdst(y, x) = make_float4(d.x, d.y, d.z, 0.f);
 
@@ -493,7 +499,10 @@ namespace kfusion
                 float3 R = normalized(2 * N * dot(N, L) - L);
 
                 float Ix = Ax*Ka*Dx + Lx * Kd * Dx * fmax(0.f, dot(N, L)) + Lx * Ks * Sx * __powf(fmax(0.f, dot(R, V)), n);
-                color = make_float3(Ix, Ix, Ix);
+                //color = make_float3(Ix, Ix, Ix);
+                
+                // for a depth image generation
+                color = make_float3(P.z/3,P.z/3,P.z/3);
             }
 
             uchar4 out;
@@ -515,6 +524,7 @@ void kfusion::device::renderImage(const Depth& depth, const Normals& normals, co
     cudaSafeCall ( cudaGetLastError () );
 }
 
+// this would run
 void kfusion::device::renderImage(const Points& points, const Normals& normals, const Reprojector& reproj, const Vec3f& light_pose, Image& image)
 {
     dim3 block (32, 8);

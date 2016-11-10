@@ -39,8 +39,8 @@ __kf_device__ float2 kfusion::device::Projector::operator()(const float3& p) con
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// Reprojector
-
 __kf_device__ float3 kfusion::device::Reprojector::operator()(int u, int v, float z) const
+
 {
     float x = z * (u - c.x) * finv.x;
     float y = z * (v - c.y) * finv.y;

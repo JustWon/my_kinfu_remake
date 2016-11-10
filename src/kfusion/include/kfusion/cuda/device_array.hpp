@@ -160,7 +160,7 @@ namespace kfusion
               * */
             void copyTo(DeviceArray2D& other) const;
 
-            /** \brief Uploads data to internal buffer in GPU memory. It calls create() inside to ensure that intenal buffer size is enough.
+            /** \brief Uploads data to internal buffer in GPU memory. It calls create() inside to ensure that internal buffer size is enough.
               * \param host_ptr: pointer to host buffer to upload
               * \param host_step: stride between two consecutive rows in bytes for host buffer
               * \param rows: number of rows to upload
@@ -168,7 +168,7 @@ namespace kfusion
               * */
             void upload(const void *host_ptr, size_t host_step, int rows, int cols);
 
-            /** \brief Downloads data from internal buffer to CPU memory. User is resposible for correct host buffer size.
+            /** \brief Downloads data from internal buffer to CPU memory. User is responsible for correct host buffer size.
               * \param host_ptr: pointer to host buffer to download
               * \param host_step: stride between two consecutive rows in bytes for host buffer
               * */
@@ -179,7 +179,7 @@ namespace kfusion
               * */
             void swap(DeviceArray2D& other_arg);
 
-            /** \brief Uploads data to internal buffer in GPU memory. It calls create() inside to ensure that intenal buffer size is enough.
+            /** \brief Uploads data to internal buffer in GPU memory. It calls create() inside to ensure that internal buffer size is enough.
               * \param data: host vector to upload from
               * \param cols: stride in elements between two consecutive rows for host buffer
               * */

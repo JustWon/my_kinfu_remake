@@ -6,6 +6,7 @@
 #include <kfusion/kinfu.hpp>
 #include <io/capture.hpp>
 #include <stdio.h>
+#include <string>
 
 using namespace kfusion;
 
@@ -34,7 +35,7 @@ struct KinFuApp
 
         cv::viz::WCube cube(cv::Vec3d::all(0), cv::Vec3d(params.volume_size), true, cv::viz::Color::apricot());
         viz.showWidget("cube", cube, params.volume_pose);
-        viz.showWidget("coor", cv::viz::WCoordinateSystem(0.1));
+        viz.showWidget("color", cv::viz::WCoordinateSystem(0.1));
         viz.registerKeyboardCallback(KeyboardCallback, this);
     }
 
@@ -46,9 +47,17 @@ struct KinFuApp
         cv::imshow("Depth", display);
     }
 
+    template <typename T>
+    std::string to_string(T value)
+    {
+    	std::ostringstream os ;
+    	os << value ;
+    	return os.str() ;
+    }
+
     void show_raycasted(KinFu& kinfu)
     {
-        const int mode = 3;
+        const int mode = 1;
         if (iteractive_mode_)
             kinfu.renderImage(view_device_, viz.getViewerPose(), mode);
         else
@@ -57,6 +66,23 @@ struct KinFuApp
         view_host_.create(view_device_.rows(), view_device_.cols(), CV_8UC4);
         view_device_.download(view_host_.ptr<void>(), view_host_.step);
         cv::imshow("Scene", view_host_);
+
+        if (depth_gen) {
+        	std::cout << "depth image capture" << std::endl;
+
+        	Affine3f cur_view = viz.getViewerPose();
+        	for (int idx = 0 ; idx < 5 ; idx++)
+        	{
+        		std::string filename = "view" + to_string(idx) +".bmp";
+
+        		cur_view.matrix(0,3) += 0.1;
+        		kinfu.renderImage(view_device_, cur_view, mode);
+				view_device_.download(view_host_.ptr<void>(), view_host_.step);
+				cv::imwrite(filename.c_str(),view_host_);
+
+				depth_gen = false;
+        	}
+        }
     }
 
     void take_cloud(KinFu& kinfu)
@@ -76,7 +102,7 @@ struct KinFuApp
         bool has_image = false;
 
         int view_count = 1;
-        int seq_count = 100;
+        int seq_count = 0;
         for (int i = 0; !exit_ && !viz.wasStopped(); ++i)
         {
             bool has_frame = capture_.grab(depth, image);
@@ -88,15 +114,12 @@ struct KinFuApp
 				view_count = 1;
 				kinfu.reset();
 			}
-			if (seq_count > 297)
+			if (seq_count > 489)
 			{
-				seq_count = 100;
+				seq_count = 0;
 			}
             char file_name[1024];
-            if (view_count == 1)
-            	sprintf(file_name,"/home/dongwonshin/Desktop/20161028_kinectv2_two_com_seq/cam%d/image%d.png", view_count, seq_count+2);
-            else if (view_count == 2)
-            	sprintf(file_name,"/home/dongwonshin/Desktop/20161028_kinectv2_two_com_seq/cam%d/image%d.png", view_count, seq_count);
+            sprintf(file_name,"/home/dongwonshin/Desktop/20161031 test/com%d/20161031_005318 sequence/sequence/kinect_depth%d.png", view_count, seq_count);
 			view_count++;
 			seq_count++;
 			cv::Mat tof_img = cv::imread(file_name, CV_LOAD_IMAGE_ANYDEPTH);
@@ -124,7 +147,12 @@ struct KinFuApp
             if (!iteractive_mode_)
             {
             	kfusion::Affine3f temp = kinfu.getCameraPose();
-//            	temp.matrix(0,3) += 1;
+            	float rx = -272.330416;
+            	float ry = 454.777229;
+            	float rz = -219.745544;
+            	temp.matrix(0,3) += rx/10000;
+            	temp.matrix(1,3) += ry/10000;
+            	temp.matrix(2,3) += rz/1000;
                 viz.setViewerPose(temp);
             }
 
@@ -134,6 +162,7 @@ struct KinFuApp
             {
 				case 't': case 'T' : take_cloud(kinfu); break;
 				case 'i': case 'I' : iteractive_mode_ = !iteractive_mode_; break;
+				case 'c': case 'C' : depth_gen = true; break;
 				case 27: exit_ = true; break;
 				case 32: pause_ = !pause_; break;
             }
@@ -147,6 +176,8 @@ struct KinFuApp
 
     bool pause_ /*= false*/;
     bool exit_, iteractive_mode_;
+    bool depth_gen = false;
+
     OpenNISource& capture_;
     KinFu::Ptr kinfu_;
     cv::viz::Viz3d viz;
@@ -171,14 +202,6 @@ int main (int argc, char* argv[])
 
     OpenNISource capture;
     capture.open (0);
-
-    //capture.open("d:/onis/20111013-224932.oni");
-    //capture.open("d:/onis/reg20111229-180846.oni");
-    //capture.open("d:/onis/white1.oni");
-    //capture.open("/media/Main/onis/20111013-224932.oni");
-    //capture.open("20111013-225218.oni");
-    //capture.open("d:/onis/20111013-224551.oni");
-    //capture.open("d:/onis/20111013-224719.oni");
 
     KinFuApp app (capture);
 
