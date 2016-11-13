@@ -290,13 +290,13 @@ void kfusion::KinFu::renderImage(cuda::Image& image, const Affine3f& pose, int f
     #define PASS1 points_
 #endif
 
-    //volume_->raycast(pose, p.intr, PASS1, normals_);
+//    volume_->raycast(pose, p.intr, PASS1, normals_);
 	volume_->raycast(pose, Intr(1732.798623, 1731.965514, 658.178905, 369.409351), PASS1, normals_);
 
 
     if (flag == 1)
     {
-    	//cuda::renderImage(PASS1, normals_, p.intr, params_.light_pose, image);
+//    	cuda::renderImage(PASS1, normals_, p.intr, params_.light_pose, image);
         cuda::renderImage(PASS1, normals_, Intr(1732.798623, 1731.965514, 658.178905, 369.409351), params_.light_pose, image);
     }
     else if (flag == 2)
@@ -305,14 +305,14 @@ void kfusion::KinFu::renderImage(cuda::Image& image, const Affine3f& pose, int f
     }
     else /* if (flag == 3) */
     {
-    	// This would run
 //        DeviceArray2D<RGB> i1(p.rows, p.cols, image.ptr(), image.step());
 //        DeviceArray2D<RGB> i2(p.rows, p.cols, image.ptr() + p.cols, image.step());
     	DeviceArray2D<RGB> i1(720, 1280, image.ptr(), image.step());
     	DeviceArray2D<RGB> i2(720, 1280, image.ptr() + 1280, image.step());
 
-        //cuda::renderImage(PASS1, normals_, params_.intr, params_.light_pose, i1);
+//        cuda::renderImage(PASS1, normals_, params_.intr, params_.light_pose, i1);
         cuda::renderImage(PASS1, normals_, Intr(1732.798623, 1731.965514, 658.178905, 369.409351), params_.light_pose, i1);
+
         cuda::renderTangentColors(normals_, i2);
     }
 #undef PASS1

@@ -69,19 +69,45 @@ struct KinFuApp
 
         if (depth_gen) {
         	std::cout << "depth image capture" << std::endl;
-
         	Affine3f cur_view = viz.getViewerPose();
-        	for (int idx = 0 ; idx < 5 ; idx++)
-        	{
-        		std::string filename = "view" + to_string(idx) +".bmp";
 
-        		cur_view.matrix(0,3) += 0.1;
-        		kinfu.renderImage(view_device_, cur_view, mode);
-				view_device_.download(view_host_.ptr<void>(), view_host_.step);
-				cv::imwrite(filename.c_str(),view_host_);
+//        	for (int idx = 0 ; idx < 5 ; idx++)
+//        	{
+//        		std::string filename = "view" + to_string(idx) +".png";
+//
+//        		cur_view.matrix(0,3) += 0.1;
+//        		kinfu.renderImage(view_device_, cur_view, mode);
+//				view_device_.download(view_host_.ptr<void>(), view_host_.step);
+//				cv::imwrite(filename.c_str(),view_host_);
+//        	}
 
-				depth_gen = false;
-        	}
+
+			kinfu.renderImage(view_device_, cur_view, mode);
+			view_device_.download(view_host_.ptr<void>(), view_host_.step);
+			cv::imwrite("view0.bmp",view_host_);
+
+			cur_view.matrix(0,3) += 40.074353/1000;
+			cur_view.matrix(1,3) += -1.973618/1000;
+			cur_view.matrix(2,3) += -5.539809/1000;
+			kinfu.renderImage(view_device_, cur_view, mode);
+			view_device_.download(view_host_.ptr<void>(), view_host_.step);
+			cv::imwrite("view1.bmp",view_host_);
+
+			cur_view.matrix(0,3) += 70.204512/1000;
+			cur_view.matrix(1,3) += -6.869942/1000;
+			cur_view.matrix(2,3) += -3.684597/1000;
+			kinfu.renderImage(view_device_, cur_view, mode);
+			view_device_.download(view_host_.ptr<void>(), view_host_.step);
+			cv::imwrite("view2.bmp",view_host_);
+
+			cur_view.matrix(0,3) += 61.193986/1000;
+			cur_view.matrix(1,3) += -2.879078/1000;
+			cur_view.matrix(2,3) += -9.842761/1000;
+			kinfu.renderImage(view_device_, cur_view, mode);
+			view_device_.download(view_host_.ptr<void>(), view_host_.step);
+			cv::imwrite("view3.bmp",view_host_);
+
+        	depth_gen = false;
         }
     }
 

@@ -511,7 +511,13 @@ namespace kfusion
             out.z = static_cast<unsigned char>(__saturatef(color.z) * 255.f);
             out.w = 0;
             dst(y, x) = out;
+            
+            //uint out;
+            //out = color.z;
+            //dst(y,x) = out;
         }
+        
+        
     }
 }
 
