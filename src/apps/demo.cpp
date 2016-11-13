@@ -70,6 +70,7 @@ struct KinFuApp
         for (int j = 0 ; j < view_host_.cols/resize_factor ; j++)
         	resized.at<float>(i,j) = view_host_.at<float>(resize_factor*i,resize_factor*j);
         cv::imshow("view0", resized);
+        cv::moveWindow("view0",100,100);
 
 		cur_view.matrix(0,3) += 40.074353/1000;
 		cur_view.matrix(1,3) += -1.973618/1000;
@@ -81,6 +82,7 @@ struct KinFuApp
 		for (int j = 0 ; j < view_host_.cols/resize_factor ; j++)
 			resized.at<float>(i,j) = view_host_.at<float>(resize_factor*i,resize_factor*j);
 		cv::imshow("view1",resized);
+		cv::moveWindow("view1",450,100);
 
 		cur_view.matrix(0,3) += 70.204512/1000;
 		cur_view.matrix(1,3) += -6.869942/1000;
@@ -92,6 +94,7 @@ struct KinFuApp
 		for (int j = 0 ; j < view_host_.cols/resize_factor ; j++)
 			resized.at<float>(i,j) = view_host_.at<float>(resize_factor*i,resize_factor*j);
 		cv::imshow("view2",resized);
+		cv::moveWindow("view2",800,100);
 
 		cur_view.matrix(0,3) += 61.193986/1000;
 		cur_view.matrix(1,3) += -2.879078/1000;
@@ -103,41 +106,58 @@ struct KinFuApp
 		for (int j = 0 ; j < view_host_.cols/resize_factor ; j++)
 			resized.at<float>(i,j) = view_host_.at<float>(resize_factor*i,resize_factor*j);
 		cv::imshow("view3",resized);
+		cv::moveWindow("view3",1150,100);
 
 
-
+		// save
         if (depth_gen) {
         	std::cout << "depth image capture" << std::endl;
         	Affine3f cur_view = viz.getViewerPose();
 
 			kinfu.renderImage(view_device_, cur_view, mode);
 			view_device_.download(view_host_.ptr<void>(), view_host_.step);
+			view_host_ = view_host_*100;
 			cv::imwrite("view0.bmp", view_host_);
 
-			cv::FileStorage storage("view0.yml", cv::FileStorage::WRITE);
-			storage << "img" << view_host_;
-			storage.release();
+			cv::FileStorage storage0("view0.yml", cv::FileStorage::WRITE);
+			storage0 << "img" << view_host_;
+			storage0.release();
 
-//			cur_view.matrix(0,3) += 40.074353/1000;
-//			cur_view.matrix(1,3) += -1.973618/1000;
-//			cur_view.matrix(2,3) += -5.539809/1000;
-//			kinfu.renderImage(view_device_, cur_view, mode);
-//			view_device_.download(view_host_.ptr<void>(), view_host_.step);
-//			cv::imwrite("view1.bmp",view_host_);
-//
-//			cur_view.matrix(0,3) += 70.204512/1000;
-//			cur_view.matrix(1,3) += -6.869942/1000;
-//			cur_view.matrix(2,3) += -3.684597/1000;
-//			kinfu.renderImage(view_device_, cur_view, mode);
-//			view_device_.download(view_host_.ptr<void>(), view_host_.step);
-//			cv::imwrite("view2.bmp",view_host_);
-//
-//			cur_view.matrix(0,3) += 61.193986/1000;
-//			cur_view.matrix(1,3) += -2.879078/1000;
-//			cur_view.matrix(2,3) += -9.842761/1000;
-//			kinfu.renderImage(view_device_, cur_view, mode);
-//			view_device_.download(view_host_.ptr<void>(), view_host_.step);
-//			cv::imwrite("view3.bmp",view_host_);
+			cur_view.matrix(0,3) += 40.074353/1000;
+			cur_view.matrix(1,3) += -1.973618/1000;
+			cur_view.matrix(2,3) += -5.539809/1000;
+			kinfu.renderImage(view_device_, cur_view, mode);
+			view_device_.download(view_host_.ptr<void>(), view_host_.step);
+			view_host_ = view_host_*100;
+			cv::imwrite("view1.bmp",view_host_);
+
+			cv::FileStorage storage1("view1.yml", cv::FileStorage::WRITE);
+			storage1 << "img" << view_host_;
+			storage1.release();
+
+			cur_view.matrix(0,3) += 70.204512/1000;
+			cur_view.matrix(1,3) += -6.869942/1000;
+			cur_view.matrix(2,3) += -3.684597/1000;
+			kinfu.renderImage(view_device_, cur_view, mode);
+			view_device_.download(view_host_.ptr<void>(), view_host_.step);
+			view_host_ = view_host_*100;
+			cv::imwrite("view2.bmp",view_host_);
+
+			cv::FileStorage storage2("view2.yml", cv::FileStorage::WRITE);
+			storage2 << "img" << view_host_;
+			storage2.release();
+
+			cur_view.matrix(0,3) += 61.193986/1000;
+			cur_view.matrix(1,3) += -2.879078/1000;
+			cur_view.matrix(2,3) += -9.842761/1000;
+			kinfu.renderImage(view_device_, cur_view, mode);
+			view_device_.download(view_host_.ptr<void>(), view_host_.step);
+			view_host_ = view_host_*100;
+			cv::imwrite("view3.bmp",view_host_);
+
+			cv::FileStorage storage3("view3.yml", cv::FileStorage::WRITE);
+			storage3 << "img" << view_host_;
+			storage3.release();
 
         	depth_gen = false;
         }
@@ -199,7 +219,7 @@ struct KinFuApp
             if (has_image)
                 show_raycasted(kinfu);
 
-            show_depth(depth);
+            //show_depth(depth);
             //cv::imshow("Image", image);
 
             if (!iteractive_mode_)
