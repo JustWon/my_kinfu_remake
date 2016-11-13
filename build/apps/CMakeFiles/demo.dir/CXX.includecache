@@ -9,11 +9,11 @@
 /home/dongwonshin/Desktop/my_codes/kinfu_remake/src/apps/demo.cpp
 iostream
 -
+opencv2/opencv.hpp
+-
 opencv2/highgui/highgui.hpp
 -
 opencv2/imgproc/imgproc.hpp
--
-opencv2/opencv.hpp
 -
 opencv2/viz/vizcore.hpp
 -

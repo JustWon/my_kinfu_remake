@@ -457,7 +457,7 @@ namespace kfusion
         }
 
         __global__ void render_image_kernel(const PtrStep<Point> points, const PtrStep<Normal> normals,
-                                            const Reprojector reproj, const float3 light_pose, PtrStepSz<uchar4> dst)
+                                            const Reprojector reproj, const float3 light_pose, PtrStepSz<float> dst)
         {
             int x = threadIdx.x + blockIdx.x * blockDim.x;
             int y = threadIdx.y + blockIdx.y * blockDim.y;
@@ -502,22 +502,20 @@ namespace kfusion
                 //color = make_float3(Ix, Ix, Ix);
                 
                 // for a depth image generation
-                color = make_float3(P.z/3,P.z/3,P.z/3);
+                color = make_float3(P.x,P.y,P.z);
             }
 
-            uchar4 out;
-            out.x = static_cast<unsigned char>(__saturatef(color.x) * 255.f);
-            out.y = static_cast<unsigned char>(__saturatef(color.y) * 255.f);
-            out.z = static_cast<unsigned char>(__saturatef(color.z) * 255.f);
-            out.w = 0;
-            dst(y, x) = out;
+            //uchar4 out;
+            //out.x = static_cast<unsigned char>(__saturatef(color.x) * 255.f);
+            //out.y = static_cast<unsigned char>(__saturatef(color.y) * 255.f);
+            //out.z = static_cast<unsigned char>(__saturatef(color.z) * 255.f);
+            //out.w = 0;
+            //dst(y, x) = out;
             
-            //uint out;
-            //out = color.z;
-            //dst(y,x) = out;
-        }
-        
-        
+            float out;
+            out = color.z;
+            dst(y,x) = out;
+        }        
     }
 }
 

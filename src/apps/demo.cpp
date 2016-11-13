@@ -1,7 +1,7 @@
 #include <iostream>
+#include <opencv2/opencv.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
-#include <opencv2/opencv.hpp>
 #include <opencv2/viz/vizcore.hpp>
 #include <kfusion/kinfu.hpp>
 #include <io/capture.hpp>
@@ -58,54 +58,86 @@ struct KinFuApp
     void show_raycasted(KinFu& kinfu)
     {
         const int mode = 1;
-        if (iteractive_mode_)
-            kinfu.renderImage(view_device_, viz.getViewerPose(), mode);
-        else
-            kinfu.renderImage(view_device_, mode);
+        int resize_factor = 4;
 
-        view_host_.create(view_device_.rows(), view_device_.cols(), CV_8UC4);
+        Affine3f cur_view = viz.getViewerPose();
+        kinfu.renderImage(view_device_, cur_view, mode);
+        view_host_.create(view_device_.rows(), view_device_.cols(), CV_32FC1);
         view_device_.download(view_host_.ptr<void>(), view_host_.step);
-        cv::imshow("Scene", view_host_);
+        view_host_ = view_host_/3;
+        cv::Mat resized(view_host_.rows/resize_factor, view_host_.cols/resize_factor,CV_32FC1);
+        for (int i = 0 ; i < view_host_.rows/resize_factor ; i++)
+        for (int j = 0 ; j < view_host_.cols/resize_factor ; j++)
+        	resized.at<float>(i,j) = view_host_.at<float>(resize_factor*i,resize_factor*j);
+        cv::imshow("view0", resized);
+
+		cur_view.matrix(0,3) += 40.074353/1000;
+		cur_view.matrix(1,3) += -1.973618/1000;
+		cur_view.matrix(2,3) += -5.539809/1000;
+		kinfu.renderImage(view_device_, cur_view, mode);
+		view_device_.download(view_host_.ptr<void>(), view_host_.step);
+		view_host_ = view_host_/3;
+		for (int i = 0 ; i < view_host_.rows/resize_factor ; i++)
+		for (int j = 0 ; j < view_host_.cols/resize_factor ; j++)
+			resized.at<float>(i,j) = view_host_.at<float>(resize_factor*i,resize_factor*j);
+		cv::imshow("view1",resized);
+
+		cur_view.matrix(0,3) += 70.204512/1000;
+		cur_view.matrix(1,3) += -6.869942/1000;
+		cur_view.matrix(2,3) += -3.684597/1000;
+		kinfu.renderImage(view_device_, cur_view, mode);
+		view_device_.download(view_host_.ptr<void>(), view_host_.step);
+		view_host_ = view_host_/3;
+		for (int i = 0 ; i < view_host_.rows/resize_factor ; i++)
+		for (int j = 0 ; j < view_host_.cols/resize_factor ; j++)
+			resized.at<float>(i,j) = view_host_.at<float>(resize_factor*i,resize_factor*j);
+		cv::imshow("view2",resized);
+
+		cur_view.matrix(0,3) += 61.193986/1000;
+		cur_view.matrix(1,3) += -2.879078/1000;
+		cur_view.matrix(2,3) += -9.842761/1000;
+		kinfu.renderImage(view_device_, cur_view, mode);
+		view_device_.download(view_host_.ptr<void>(), view_host_.step);
+		view_host_ = view_host_/3;
+		for (int i = 0 ; i < view_host_.rows/resize_factor ; i++)
+		for (int j = 0 ; j < view_host_.cols/resize_factor ; j++)
+			resized.at<float>(i,j) = view_host_.at<float>(resize_factor*i,resize_factor*j);
+		cv::imshow("view3",resized);
+
+
 
         if (depth_gen) {
         	std::cout << "depth image capture" << std::endl;
         	Affine3f cur_view = viz.getViewerPose();
 
-//        	for (int idx = 0 ; idx < 5 ; idx++)
-//        	{
-//        		std::string filename = "view" + to_string(idx) +".png";
+			kinfu.renderImage(view_device_, cur_view, mode);
+			view_device_.download(view_host_.ptr<void>(), view_host_.step);
+			cv::imwrite("view0.bmp", view_host_);
+
+			cv::FileStorage storage("view0.yml", cv::FileStorage::WRITE);
+			storage << "img" << view_host_;
+			storage.release();
+
+//			cur_view.matrix(0,3) += 40.074353/1000;
+//			cur_view.matrix(1,3) += -1.973618/1000;
+//			cur_view.matrix(2,3) += -5.539809/1000;
+//			kinfu.renderImage(view_device_, cur_view, mode);
+//			view_device_.download(view_host_.ptr<void>(), view_host_.step);
+//			cv::imwrite("view1.bmp",view_host_);
 //
-//        		cur_view.matrix(0,3) += 0.1;
-//        		kinfu.renderImage(view_device_, cur_view, mode);
-//				view_device_.download(view_host_.ptr<void>(), view_host_.step);
-//				cv::imwrite(filename.c_str(),view_host_);
-//        	}
-
-
-			kinfu.renderImage(view_device_, cur_view, mode);
-			view_device_.download(view_host_.ptr<void>(), view_host_.step);
-			cv::imwrite("view0.bmp",view_host_);
-
-			cur_view.matrix(0,3) += 40.074353/1000;
-			cur_view.matrix(1,3) += -1.973618/1000;
-			cur_view.matrix(2,3) += -5.539809/1000;
-			kinfu.renderImage(view_device_, cur_view, mode);
-			view_device_.download(view_host_.ptr<void>(), view_host_.step);
-			cv::imwrite("view1.bmp",view_host_);
-
-			cur_view.matrix(0,3) += 70.204512/1000;
-			cur_view.matrix(1,3) += -6.869942/1000;
-			cur_view.matrix(2,3) += -3.684597/1000;
-			kinfu.renderImage(view_device_, cur_view, mode);
-			view_device_.download(view_host_.ptr<void>(), view_host_.step);
-			cv::imwrite("view2.bmp",view_host_);
-
-			cur_view.matrix(0,3) += 61.193986/1000;
-			cur_view.matrix(1,3) += -2.879078/1000;
-			cur_view.matrix(2,3) += -9.842761/1000;
-			kinfu.renderImage(view_device_, cur_view, mode);
-			view_device_.download(view_host_.ptr<void>(), view_host_.step);
-			cv::imwrite("view3.bmp",view_host_);
+//			cur_view.matrix(0,3) += 70.204512/1000;
+//			cur_view.matrix(1,3) += -6.869942/1000;
+//			cur_view.matrix(2,3) += -3.684597/1000;
+//			kinfu.renderImage(view_device_, cur_view, mode);
+//			view_device_.download(view_host_.ptr<void>(), view_host_.step);
+//			cv::imwrite("view2.bmp",view_host_);
+//
+//			cur_view.matrix(0,3) += 61.193986/1000;
+//			cur_view.matrix(1,3) += -2.879078/1000;
+//			cur_view.matrix(2,3) += -9.842761/1000;
+//			kinfu.renderImage(view_device_, cur_view, mode);
+//			view_device_.download(view_host_.ptr<void>(), view_host_.step);
+//			cv::imwrite("view3.bmp",view_host_);
 
         	depth_gen = false;
         }
