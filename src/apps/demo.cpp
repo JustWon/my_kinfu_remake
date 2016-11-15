@@ -7,6 +7,7 @@
 #include <io/capture.hpp>
 #include <stdio.h>
 #include <string>
+#include "my_config.h"
 
 using namespace kfusion;
 
@@ -55,109 +56,73 @@ struct KinFuApp
     	return os.str() ;
     }
 
+    void diplay_generated_depth(KinFu& kinfu, Affine3f cur_view, int view_id, const int mode, int win_xpos, int win_ypos)
+    {
+    	kinfu.renderImage(view_device_, cur_view, mode);
+    	view_host_.create(view_device_.rows(), view_device_.cols(), CV_32FC1);
+		view_device_.download(view_host_.ptr<void>(), view_host_.step);
+		view_host_ = view_host_/ MY_CONFIG::vh_dividing_factor;
+		cv::Mat resized(view_host_.rows/MY_CONFIG::vh_resize_factor, view_host_.cols/MY_CONFIG::vh_resize_factor,CV_32FC1);
+		for (int i = 0 ; i < view_host_.rows/MY_CONFIG::vh_resize_factor ; i++)
+		for (int j = 0 ; j < view_host_.cols/MY_CONFIG::vh_resize_factor ; j++)
+			resized.at<float>(i,j) = view_host_.at<float>(MY_CONFIG::vh_resize_factor*i,MY_CONFIG::vh_resize_factor*j);
+		std::string window_name = "view"+ to_string(view_id);
+		cv::imshow(window_name, resized);
+		cv::moveWindow(window_name,win_xpos,win_ypos);
+    }
+    void save_generated_depth(KinFu& kinfu, Affine3f cur_view, int view_id, const int mode)
+    {
+    	int multiplying_factor = 100;
+    	kinfu.renderImage(view_device_, cur_view, mode);
+		view_device_.download(view_host_.ptr<void>(), view_host_.step);
+		view_host_ = view_host_* multiplying_factor;
+		cv::imwrite("view"+to_string(view_id)+".bmp", view_host_);
+
+		cv::FileStorage storage0("view"+to_string(view_id)+".yml", cv::FileStorage::WRITE);
+		storage0 << "img" << view_host_;
+		storage0.release();
+    }
+
     void show_raycasted(KinFu& kinfu)
     {
         const int mode = 1;
-        int resize_factor = 4;
 
+        // initialize
         Affine3f cur_view = viz.getViewerPose();
-        kinfu.renderImage(view_device_, cur_view, mode);
-        view_host_.create(view_device_.rows(), view_device_.cols(), CV_32FC1);
-        view_device_.download(view_host_.ptr<void>(), view_host_.step);
-        view_host_ = view_host_/3;
-        cv::Mat resized(view_host_.rows/resize_factor, view_host_.cols/resize_factor,CV_32FC1);
-        for (int i = 0 ; i < view_host_.rows/resize_factor ; i++)
-        for (int j = 0 ; j < view_host_.cols/resize_factor ; j++)
-        	resized.at<float>(i,j) = view_host_.at<float>(resize_factor*i,resize_factor*j);
-        cv::imshow("view0", resized);
-        cv::moveWindow("view0",100,100);
 
+        // display depth
+        diplay_generated_depth(kinfu, cur_view, 0, mode, 100,100);
 		cur_view.matrix(0,3) += 40.074353/1000;
 		cur_view.matrix(1,3) += -1.973618/1000;
 		cur_view.matrix(2,3) += -5.539809/1000;
-		kinfu.renderImage(view_device_, cur_view, mode);
-		view_device_.download(view_host_.ptr<void>(), view_host_.step);
-		view_host_ = view_host_/3;
-		for (int i = 0 ; i < view_host_.rows/resize_factor ; i++)
-		for (int j = 0 ; j < view_host_.cols/resize_factor ; j++)
-			resized.at<float>(i,j) = view_host_.at<float>(resize_factor*i,resize_factor*j);
-		cv::imshow("view1",resized);
-		cv::moveWindow("view1",450,100);
-
+		diplay_generated_depth(kinfu, cur_view, 1, mode, 450,100);
 		cur_view.matrix(0,3) += 70.204512/1000;
 		cur_view.matrix(1,3) += -6.869942/1000;
 		cur_view.matrix(2,3) += -3.684597/1000;
-		kinfu.renderImage(view_device_, cur_view, mode);
-		view_device_.download(view_host_.ptr<void>(), view_host_.step);
-		view_host_ = view_host_/3;
-		for (int i = 0 ; i < view_host_.rows/resize_factor ; i++)
-		for (int j = 0 ; j < view_host_.cols/resize_factor ; j++)
-			resized.at<float>(i,j) = view_host_.at<float>(resize_factor*i,resize_factor*j);
-		cv::imshow("view2",resized);
-		cv::moveWindow("view2",800,100);
-
+		diplay_generated_depth(kinfu, cur_view, 2, mode, 800,100);
 		cur_view.matrix(0,3) += 61.193986/1000;
 		cur_view.matrix(1,3) += -2.879078/1000;
 		cur_view.matrix(2,3) += -9.842761/1000;
-		kinfu.renderImage(view_device_, cur_view, mode);
-		view_device_.download(view_host_.ptr<void>(), view_host_.step);
-		view_host_ = view_host_/3;
-		for (int i = 0 ; i < view_host_.rows/resize_factor ; i++)
-		for (int j = 0 ; j < view_host_.cols/resize_factor ; j++)
-			resized.at<float>(i,j) = view_host_.at<float>(resize_factor*i,resize_factor*j);
-		cv::imshow("view3",resized);
-		cv::moveWindow("view3",1150,100);
+		diplay_generated_depth(kinfu, cur_view, 3, mode, 1150,100);
 
-
-		// save
+		// save depth
         if (depth_gen) {
         	std::cout << "depth image capture" << std::endl;
         	Affine3f cur_view = viz.getViewerPose();
 
-			kinfu.renderImage(view_device_, cur_view, mode);
-			view_device_.download(view_host_.ptr<void>(), view_host_.step);
-			view_host_ = view_host_*100;
-			cv::imwrite("view0.bmp", view_host_);
-
-			cv::FileStorage storage0("view0.yml", cv::FileStorage::WRITE);
-			storage0 << "img" << view_host_;
-			storage0.release();
-
+        	save_generated_depth(kinfu, cur_view, 0, mode);
 			cur_view.matrix(0,3) += 40.074353/1000;
 			cur_view.matrix(1,3) += -1.973618/1000;
 			cur_view.matrix(2,3) += -5.539809/1000;
-			kinfu.renderImage(view_device_, cur_view, mode);
-			view_device_.download(view_host_.ptr<void>(), view_host_.step);
-			view_host_ = view_host_*100;
-			cv::imwrite("view1.bmp",view_host_);
-
-			cv::FileStorage storage1("view1.yml", cv::FileStorage::WRITE);
-			storage1 << "img" << view_host_;
-			storage1.release();
-
+			save_generated_depth(kinfu, cur_view, 1, mode);
 			cur_view.matrix(0,3) += 70.204512/1000;
 			cur_view.matrix(1,3) += -6.869942/1000;
 			cur_view.matrix(2,3) += -3.684597/1000;
-			kinfu.renderImage(view_device_, cur_view, mode);
-			view_device_.download(view_host_.ptr<void>(), view_host_.step);
-			view_host_ = view_host_*100;
-			cv::imwrite("view2.bmp",view_host_);
-
-			cv::FileStorage storage2("view2.yml", cv::FileStorage::WRITE);
-			storage2 << "img" << view_host_;
-			storage2.release();
-
+			save_generated_depth(kinfu, cur_view, 2, mode);
 			cur_view.matrix(0,3) += 61.193986/1000;
 			cur_view.matrix(1,3) += -2.879078/1000;
 			cur_view.matrix(2,3) += -9.842761/1000;
-			kinfu.renderImage(view_device_, cur_view, mode);
-			view_device_.download(view_host_.ptr<void>(), view_host_.step);
-			view_host_ = view_host_*100;
-			cv::imwrite("view3.bmp",view_host_);
-
-			cv::FileStorage storage3("view3.yml", cv::FileStorage::WRITE);
-			storage3 << "img" << view_host_;
-			storage3.release();
+			save_generated_depth(kinfu, cur_view, 3, mode);
 
         	depth_gen = false;
         }
@@ -181,33 +146,34 @@ struct KinFuApp
 
         int view_count = 1;
         int seq_count = 0;
+        int input_source = 1;
         for (int i = 0; !exit_ && !viz.wasStopped(); ++i)
         {
-            bool has_frame = capture_.grab(depth, image);
-            if (!has_frame)
-                return std::cout << "Can't grab" << std::endl, false;
+        	// input source
+        	if (input_source == 0) // kinect direct input
+        	{
+				bool has_frame = capture_.grab(depth, image);
+				if (!has_frame)
+					return std::cout << "Can't grab" << std::endl, false;
+        	}
+        	else { // sequence input
+				if (view_count > MY_CONFIG::max_view_num) {
+					view_count = 1;
+					kinfu.reset();
+					seq_count++;
+				}
+				// circular operation
+				if (seq_count > MY_CONFIG::max_seq_num)
+				{
+					seq_count = 0;
+				}
 
-            // kinect v2 tof image experiment
-			if (view_count > 2) {
-				view_count = 1;
-				kinfu.reset();
-			}
-			if (seq_count > 489)
-			{
-				seq_count = 0;
-			}
-            char file_name[1024];
-            sprintf(file_name,"/home/dongwonshin/Desktop/20161031 test/com%d/20161031_005318 sequence/sequence/kinect_depth%d.png", view_count, seq_count);
-			view_count++;
-			seq_count++;
-			cv::Mat tof_img = cv::imread(file_name, CV_LOAD_IMAGE_ANYDEPTH);
+				std::string file_name = "/home/dongwonshin/Desktop/20161031 test/com"+ to_string(view_count) +"/20161031_005318 sequence/sequence/kinect_depth"+to_string(seq_count)+".png";
+				cv::Mat tof_img = cv::imread(file_name, CV_LOAD_IMAGE_ANYDEPTH);
+				depth = tof_img/3;
 
-			for (int y = 0 ; y < tof_img.rows ; y++)
-			for (int x = 0 ; x < tof_img.cols ; x++)
-			{
-				tof_img.at<ushort>(y,x) /= 3;
-			}
-			depth = tof_img;
+				view_count++;
+        	}
 
             depth_device_.upload(depth.data, depth.step, depth.rows, depth.cols);
 
@@ -220,17 +186,16 @@ struct KinFuApp
                 show_raycasted(kinfu);
 
             //show_depth(depth);
-            //cv::imshow("Image", image);
 
             if (!iteractive_mode_)
             {
             	kfusion::Affine3f temp = kinfu.getCameraPose();
             	float rx = -272.330416;
-            	float ry = 454.777229;
+            	float ry =  454.777229;
             	float rz = -219.745544;
             	temp.matrix(0,3) += rx/10000;
             	temp.matrix(1,3) += ry/10000;
-            	temp.matrix(2,3) += rz/1000;
+            	temp.matrix(2,3) += rz/10000;
                 viz.setViewerPose(temp);
             }
 
@@ -247,7 +212,6 @@ struct KinFuApp
 
             //exit_ = exit_ || i > 100;
             viz.spinOnce(3, true);
-
         }
         return true;
     }
@@ -273,10 +237,7 @@ int main (int argc, char* argv[])
 {
     int device = 0;
     cuda::setDevice (device);
-    cuda::printShortCudaDeviceInfo (device);
-
-    if(cuda::checkIfPreFermiGPU(device))
-        return std::cout << std::endl << "Kinfu is not supported for pre-Fermi GPU architectures, and not built for them by default. Exiting..." << std::endl, 1;
+    cuda::printCudaDeviceInfo (device);
 
     OpenNISource capture;
     capture.open (0);

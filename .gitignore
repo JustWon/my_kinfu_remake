@@ -1,6 +1,8 @@
 *.yml
 *.bmp
 *.png
+build/*.bmp
+build/*.yml
 
 # Created by https://www.gitignore.io/api/c++,opencv,eclipse
 

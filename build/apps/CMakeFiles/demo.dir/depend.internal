@@ -3,6 +3,7 @@
 
 apps/CMakeFiles/demo.dir/demo.cpp.o
  /home/dongwonshin/Desktop/my_codes/kinfu_remake/src/apps/demo.cpp
+ /home/dongwonshin/Desktop/my_codes/kinfu_remake/src/apps/my_config.h
  /home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/include/io/capture.hpp
  /home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/include/kfusion/cuda/device_array.hpp
  /home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/include/kfusion/cuda/device_memory.hpp
