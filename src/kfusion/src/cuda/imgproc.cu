@@ -455,8 +455,63 @@ namespace kfusion
             out.w = 0;
             dst(y, x) = out;
         }
-
+        
         __global__ void render_image_kernel(const PtrStep<Point> points, const PtrStep<Normal> normals,
+                                            const Reprojector reproj, const float3 light_pose, PtrStepSz<uchar4> dst)
+        {
+        	int x = threadIdx.x + blockIdx.x * blockDim.x;
+            int y = threadIdx.y + blockIdx.y * blockDim.y;
+
+            if (x >= dst.cols || y >= dst.rows)
+                return;
+
+            float3 color;
+
+            float3 p = tr(points(y,x));
+
+            if (isnan(p.x))
+            {
+                const float3 bgr1 = make_float3(4.f/255.f, 2.f/255.f, 2.f/255.f);
+                const float3 bgr2 = make_float3(236.f/255.f, 120.f/255.f, 120.f/255.f);
+
+                float w = static_cast<float>(y) / dst.rows;
+                color = bgr1 * (1 - w) + bgr2 * w;
+            }
+            else
+            {
+                float3 P = p;
+                float3 N = tr(normals(y,x));
+
+                const float Ka = 0.3f;  //ambient coeff
+                const float Kd = 0.5f;  //diffuse coeff
+                const float Ks = 0.2f;  //specular coeff
+                const float n = 20.f;  //specular power
+
+                const float Ax = 1.f;   //ambient color,  can be RGB
+                const float Dx = 1.f;   //diffuse color,  can be RGB
+                const float Sx = 1.f;   //specular color, can be RGB
+                const float Lx = 1.f;   //light color
+
+                //Ix = Ax*Ka*Dx + Att*Lx [Kd*Dx*(N dot L) + Ks*Sx*(R dot V)^n]
+
+                float3 L = normalized(light_pose - P);
+                float3 V = normalized(make_float3(0.f, 0.f, 0.f) - P);
+                float3 R = normalized(2 * N * dot(N, L) - L);
+
+                float Ix = Ax*Ka*Dx + Lx * Kd * Dx * fmax(0.f, dot(N, L)) + Lx * Ks * Sx * __powf(fmax(0.f, dot(R, V)), n);
+                color = make_float3(Ix, Ix, Ix);
+            }
+
+            uchar4 out;
+            out.x = static_cast<unsigned char>(__saturatef(color.x) * 255.f);
+            out.y = static_cast<unsigned char>(__saturatef(color.y) * 255.f);
+            out.z = static_cast<unsigned char>(__saturatef(color.z) * 255.f);
+            out.w = 0;
+            dst(y, x) = out;
+        }        
+        
+
+        __global__ void render_depth_image_kernel(const PtrStep<Point> points, const PtrStep<Normal> normals,
                                             const Reprojector reproj, const float3 light_pose, PtrStepSz<float> dst)
         {
             int x = threadIdx.x + blockIdx.x * blockDim.x;
@@ -534,7 +589,7 @@ void kfusion::device::renderImage(const Points& points, const Normals& normals, 
     dim3 block (32, 8);
     dim3 grid (divUp (points.cols(), block.x), divUp (points.rows(), block.y));
 
-    render_image_kernel<<<grid, block>>>((PtrStep<Point>)points, normals, reproj, light_pose, image);
+    render_depth_image_kernel<<<grid, block>>>((PtrStep<Point>)points, normals, reproj, light_pose, image);
     cudaSafeCall ( cudaGetLastError () );
 }
 

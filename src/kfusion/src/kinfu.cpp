@@ -19,14 +19,14 @@ kfusion::KinFuParams kfusion::KinFuParams::default_params()
     //for kinectv2 cam
     p.cols = 512;  //pixels
 	p.rows = 424;  //pixels
-	p.intr = Intr(364.486761, 364.715187, 255.029142, 199.168648);
+	p.intr = Intr(364.979886, 365.079324, 254.144076 , 200.746802);
 
 //    p.cols = 640;  //pixels
 //    p.rows = 480;  //pixels
 //    p.intr = Intr(525.f, 525.f, p.cols/2 - 0.5f, p.rows/2 - 0.5f);
 
     p.volume_dims = Vec3i::all(1024);  //number of voxels
-    p.volume_size = Vec3f::all(2.f);  //meters
+    p.volume_size = Vec3f::all(5.f);  //meters
     p.volume_pose = Affine3f().translate(Vec3f(-p.volume_size[0]/2, -p.volume_size[1]/2, 0.5f));
 
     p.bilateral_sigma_depth = 0.04f;  //meter
@@ -291,13 +291,13 @@ void kfusion::KinFu::renderImage(cuda::Image& image, const Affine3f& pose, int f
 #endif
 
 //    volume_->raycast(pose, p.intr, PASS1, normals_);
-	volume_->raycast(pose, Intr(1732.798623, 1731.965514, 658.178905, 369.409351), PASS1, normals_);
+	volume_->raycast(pose, Intr(1740.965819, 1741.002940, 663.619522, 367.065100), PASS1, normals_);
 
 
     if (flag == 1)
     {
 //    	cuda::renderImage(PASS1, normals_, p.intr, params_.light_pose, image);
-        cuda::renderImage(PASS1, normals_, Intr(1732.798623, 1731.965514, 658.178905, 369.409351), params_.light_pose, image);
+        cuda::renderImage(PASS1, normals_, Intr(1740.965819, 1741.002940, 663.619522, 367.065100), params_.light_pose, image);
     }
     else if (flag == 2)
     {
@@ -311,7 +311,7 @@ void kfusion::KinFu::renderImage(cuda::Image& image, const Affine3f& pose, int f
     	DeviceArray2D<RGB> i2(720, 1280, image.ptr() + 1280, image.step());
 
 //        cuda::renderImage(PASS1, normals_, params_.intr, params_.light_pose, i1);
-        cuda::renderImage(PASS1, normals_, Intr(1732.798623, 1731.965514, 658.178905, 369.409351), params_.light_pose, i1);
+        cuda::renderImage(PASS1, normals_, Intr(1740.965819, 1741.002940, 663.619522, 367.065100), params_.light_pose, i1);
 
         cuda::renderTangentColors(normals_, i2);
     }
