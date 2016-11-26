@@ -25,6 +25,18 @@ struct KinFuApp
 
         if(event.code == 'i' || event.code == 'I')
             kinfu.iteractive_mode_ = !kinfu.iteractive_mode_;
+
+        if(event.code == '[')
+        {
+        	if (kinfu.blending_alpha > 0)
+        		kinfu.blending_alpha -= 0.1;
+        }
+
+        if(event.code == ']')
+        {
+        	if (kinfu.blending_alpha < 1)
+        		kinfu.blending_alpha += 0.1;
+        }
     }
 
     KinFuApp(OpenNISource& source) : exit_ (false),  iteractive_mode_(false), capture_ (source), pause_(false)
@@ -82,28 +94,26 @@ struct KinFuApp
 		view_host_ = view_host_/ MY_CONFIG::vh_dividing_factor;
 		cv::Mat resized(view_host_.rows/MY_CONFIG::vh_resize_factor, view_host_.cols/MY_CONFIG::vh_resize_factor,CV_32FC1);
 
-		// temp code
-		std::string file_name = "/home/dongwonshin/Desktop/20161118 test seq/com1/20161118_004252/sequence/color"+to_string(view_count)+"_"+ to_string(seq_count)+".bmp";
+		//  color overlap
+		std::string file_name = "/home/dongwonshin/Desktop/Sequence Data/20161126 test seq/com1/20161126_215652/sequence/color"+to_string(view_count)+"_"+ to_string(seq_count)+".bmp";
 		cv::Mat here_img = cv::imread(file_name);
-		cv::flip(here_img, here_img, 1);
 
-		float alpha = 0.5;
+		float alpha = blending_alpha;
 		for (int i = 0 ; i < view_host_.rows/MY_CONFIG::vh_resize_factor ; i++)
 		for (int j = 0 ; j < view_host_.cols/MY_CONFIG::vh_resize_factor ; j++)
 		{
 			float temp_v=0;
 			if (!here_img.empty())
 			{
-				cv::Vec3b vec_val = here_img.at<cv::Vec3b>(MY_CONFIG::vh_resize_factor*i,MY_CONFIG::vh_resize_factor*j);
+				cv::Vec3b vec_val = here_img.at<cv::Vec3b>(MY_CONFIG::vh_resize_factor*i, MY_CONFIG::vh_resize_factor*j);
 				temp_v = (vec_val[0] + vec_val[1] + vec_val[2])/3;
 				temp_v /= 255;
 			}
-			resized.at<float>(i,j) = alpha*view_host_.at<float>(MY_CONFIG::vh_resize_factor*i,MY_CONFIG::vh_resize_factor*j) + alpha*temp_v;
+			resized.at<float>(i,j) = alpha*view_host_.at<float>(MY_CONFIG::vh_resize_factor*i,MY_CONFIG::vh_resize_factor*j) + (1-alpha)*temp_v;
 		}
 		std::string window_name = "view"+ to_string(view_id);
 		cv::imshow(window_name, resized);
 		cv::moveWindow(window_name,win_xpos,win_ypos);
-
     }
     void save_generated_depth(KinFu& kinfu, Affine3f cur_view, int view_id, const int mode)
     {
@@ -122,22 +132,48 @@ struct KinFuApp
         const int mode = 1;
 
         // initialize
+        Affine3f origin_view = viz.getViewerPose();
         Affine3f cur_view = viz.getViewerPose();
+
+        std::cout <<    "getViewerPose"   << std::endl;
+		std::cout << cur_view.matrix(0,3) << std::endl;
+		std::cout << cur_view.matrix(1,3) << std::endl;
+		std::cout << cur_view.matrix(2,3) << std::endl;
 
         // display depth
         {
+//			cur_view.matrix(0,0) =  0.999933; cur_view.matrix(0,1) = -0.007615; cur_view.matrix(0,2) = 0.008710;
+//			cur_view.matrix(1,0) =  0.007957; cur_view.matrix(1,1) =  0.999171; cur_view.matrix(1,2) =-0.039931;
+//			cur_view.matrix(2,0) = -0.008399; cur_view.matrix(2,1) =  0.039998; cur_view.matrix(2,2) = 0.999164;
+			cur_view.matrix(0,3) = origin_view.matrix(0,3) + -260.036812/1000;
+			cur_view.matrix(1,3) = origin_view.matrix(1,3) + 292.178799/1000;
+			cur_view.matrix(2,3) = origin_view.matrix(2,3) + 45.270704/1000;
 			diplay_generated_depth(kinfu, cur_view, 0, mode, 100,100, 0, seq_count);
-			cur_view.matrix(0,3) += -60.118894/1000;
-			cur_view.matrix(1,3) += -1.061838/1000;
-			cur_view.matrix(2,3) += 3.539284/1000;
+//			diplay_generated_volume(kinfu, cur_view, 0, mode, 100,100);
+
+//			cur_view.matrix(0,0) =  0.999899; cur_view.matrix(0,1) = -0.010468; cur_view.matrix(0,2) = 0.009617;
+//			cur_view.matrix(1,0) =  0.010834; cur_view.matrix(1,1) =  0.999188; cur_view.matrix(1,2) =-0.038811;
+//			cur_view.matrix(2,0) = -0.009203; cur_view.matrix(2,1) =  0.038912; cur_view.matrix(2,2) = 0.999200;
+			cur_view.matrix(0,3) = origin_view.matrix(0,3) + -199.917918/1000;
+			cur_view.matrix(1,3) = origin_view.matrix(1,3) + 291.116961/1000;
+			cur_view.matrix(2,3) = origin_view.matrix(2,3) + 48.809988/1000;
 			diplay_generated_depth(kinfu, cur_view, 1, mode, 450,100, 1, seq_count);
-			cur_view.matrix(0,3) += -67.30809/1000;
-			cur_view.matrix(1,3) += -7.107205/1000;
-			cur_view.matrix(2,3) += -4.976931/1000;
+//			diplay_generated_volume(kinfu, cur_view, 1, mode, 450,100);
+
+//			cur_view.matrix(0,0) =  0.999933; cur_view.matrix(0,1) = -0.007615; cur_view.matrix(0,2) = 0.008710;
+//			cur_view.matrix(1,0) =  0.007957; cur_view.matrix(1,1) =  0.999171; cur_view.matrix(1,2) =-0.039931;
+//			cur_view.matrix(2,0) = -0.008399; cur_view.matrix(2,1) =  0.039998; cur_view.matrix(2,2) = 0.999164;
+			cur_view.matrix(0,3) = origin_view.matrix(0,3) + -132.609828/1000;
+			cur_view.matrix(1,3) = origin_view.matrix(1,3) + 284.009756/1000;
+			cur_view.matrix(2,3) = origin_view.matrix(2,3) + 43.833057/1000;
 			diplay_generated_depth(kinfu, cur_view, 2, mode, 800,100, 2, seq_count);
-			cur_view.matrix(0,3) += -38.334795/1000;
-			cur_view.matrix(1,3) += -3.936116/1000;
-			cur_view.matrix(2,3) += -6.865113/1000;
+
+//			cur_view.matrix(0,0) =  0.999933; cur_view.matrix(0,1) = -0.007615; cur_view.matrix(0,2) = 0.008710;
+//			cur_view.matrix(1,0) =  0.007957; cur_view.matrix(1,1) =  0.999171; cur_view.matrix(1,2) =-0.039931;
+//			cur_view.matrix(2,0) = -0.008399; cur_view.matrix(2,1) =  0.039998; cur_view.matrix(2,2) = 0.999164;
+			cur_view.matrix(0,3) = origin_view.matrix(0,3) + -94.275033/1000;
+			cur_view.matrix(1,3) = origin_view.matrix(1,3) +  280.07364/1000;
+			cur_view.matrix(2,3) = origin_view.matrix(2,3) +  36.967944/1000;
 			diplay_generated_depth(kinfu, cur_view, 3, mode, 1150,100, 3, seq_count);
         }
 
@@ -181,9 +217,8 @@ struct KinFuApp
         bool has_image = false;
 
         int view_count = 1;
-        int seq_count = 0;
+        int seq_count = MY_CONFIG::start_frame;
         int input_source = 1;
-        cv::Mat temp_color_img;
         for (int i = 0; !exit_ && !viz.wasStopped(); ++i)
         {
 
@@ -201,48 +236,40 @@ struct KinFuApp
 					seq_count++;
 				}
 				// circular operation
-				if (seq_count > MY_CONFIG::max_seq_num)
+				if (seq_count > MY_CONFIG::end_frame)
 				{
-					seq_count = 0;
+					seq_count = MY_CONFIG::start_frame;
 				}
 
 				//std::string file_name = "/home/dongwonshin/Desktop/20161031 test/com"+ to_string(view_count) +"/20161031_005318 sequence/sequence/kinect_depth"+to_string(seq_count)+".png";
-				std::string file_name = "/home/dongwonshin/Desktop/20161118 test seq/com"+ to_string(view_count) +"/20161118_004252/sequence/kinect_depth"+to_string(seq_count)+".png";
-				cv::Mat tof_img = cv::imread(file_name, CV_LOAD_IMAGE_ANYDEPTH);
-
-				depth = tof_img/MY_CONFIG::dividing_factor_for_seq_tof_img;
+				//std::string file_name = "/home/dongwonshin/Desktop/Sequence Data/20161118 test seq/com"+ to_string(view_count) +"/20161118_004252/sequence/kinect_depth"+to_string(seq_count)+".png";
+				//std::string file_name = "/home/dongwonshin/Desktop/Sequence Data/20161126 test seq/com"+ to_string(view_count) +"/20161126_220239/sequence/kinect_depth"+to_string(seq_count)+".png";
+				std::string file_name = "/home/dongwonshin/Desktop/Sequence Data/20161126 test seq/com"+ to_string(view_count) +"/20161126_215652/sequence/kinect_depth"+to_string(seq_count)+".png";
+				depth = cv::imread(file_name, CV_LOAD_IMAGE_ANYDEPTH);
+				if (view_count == 2)
+				{
+					flip(depth,depth,1);
+				}
 
 				view_count++;
         	}
 
             depth_device_.upload(depth.data, depth.step, depth.rows, depth.cols);
-
             {
                 SampledScopeTime fps(time_ms); (void)fps;
                 has_image = kinfu(depth_device_);
             }
 
-            show_depth(depth);
             if (has_image)
             {
                 show_raycasted(kinfu, seq_count);
                 std::cout << "seq_count : " << seq_count << std::endl;
             }
 
-            if (!iteractive_mode_)
-            {
-            	kfusion::Affine3f temp = kinfu.getCameraPose();
-            	{
-					temp.matrix(0,0) =  0.999727; temp.matrix(0,1) = -0.012631; temp.matrix(0,2) = 0.019679;
-					temp.matrix(1,0) =  0.013289; temp.matrix(1,1) =  0.999344; temp.matrix(1,2) =-0.033677;
-					temp.matrix(2,0) = -0.019240; temp.matrix(2,1) =  0.033929; temp.matrix(2,2) = 0.999239;
+            show_depth(depth);
 
-					temp.matrix(0,3) += 172.663979/1000;
-					temp.matrix(1,3) += 409.982024/1000;
-					temp.matrix(2,3) += 32.027919/1000;
-            	}
-                viz.setViewerPose(temp);
-            }
+            if (!iteractive_mode_)
+			    viz.setViewerPose(kinfu.getCameraPose());
 
             int key = cv::waitKey(pause_ ? 0 : 3);
 
@@ -273,6 +300,8 @@ struct KinFuApp
     cuda::Image view_device_;
     cuda::Depth depth_device_;
     cuda::DeviceArray<Point> cloud_buffer;
+
+    float blending_alpha;
 };
 
 
@@ -280,7 +309,7 @@ struct KinFuApp
 
 int main (int argc, char* argv[])
 {
-    int device = 0;
+    int device = MY_CONFIG::device_num;
     cuda::setDevice (device);
     cuda::printCudaDeviceInfo (device);
 

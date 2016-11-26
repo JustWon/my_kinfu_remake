@@ -158,7 +158,7 @@ bool kfusion::cuda::ProjectiveICP::estimateTransform(Affine3f& affine, const Int
             }
 
             StreamHelper::Vec6f r;
-            cv::solve(A, b, r, cv::DECOMP_SVD);
+            cv::solve(A, b, r, cv::DECOMP_SVD); // r would be an optimization result.
             Affine3f Tinc(Vec3f(r.val), Vec3f(r.val+3));
             affine = Tinc * affine;
         }

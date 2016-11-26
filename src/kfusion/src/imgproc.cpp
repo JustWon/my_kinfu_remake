@@ -40,9 +40,9 @@ void kfusion::cuda::computePointNormals(const Intr& intr, const Depth& depth, Cl
     device::computePointNormals(reproj, depth, p, n);
 }
 
-
 void kfusion::cuda::computeDists(const Depth& depth, Dists& dists, const Intr& intr)
 {
+	// https://www.evernote.com/l/ABT_OEjAc7NK4oCSYOukTyke9u3Q154ZpRE
     dists.create(depth.rows(), depth.cols());
     device::compute_dists(depth, dists, make_float2(intr.fx, intr.fy), make_float2(intr.cx, intr.cy));
 }

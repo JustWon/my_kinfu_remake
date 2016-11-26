@@ -67,9 +67,8 @@ namespace kfusion
 
                 //float3 zstep = vol2cam.R * make_float3(0.f, 0.f, volume.voxel_size.z);
                 float3 zstep = make_float3(vol2cam.R.data[0].z, vol2cam.R.data[1].z, vol2cam.R.data[2].z) * volume.voxel_size.z;
-
                 float3 vx = make_float3(x * volume.voxel_size.x, y * volume.voxel_size.y, 0);
-                float3 vc = vol2cam * vx; //tranform from volume coo frame to camera one
+                float3 vc = vol2cam * vx; //transform from volume coo frame to camera one
 
                 TsdfVolume::elem_type* vptr = volume.beg(x, y);
                 for(int i = 0; i < volume.dims.z; ++i, vc += zstep, vptr = volume.zstep(vptr))
@@ -82,6 +81,8 @@ namespace kfusion
                     if (coo.x < 0 || coo.y < 0 || coo.x >= dists_size.x || coo.y >= dists_size.y)
                         continue;
                     //#endif
+                    
+                    
                     float Dp = tex2D(dists_tex, coo.x, coo.y);
                     if(Dp == 0 || vc.z <= 0)
                         continue;
@@ -95,7 +96,6 @@ namespace kfusion
                         //read and unpack
                         int weight_prev;
                         float tsdf_prev = unpack_tsdf (gmem::LdCs(vptr), weight_prev);
-
                         float tsdf_new = __fdividef(__fmaf_rn(tsdf_prev, weight_prev, tsdf), weight_prev + 1);
                         int weight_new = min (weight_prev + 1, volume.max_weight);
 

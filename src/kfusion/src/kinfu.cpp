@@ -19,7 +19,7 @@ kfusion::KinFuParams kfusion::KinFuParams::default_params()
     //for kinectv2 cam
     p.cols = 512;  //pixels
 	p.rows = 424;  //pixels
-	p.intr = Intr(364.979886, 365.079324, 254.144076 , 200.746802);
+	p.intr = Intr(364.996042, 365.097854, 257.040047, 200.494758);
 
 //    p.cols = 640;  //pixels
 //    p.rows = 480;  //pixels
@@ -29,13 +29,9 @@ kfusion::KinFuParams kfusion::KinFuParams::default_params()
     p.volume_size = Vec3f::all(5.f);  //meters
     p.volume_pose = Affine3f().translate(Vec3f(-p.volume_size[0]/2, -p.volume_size[1]/2, 0.5f));
 
-    p.bilateral_sigma_depth = 0.04f;  //meter
-    p.bilateral_sigma_spatial = 4.5; //pixels
-    p.bilateral_kernel_size = 7;     //pixels
-
     p.icp_truncate_depth_dist = 0.f;        //meters, disabled
-    p.icp_dist_thres = 0.1f;                //meters
-    p.icp_angle_thres = deg2rad(30.f); //radians
+    p.icp_dist_thres = 0.8f;                //meters
+    p.icp_angle_thres = deg2rad(30.f);      //radians
     p.icp_iter_num.assign(iters, iters + levels);
 
     p.tsdf_min_camera_movement = 0.f; //meters, disabled
@@ -44,6 +40,10 @@ kfusion::KinFuParams kfusion::KinFuParams::default_params()
 
     p.raycast_step_factor = 0.75f;  //in voxel sizes
     p.gradient_delta_factor = 0.5f; //in voxel sizes
+
+    p.bilateral_sigma_depth = 0.04f;  //meter
+	p.bilateral_sigma_spatial = 4.5; //pixels
+	p.bilateral_kernel_size = 7;     //pixels
 
     //p.light_pose = p.volume_pose.translation()/4; //meters
     p.light_pose = Vec3f::all(0.f); //meters
@@ -153,12 +153,13 @@ bool kfusion::KinFu::operator()(const kfusion::cuda::Depth& depth, const kfusion
     const KinFuParams& p = params_;
     const int LEVELS = icp_->getUsedLevelsNum();
 
+    // radial distance from the camera
     cuda::computeDists(depth, dists_, p.intr);
     cuda::depthBilateralFilter(depth, curr_.depth_pyr[0], p.bilateral_kernel_size, p.bilateral_sigma_spatial, p.bilateral_sigma_depth);
 
     // p.icp_truncate_depth_dist = 0, as a default, so it is ignored
-    if (p.icp_truncate_depth_dist > 0)
-        kfusion::cuda::depthTruncation(curr_.depth_pyr[0], p.icp_truncate_depth_dist);
+    //if (p.icp_truncate_depth_dist > 0)
+    //    kfusion::cuda::depthTruncation(curr_.depth_pyr[0], p.icp_truncate_depth_dist);
 
     for (int i = 1; i < LEVELS; ++i)
         cuda::depthBuildPyramid(curr_.depth_pyr[i-1], curr_.depth_pyr[i], p.bilateral_sigma_depth);
@@ -173,7 +174,7 @@ bool kfusion::KinFu::operator()(const kfusion::cuda::Depth& depth, const kfusion
 
     cuda::waitAllDefaultStream();
 
-    //can't perform more on first frame
+    // for the first frame, this block will be operated and finished right after this.
     if (frame_counter_ == 0)
     {
         volume_->integrate(dists_, poses_.back(), p.intr);
@@ -189,6 +190,8 @@ bool kfusion::KinFu::operator()(const kfusion::cuda::Depth& depth, const kfusion
     ///////////////////////////////////////////////////////////////////////////////////////////
     // ICP
     Affine3f affine; // cuur -> prev
+
+
     {
         //ScopeTime time("icp");
 #if defined USE_DEPTH
@@ -199,6 +202,13 @@ bool kfusion::KinFu::operator()(const kfusion::cuda::Depth& depth, const kfusion
         if (!ok)
             return reset(), false;
     }
+
+//    affine.matrix(0,0) =  0.999740; affine.matrix(0,1) =  0.010197; affine.matrix(0,2) = 0.020410;
+//    affine.matrix(1,0) = -0.011238; affine.matrix(1,1) = 0.998605; affine.matrix(1,2) = 0.051584;
+//    affine.matrix(2,0) = -0.019855; affine.matrix(2,1) = -0.051799; affine.matrix(2,2) = 0.998460;
+//    affine.matrix(0,3) = -289.853486/1000;
+//    affine.matrix(1,3) = -130.066471/1000;
+//    affine.matrix(2,3) =   -8.394523/1000;
 
     poses_.push_back(poses_.back() * affine); // curr -> global
 
@@ -297,7 +307,7 @@ void kfusion::KinFu::renderImage(cuda::Image& image, const Affine3f& pose, int f
     if (flag == 1)
     {
 //    	cuda::renderImage(PASS1, normals_, p.intr, params_.light_pose, image);
-        cuda::renderImage(PASS1, normals_, Intr(1740.965819, 1741.002940, 663.619522, 367.065100), params_.light_pose, image);
+      cuda::renderImage(PASS1, normals_, Intr(1740.965819, 1741.002940, 663.619522, 367.065100), params_.light_pose, image);
     }
     else if (flag == 2)
     {

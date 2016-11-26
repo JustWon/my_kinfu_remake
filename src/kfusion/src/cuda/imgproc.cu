@@ -215,6 +215,7 @@ namespace kfusion
             if (x >= depth.cols || y >= depth.rows)
                 return;
 
+			// initialization
             const float qnan = numeric_limits<float>::quiet_NaN ();
             points(y, x) = normals(y, x) = make_float4(qnan, qnan, qnan, qnan);
 
@@ -233,7 +234,7 @@ namespace kfusion
                 float3 v01 = reproj(x+1, y, z01);
                 float3 v10 = reproj(x, y+1, z10);
 				
-				// cross product for normal 
+				// cross product for normal vector
                 float3 n = normalized( cross (v01 - v00, v10 - v00) );
                 normals(y, x) = make_float4(-n.x, -n.y, -n.z, 0.f);
                 points(y, x) = make_float4(v00.x, v00.y, v00.z, 0.f);
@@ -258,6 +259,7 @@ namespace kfusion
 {
     namespace device
     {
+    	//https://www.evernote.com/l/ABT_OEjAc7NK4oCSYOukTyke9u3Q154ZpRE
         __global__ void compute_dists_kernel(const PtrStepSz<ushort> depth, Dists dists, float2 finv, float2 c)
         {
             int x = threadIdx.x + blockIdx.x * blockDim.x;
@@ -269,7 +271,7 @@ namespace kfusion
                 float yl = (y - c.y) * finv.y;
                 float lambda = sqrtf (xl * xl + yl * yl + 1);
 
-                dists(y, x) = __float2half_rn(depth(y, x) * lambda * 0.001f); //meters
+				dists(y, x) = __float2half_rn(depth(y, x) * lambda * 0.001f); //meters
             }
         }
     }
@@ -590,6 +592,7 @@ void kfusion::device::renderImage(const Points& points, const Normals& normals, 
     dim3 grid (divUp (points.cols(), block.x), divUp (points.rows(), block.y));
 
     render_depth_image_kernel<<<grid, block>>>((PtrStep<Point>)points, normals, reproj, light_pose, image);
+    //render_image_kernel<<<grid, block>>>((PtrStep<Point>)points, normals, reproj, light_pose, image);
     cudaSafeCall ( cudaGetLastError () );
 }
 
