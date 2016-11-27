@@ -92,27 +92,27 @@ struct KinFuApp
     	view_host_.create(view_device_.rows(), view_device_.cols(), CV_32FC1);
     	view_device_.download(view_host_.ptr<void>(), view_host_.step);
 		view_host_ = view_host_/ MY_CONFIG::vh_dividing_factor;
-		cv::Mat resized(view_host_.rows/MY_CONFIG::vh_resize_factor, view_host_.cols/MY_CONFIG::vh_resize_factor,CV_32FC1);
+//		cv::Mat resized(view_host_.rows/MY_CONFIG::vh_resize_factor, view_host_.cols/MY_CONFIG::vh_resize_factor,CV_32FC1);
 
 		//  color overlap
-		std::string file_name = "/home/dongwonshin/Desktop/Sequence Data/20161126 test seq/com1/20161126_215652/sequence/color"+to_string(view_count)+"_"+ to_string(seq_count)+".bmp";
-		cv::Mat here_img = cv::imread(file_name);
-
-		float alpha = blending_alpha;
-		for (int i = 0 ; i < view_host_.rows/MY_CONFIG::vh_resize_factor ; i++)
-		for (int j = 0 ; j < view_host_.cols/MY_CONFIG::vh_resize_factor ; j++)
-		{
-			float temp_v=0;
-			if (!here_img.empty())
-			{
-				cv::Vec3b vec_val = here_img.at<cv::Vec3b>(MY_CONFIG::vh_resize_factor*i, MY_CONFIG::vh_resize_factor*j);
-				temp_v = (vec_val[0] + vec_val[1] + vec_val[2])/3;
-				temp_v /= 255;
-			}
-			resized.at<float>(i,j) = alpha*view_host_.at<float>(MY_CONFIG::vh_resize_factor*i,MY_CONFIG::vh_resize_factor*j) + (1-alpha)*temp_v;
-		}
+//		std::string file_name = "/home/dongwonshin/Desktop/Sequence Data/20161126 test seq/com1/20161126_215652/sequence/color"+to_string(view_count)+"_"+ to_string(seq_count)+".bmp";
+//		cv::Mat here_img = cv::imread(file_name);
+//
+//		float alpha = blending_alpha;
+//		for (int i = 0 ; i < view_host_.rows/MY_CONFIG::vh_resize_factor ; i++)
+//		for (int j = 0 ; j < view_host_.cols/MY_CONFIG::vh_resize_factor ; j++)
+//		{
+//			float temp_v=0;
+//			if (!here_img.empty())
+//			{
+//				cv::Vec3b vec_val = here_img.at<cv::Vec3b>(MY_CONFIG::vh_resize_factor*i, MY_CONFIG::vh_resize_factor*j);
+//				temp_v = (vec_val[0] + vec_val[1] + vec_val[2])/3;
+//				temp_v /= 255;
+//			}
+//			resized.at<float>(i,j) = alpha*view_host_.at<float>(MY_CONFIG::vh_resize_factor*i,MY_CONFIG::vh_resize_factor*j) + (1-alpha)*temp_v;
+//		}
 		std::string window_name = "view"+ to_string(view_id);
-		cv::imshow(window_name, resized);
+		cv::imshow(window_name, view_host_);
 		cv::moveWindow(window_name,win_xpos,win_ypos);
     }
     void save_generated_depth(KinFu& kinfu, Affine3f cur_view, int view_id, const int mode)
@@ -120,11 +120,15 @@ struct KinFuApp
     	kinfu.renderImage(view_device_, cur_view, mode);
 		view_device_.download(view_host_.ptr<void>(), view_host_.step);
 		view_host_ = view_host_* MY_CONFIG::multiplying_factor_for_save_depth_image;
-		cv::imwrite("view"+to_string(view_id)+".bmp", view_host_);
 
-		cv::FileStorage storage("view"+to_string(view_id)+".yml", cv::FileStorage::WRITE);
-		storage << "img" << view_host_;
-		storage.release();
+		cv::Mat save_mat(view_host_.rows, view_host_.cols, CV_16U);
+		for (int i = 0 ; i < view_host_.rows ; i++)
+		for (int j = 0 ; j < view_host_.cols ; j++)
+		{
+			save_mat.at<ushort>(i,j) = (ushort)view_host_.at<float>(i,j);
+		}
+
+		cv::imwrite("view"+to_string(view_id)+".png", save_mat);
     }
 
     void show_raycasted(KinFu& kinfu, int seq_count)
@@ -140,8 +144,8 @@ struct KinFuApp
 		std::cout << cur_view.matrix(1,3) << std::endl;
 		std::cout << cur_view.matrix(2,3) << std::endl;
 
-        // display depth
-        {
+	  // display depth
+		{
 //			cur_view.matrix(0,0) =  0.999933; cur_view.matrix(0,1) = -0.007615; cur_view.matrix(0,2) = 0.008710;
 //			cur_view.matrix(1,0) =  0.007957; cur_view.matrix(1,1) =  0.999171; cur_view.matrix(1,2) =-0.039931;
 //			cur_view.matrix(2,0) = -0.008399; cur_view.matrix(2,1) =  0.039998; cur_view.matrix(2,2) = 0.999164;
@@ -149,55 +153,44 @@ struct KinFuApp
 			cur_view.matrix(1,3) = origin_view.matrix(1,3) + 292.178799/1000;
 			cur_view.matrix(2,3) = origin_view.matrix(2,3) + 45.270704/1000;
 			diplay_generated_depth(kinfu, cur_view, 0, mode, 100,100, 0, seq_count);
-//			diplay_generated_volume(kinfu, cur_view, 0, mode, 100,100);
-
-//			cur_view.matrix(0,0) =  0.999899; cur_view.matrix(0,1) = -0.010468; cur_view.matrix(0,2) = 0.009617;
-//			cur_view.matrix(1,0) =  0.010834; cur_view.matrix(1,1) =  0.999188; cur_view.matrix(1,2) =-0.038811;
-//			cur_view.matrix(2,0) = -0.009203; cur_view.matrix(2,1) =  0.038912; cur_view.matrix(2,2) = 0.999200;
 			cur_view.matrix(0,3) = origin_view.matrix(0,3) + -199.917918/1000;
 			cur_view.matrix(1,3) = origin_view.matrix(1,3) + 291.116961/1000;
 			cur_view.matrix(2,3) = origin_view.matrix(2,3) + 48.809988/1000;
 			diplay_generated_depth(kinfu, cur_view, 1, mode, 450,100, 1, seq_count);
-//			diplay_generated_volume(kinfu, cur_view, 1, mode, 450,100);
-
-//			cur_view.matrix(0,0) =  0.999933; cur_view.matrix(0,1) = -0.007615; cur_view.matrix(0,2) = 0.008710;
-//			cur_view.matrix(1,0) =  0.007957; cur_view.matrix(1,1) =  0.999171; cur_view.matrix(1,2) =-0.039931;
-//			cur_view.matrix(2,0) = -0.008399; cur_view.matrix(2,1) =  0.039998; cur_view.matrix(2,2) = 0.999164;
 			cur_view.matrix(0,3) = origin_view.matrix(0,3) + -132.609828/1000;
 			cur_view.matrix(1,3) = origin_view.matrix(1,3) + 284.009756/1000;
 			cur_view.matrix(2,3) = origin_view.matrix(2,3) + 43.833057/1000;
 			diplay_generated_depth(kinfu, cur_view, 2, mode, 800,100, 2, seq_count);
-
-//			cur_view.matrix(0,0) =  0.999933; cur_view.matrix(0,1) = -0.007615; cur_view.matrix(0,2) = 0.008710;
-//			cur_view.matrix(1,0) =  0.007957; cur_view.matrix(1,1) =  0.999171; cur_view.matrix(1,2) =-0.039931;
-//			cur_view.matrix(2,0) = -0.008399; cur_view.matrix(2,1) =  0.039998; cur_view.matrix(2,2) = 0.999164;
 			cur_view.matrix(0,3) = origin_view.matrix(0,3) + -94.275033/1000;
 			cur_view.matrix(1,3) = origin_view.matrix(1,3) +  280.07364/1000;
 			cur_view.matrix(2,3) = origin_view.matrix(2,3) +  36.967944/1000;
 			diplay_generated_depth(kinfu, cur_view, 3, mode, 1150,100, 3, seq_count);
-        }
+		}
 
 		// save depth
-        if (depth_gen) {
-        	std::cout << "depth image capture" << std::endl;
-        	Affine3f cur_view = viz.getViewerPose();
+		if (depth_gen) {
+			std::cout << "depth image capture" << std::endl;
+			Affine3f cur_view = viz.getViewerPose();
 
-        	save_generated_depth(kinfu, cur_view, 0, mode);
-//			cur_view.matrix(0,3) += 40.074353/1000;
-//			cur_view.matrix(1,3) += -1.973618/1000;
-//			cur_view.matrix(2,3) += -5.539809/1000;
-//			save_generated_depth(kinfu, cur_view, 1, mode);
-//			cur_view.matrix(0,3) += 70.204512/1000;
-//			cur_view.matrix(1,3) += -6.869942/1000;
-//			cur_view.matrix(2,3) += -3.684597/1000;
-//			save_generated_depth(kinfu, cur_view, 2, mode);
-//			cur_view.matrix(0,3) += 61.193986/1000;
-//			cur_view.matrix(1,3) += -2.879078/1000;
-//			cur_view.matrix(2,3) += -9.842761/1000;
-//			save_generated_depth(kinfu, cur_view, 3, mode);
+			cur_view.matrix(0,3) = origin_view.matrix(0,3) + -260.036812/1000;
+			cur_view.matrix(1,3) = origin_view.matrix(1,3) + 292.178799/1000;
+			cur_view.matrix(2,3) = origin_view.matrix(2,3) + 45.270704/1000;
+			save_generated_depth(kinfu, cur_view, 0, mode);
+			cur_view.matrix(0,3) = origin_view.matrix(0,3) + -199.917918/1000;
+			cur_view.matrix(1,3) = origin_view.matrix(1,3) + 291.116961/1000;
+			cur_view.matrix(2,3) = origin_view.matrix(2,3) + 48.809988/1000;
+			save_generated_depth(kinfu, cur_view, 1, mode);
+			cur_view.matrix(0,3) = origin_view.matrix(0,3) + -132.609828/1000;
+			cur_view.matrix(1,3) = origin_view.matrix(1,3) + 284.009756/1000;
+			cur_view.matrix(2,3) = origin_view.matrix(2,3) + 43.833057/1000;
+			save_generated_depth(kinfu, cur_view, 2, mode);
+			cur_view.matrix(0,3) = origin_view.matrix(0,3) + -94.275033/1000;
+			cur_view.matrix(1,3) = origin_view.matrix(1,3) +  280.07364/1000;
+			cur_view.matrix(2,3) = origin_view.matrix(2,3) +  36.967944/1000;
+			save_generated_depth(kinfu, cur_view, 3, mode);
 
-        	depth_gen = false;
-        }
+			depth_gen = false;
+		}
     }
 
     void take_cloud(KinFu& kinfu)
@@ -221,7 +214,6 @@ struct KinFuApp
         int input_source = 1;
         for (int i = 0; !exit_ && !viz.wasStopped(); ++i)
         {
-
         	// input source
         	if (input_source == 0) // kinect direct input
         	{

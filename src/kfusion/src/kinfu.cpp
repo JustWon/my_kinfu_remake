@@ -21,10 +21,6 @@ kfusion::KinFuParams kfusion::KinFuParams::default_params()
 	p.rows = 424;  //pixels
 	p.intr = Intr(364.996042, 365.097854, 257.040047, 200.494758);
 
-//    p.cols = 640;  //pixels
-//    p.rows = 480;  //pixels
-//    p.intr = Intr(525.f, 525.f, p.cols/2 - 0.5f, p.rows/2 - 0.5f);
-
     p.volume_dims = Vec3i::all(1024);  //number of voxels
     p.volume_size = Vec3f::all(5.f);  //meters
     p.volume_pose = Affine3f().translate(Vec3f(-p.volume_size[0]/2, -p.volume_size[1]/2, 0.5f));
@@ -39,7 +35,7 @@ kfusion::KinFuParams kfusion::KinFuParams::default_params()
     p.tsdf_max_weight = 64;   //frames
 
     p.raycast_step_factor = 0.75f;  //in voxel sizes
-    p.gradient_delta_factor = 0.5f; //in voxel sizes
+    p.gradient_delta_factor = 0.05f; //in voxel sizes
 
     p.bilateral_sigma_depth = 0.04f;  //meter
 	p.bilateral_sigma_spatial = 4.5; //pixels
