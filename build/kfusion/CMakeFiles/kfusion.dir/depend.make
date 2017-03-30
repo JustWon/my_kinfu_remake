@@ -128,6 +128,7 @@ kfusion/CMakeFiles/kfusion.dir/src/imgproc.cpp.o: /usr/local/include/opencv2/viz
 kfusion/CMakeFiles/kfusion.dir/src/imgproc.cpp.o: /usr/local/include/opencv2/viz/vizcore.hpp
 kfusion/CMakeFiles/kfusion.dir/src/imgproc.cpp.o: /usr/local/include/opencv2/viz/widgets.hpp
 
+kfusion/CMakeFiles/kfusion.dir/src/kinfu.cpp.o: /home/dongwonshin/Desktop/my_codes/kinfu_remake/src/apps/my_config.h
 kfusion/CMakeFiles/kfusion.dir/src/kinfu.cpp.o: /home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/include/kfusion/cuda/device_array.hpp
 kfusion/CMakeFiles/kfusion.dir/src/kinfu.cpp.o: /home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/include/kfusion/cuda/device_memory.hpp
 kfusion/CMakeFiles/kfusion.dir/src/kinfu.cpp.o: /home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/include/kfusion/cuda/imgproc.hpp

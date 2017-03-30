@@ -276,11 +276,12 @@ namespace kfusion
         }
     }
 }
-
+#include <stdio.h>
 void kfusion::device::compute_dists(const Depth& depth, Dists dists, float2 f, float2 c)
 {
     dim3 block (32, 8);
     dim3 grid (divUp (depth.cols (), block.x), divUp (depth.rows (), block.y));
+    printf("%d %d\n", depth.cols(), depth.rows());
 
     compute_dists_kernel<<<grid, block>>>(depth, dists, make_float2(1.f/f.x, 1.f/f.y), c);
     cudaSafeCall ( cudaGetLastError () );
@@ -372,7 +373,7 @@ namespace kfusion
 
             if (!isnan(d00.x * d01.x * d10.x * d11.x))
             {
-            	// mean value
+            	// mean depth value
                 float3 d = (d00 + d01 + d10 + d11) * 0.25f;
                 vdst(y, x) = make_float4(d.x, d.y, d.z, 0.f);
 
@@ -522,56 +523,9 @@ namespace kfusion
             if (x >= dst.cols || y >= dst.rows)
                 return;
 
-            float3 color;
+			float3 p = tr(points(y,x));
 
-            float3 p = tr(points(y,x));
-
-            if (isnan(p.x))
-            {
-                const float3 bgr1 = make_float3(4.f/255.f, 2.f/255.f, 2.f/255.f);
-                const float3 bgr2 = make_float3(236.f/255.f, 120.f/255.f, 120.f/255.f);
-
-                float w = static_cast<float>(y) / dst.rows;
-                color = bgr1 * (1 - w) + bgr2 * w;
-            }
-            else
-            {
-                float3 P = p;
-                float3 N = tr(normals(y,x));
-
-                const float Ka = 0.3f;  //ambient coeff
-                const float Kd = 0.5f;  //diffuse coeff
-                const float Ks = 0.2f;  //specular coeff
-                const float n = 20.f;  //specular power
-
-                const float Ax = 1.f;   //ambient color,  can be RGB
-                const float Dx = 1.f;   //diffuse color,  can be RGB
-                const float Sx = 1.f;   //specular color, can be RGB
-                const float Lx = 1.f;   //light color
-
-                //Ix = Ax*Ka*Dx + Att*Lx [Kd*Dx*(N dot L) + Ks*Sx*(R dot V)^n]
-
-                float3 L = normalized(light_pose - P);
-                float3 V = normalized(make_float3(0.f, 0.f, 0.f) - P);
-                float3 R = normalized(2 * N * dot(N, L) - L);
-
-                float Ix = Ax*Ka*Dx + Lx * Kd * Dx * fmax(0.f, dot(N, L)) + Lx * Ks * Sx * __powf(fmax(0.f, dot(R, V)), n);
-                //color = make_float3(Ix, Ix, Ix);
-                
-                // for a depth image generation
-                color = make_float3(P.x,P.y,P.z);
-            }
-
-            //uchar4 out;
-            //out.x = static_cast<unsigned char>(__saturatef(color.x) * 255.f);
-            //out.y = static_cast<unsigned char>(__saturatef(color.y) * 255.f);
-            //out.z = static_cast<unsigned char>(__saturatef(color.z) * 255.f);
-            //out.w = 0;
-            //dst(y, x) = out;
-            
-            float out;
-            out = color.z;
-            dst(y,x) = out;
+            dst(y,x) = p.z;
         }        
     }
 }

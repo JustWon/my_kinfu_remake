@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/apps/my_config.h
+
 /home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/include/io/capture.hpp
 kfusion/kinfu.hpp
 -
@@ -122,6 +124,8 @@ precomp.hpp
 internal.hpp
 /home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/internal.hpp
 iostream
+-
+../../apps/my_config.h
 -
 
 /home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/precomp.cpp

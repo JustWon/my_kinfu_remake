@@ -2,108 +2,27 @@
 <projectDescription>
 	<name>kfusion@build</name>
 	<comment></comment>
-	<projects></projects>
+	<projects>
+	</projects>
 	<buildSpec>
 		<buildCommand>
-			<name>org.eclipse.cdt.make.core.makeBuilder</name>
+			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
 			<triggers>clean,full,incremental,</triggers>
 			<arguments>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.cleanBuildTarget</key>
-					<value>clean</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.enableCleanBuild</key>
-					<value>true</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.append_environment</key>
-					<value>true</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.stopOnError</key>
-					<value>true</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.enabledIncrementalBuild</key>
-					<value>true</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.build.command</key>
-					<value>/usr/bin/make</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.contents</key>
-					<value>org.eclipse.cdt.make.core.activeConfigSettings</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.build.target.inc</key>
-					<value>all</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.build.arguments</key>
-					<value>-j16</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.buildLocation</key>
-					<value>/home/dongwonshin/Desktop/my_codes/kinfu_remake/build</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.useDefaultBuildCmd</key>
-					<value>false</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.environment</key>
-					<value>VERBOSE=1|CMAKE_NO_VERBOSE=1|</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.enableFullBuild</key>
-					<value>true</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.build.target.auto</key>
-					<value>all</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.enableAutoBuild</key>
-					<value>false</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.build.target.clean</key>
-					<value>clean</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.fullBuildTarget</key>
-					<value>all</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.buildArguments</key>
-					<value></value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.build.location</key>
-					<value>/home/dongwonshin/Desktop/my_codes/kinfu_remake/build</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.make.core.autoBuildTarget</key>
-					<value>all</value>
-				</dictionary>
-				<dictionary>
-					<key>org.eclipse.cdt.core.errorOutputParser</key>
-					<value>org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser;</value>
-				</dictionary>
 			</arguments>
 		</buildCommand>
 		<buildCommand>
-			<name>org.eclipse.cdt.make.core.ScannerConfigBuilder</name>
-			<arguments/>
+			<name>org.eclipse.cdt.managedbuilder.core.ScannerConfigBuilder</name>
+			<triggers>full,incremental,</triggers>
+			<arguments>
+			</arguments>
 		</buildCommand>
 	</buildSpec>
 	<natures>
-		<nature>org.eclipse.cdt.make.core.makeNature</nature>
-		<nature>org.eclipse.cdt.make.core.ScannerConfigNature</nature>
 		<nature>org.eclipse.cdt.core.ccnature</nature>
 		<nature>org.eclipse.cdt.core.cnature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
 	<linkedResources>
 		<link>
@@ -117,17 +36,17 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>[Subprojects]/kfusion</name>
-			<type>2</type>
-			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src</location>
-		</link>
-		<link>
 			<name>[Targets]</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>[Targets]/[lib] kfusion</name>
+			<name>[Subprojects]/kfusion</name>
+			<type>2</type>
+			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] demo/</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
@@ -137,12 +56,27 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>[Targets]/[lib] kfusion/Source Files</name>
+			<name>[Targets]/[exe] demo/CMake Rules</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>[Targets]/[lib] kfusion/Header Files</name>
+			<name>[Targets]/[exe] demo/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] demo/Object Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] demo/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] demo/Source Files</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
@@ -152,7 +86,12 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>[Targets]/[lib] kfusion/Resources</name>
+			<name>[Targets]/[lib] kfusion/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] kfusion/Include</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
@@ -160,6 +99,46 @@
 			<name>[Targets]/[lib] kfusion/Object Files</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] kfusion/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] kfusion/Source</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] kfusion/Source Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] demo/Source Files/demo.cpp</name>
+			<type>1</type>
+			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/apps/demo.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] kfusion/Include/cuda</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] kfusion/Include/exports.hpp</name>
+			<type>1</type>
+			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/include/kfusion/exports.hpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] kfusion/Include/kinfu.hpp</name>
+			<type>1</type>
+			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/include/kfusion/kinfu.hpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] kfusion/Include/types.hpp</name>
+			<type>1</type>
+			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/include/kfusion/types.hpp</location>
 		</link>
 		<link>
 			<name>[Targets]/[lib] kfusion/Object Files/kfusion_generated_imgproc.cu.o</name>
@@ -177,12 +156,67 @@
 			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/build/kfusion/CMakeFiles/kfusion.dir/src/cuda/kfusion_generated_tsdf_volume.cu.o</location>
 		</link>
 		<link>
-			<name>[Targets]/[lib] kfusion/Include</name>
+			<name>[Targets]/[lib] kfusion/Source/capture.cpp</name>
+			<type>1</type>
+			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/capture.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] kfusion/Source/core.cpp</name>
+			<type>1</type>
+			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/core.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] kfusion/Source/cuda</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>[Targets]/[lib] kfusion/Include/cuda</name>
+			<name>[Targets]/[lib] kfusion/Source/device_memory.cpp</name>
+			<type>1</type>
+			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/device_memory.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] kfusion/Source/imgproc.cpp</name>
+			<type>1</type>
+			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/imgproc.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] kfusion/Source/internal.hpp</name>
+			<type>1</type>
+			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/internal.hpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] kfusion/Source/kinfu.cpp</name>
+			<type>1</type>
+			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/kinfu.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] kfusion/Source/precomp.cpp</name>
+			<type>1</type>
+			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/precomp.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] kfusion/Source/precomp.hpp</name>
+			<type>1</type>
+			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/precomp.hpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] kfusion/Source/projective_icp.cpp</name>
+			<type>1</type>
+			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/projective_icp.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] kfusion/Source/safe_call.hpp</name>
+			<type>1</type>
+			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/safe_call.hpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] kfusion/Source/tsdf_volume.cpp</name>
+			<type>1</type>
+			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/tsdf_volume.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] kfusion/Source/utils</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
@@ -217,49 +251,9 @@
 			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/include/kfusion/cuda/tsdf_volume.hpp</location>
 		</link>
 		<link>
-			<name>[Targets]/[lib] kfusion/Include/exports.hpp</name>
-			<type>1</type>
-			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/include/kfusion/exports.hpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] kfusion/Include/kinfu.hpp</name>
-			<type>1</type>
-			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/include/kfusion/kinfu.hpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] kfusion/Include/types.hpp</name>
-			<type>1</type>
-			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/include/kfusion/types.hpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] kfusion/Source</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] kfusion/Source/utils</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[lib] kfusion/Source/cuda</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
 			<name>[Targets]/[lib] kfusion/Source/cuda/device.hpp</name>
 			<type>1</type>
 			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/cuda/device.hpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] kfusion/Source/cuda/temp_utils.hpp</name>
-			<type>1</type>
-			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/cuda/temp_utils.hpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] kfusion/Source/cuda/texture_binder.hpp</name>
-			<type>1</type>
-			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/cuda/texture_binder.hpp</location>
 		</link>
 		<link>
 			<name>[Targets]/[lib] kfusion/Source/cuda/imgproc.cu</name>
@@ -272,104 +266,19 @@
 			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/cuda/proj_icp.cu</location>
 		</link>
 		<link>
+			<name>[Targets]/[lib] kfusion/Source/cuda/temp_utils.hpp</name>
+			<type>1</type>
+			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/cuda/temp_utils.hpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] kfusion/Source/cuda/texture_binder.hpp</name>
+			<type>1</type>
+			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/cuda/texture_binder.hpp</location>
+		</link>
+		<link>
 			<name>[Targets]/[lib] kfusion/Source/cuda/tsdf_volume.cu</name>
 			<type>1</type>
 			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/cuda/tsdf_volume.cu</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] kfusion/Source/capture.cpp</name>
-			<type>1</type>
-			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/capture.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] kfusion/Source/core.cpp</name>
-			<type>1</type>
-			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/core.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] kfusion/Source/device_memory.cpp</name>
-			<type>1</type>
-			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/device_memory.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] kfusion/Source/imgproc.cpp</name>
-			<type>1</type>
-			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/imgproc.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] kfusion/Source/kinfu.cpp</name>
-			<type>1</type>
-			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/kinfu.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] kfusion/Source/precomp.cpp</name>
-			<type>1</type>
-			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/precomp.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] kfusion/Source/projective_icp.cpp</name>
-			<type>1</type>
-			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/projective_icp.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] kfusion/Source/tsdf_volume.cpp</name>
-			<type>1</type>
-			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/tsdf_volume.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] kfusion/Source/internal.hpp</name>
-			<type>1</type>
-			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/internal.hpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] kfusion/Source/precomp.hpp</name>
-			<type>1</type>
-			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/precomp.hpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[lib] kfusion/Source/safe_call.hpp</name>
-			<type>1</type>
-			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/kfusion/src/safe_call.hpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] demo</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] demo/</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] demo/Source Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] demo/Source Files/demo.cpp</name>
-			<type>1</type>
-			<location>/home/dongwonshin/Desktop/my_codes/kinfu_remake/src/apps/demo.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] demo/Header Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] demo/CMake Rules</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] demo/Resources</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] demo/Object Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

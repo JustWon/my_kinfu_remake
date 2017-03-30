@@ -50,6 +50,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/share/cmake-3.6/Modules/Platform/Linux.cmake"
   "/usr/local/share/cmake-3.6/Modules/Platform/UnixPaths.cmake"
   "/usr/local/share/cmake-3.6/Modules/ProcessorCount.cmake"
+  "/usr/share/OpenCV/OpenCVConfig-version.cmake"
   )
 
 # The corresponding makefile is:

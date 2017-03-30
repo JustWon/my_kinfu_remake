@@ -75,11 +75,13 @@ namespace kfusion
         void renderImage(cuda::Image& image, const Affine3f& pose, int flags = 0);
 
         Affine3f getCameraPose (int time = -1) const;
+
+        KinFuParams params_;
+
     private:
         void allocate_buffers();
 
         int frame_counter_;
-        KinFuParams params_;
 
         std::vector<Affine3f> poses_;
 

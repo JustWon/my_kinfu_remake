@@ -3,6 +3,8 @@
 *.png
 build/*.bmp
 build/*.yml
+*.cu.o.*
+src/core
 
 # Created by https://www.gitignore.io/api/c++,opencv,eclipse
 
@@ -103,3 +105,4 @@ local.properties
 
 # Code Recommenders
 .recommenders/
+/Default/

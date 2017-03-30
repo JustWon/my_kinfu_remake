@@ -1,6 +1,7 @@
 #include "precomp.hpp"
 #include "internal.hpp"
 #include <iostream>
+#include <../../apps/my_config.h>
 
 
 using namespace std;
@@ -19,30 +20,30 @@ kfusion::KinFuParams kfusion::KinFuParams::default_params()
     //for kinectv2 cam
     p.cols = 512;  //pixels
 	p.rows = 424;  //pixels
-	p.intr = Intr(364.996042, 365.097854, 257.040047, 200.494758);
+	p.intr = Intr(365.401048, 365.750053, 256.153198 , 200.392996);
 
-    p.volume_dims = Vec3i::all(1024);  //number of voxels
-    p.volume_size = Vec3f::all(5.f);  //meters
-    p.volume_pose = Affine3f().translate(Vec3f(-p.volume_size[0]/2, -p.volume_size[1]/2, 0.5f));
+    p.volume_dims = Vec3i(1024,1024,1024);  //number of voxels
+    p.volume_size = Vec3f(5.f,3.f,4.f); //Vec3f::all(5.f);  //meters
+    p.volume_pose = Affine3f().translate(Vec3f(-p.volume_size[0]/2, -p.volume_size[1]/2, 0.f));
 
-    p.icp_truncate_depth_dist = 0.f;        //meters, disabled
-    p.icp_dist_thres = 0.8f;                //meters
+    p.icp_truncate_depth_dist = 0.f;        //meters, 0 == disabled
+    p.icp_dist_thres = 0.2f;                //meters
     p.icp_angle_thres = deg2rad(30.f);      //radians
     p.icp_iter_num.assign(iters, iters + levels);
 
-    p.tsdf_min_camera_movement = 0.f; //meters, disabled
-    p.tsdf_trunc_dist = 0.04f; //meters;
+    p.tsdf_min_camera_movement = MY_CONFIG::tsdf_min_camera_movement; //meters, 0 == disabled
+    p.tsdf_trunc_dist = 0.04f; //meters
     p.tsdf_max_weight = 64;   //frames
 
-    p.raycast_step_factor = 0.75f;  //in voxel sizes
-    p.gradient_delta_factor = 0.05f; //in voxel sizes
+    p.raycast_step_factor = MY_CONFIG::raycast_step_factor;  //in voxel sizes
+    p.gradient_delta_factor = 0.05f; //in voxel sizes, currently it is not used
 
     p.bilateral_sigma_depth = 0.04f;  //meter
 	p.bilateral_sigma_spatial = 4.5; //pixels
 	p.bilateral_kernel_size = 7;     //pixels
 
-    //p.light_pose = p.volume_pose.translation()/4; //meters
-    p.light_pose = Vec3f::all(0.f); //meters
+//    p.light_pose = p.volume_pose.translation()/4; //meters
+    p.light_pose = Vec3f::all(0.0f); //meters
 
     return p;
 }
@@ -138,8 +139,8 @@ void kfusion::KinFu::reset()
 
 kfusion::Affine3f kfusion::KinFu::getCameraPose (int time) const
 {
-    if (time > (int)poses_.size () || time < 0)
-        time = (int)poses_.size () - 1;
+    if (time > (int)poses_.size() || time < 0)
+        time = (int)poses_.size() - 1;
     return poses_[time];
 }
 
@@ -153,9 +154,8 @@ bool kfusion::KinFu::operator()(const kfusion::cuda::Depth& depth, const kfusion
     cuda::computeDists(depth, dists_, p.intr);
     cuda::depthBilateralFilter(depth, curr_.depth_pyr[0], p.bilateral_kernel_size, p.bilateral_sigma_spatial, p.bilateral_sigma_depth);
 
-    // p.icp_truncate_depth_dist = 0, as a default, so it is ignored
-    //if (p.icp_truncate_depth_dist > 0)
-    //    kfusion::cuda::depthTruncation(curr_.depth_pyr[0], p.icp_truncate_depth_dist);
+    if (p.icp_truncate_depth_dist > 0)
+        kfusion::cuda::depthTruncation(curr_.depth_pyr[0], p.icp_truncate_depth_dist);
 
     for (int i = 1; i < LEVELS; ++i)
         cuda::depthBuildPyramid(curr_.depth_pyr[i-1], curr_.depth_pyr[i], p.bilateral_sigma_depth);
@@ -187,7 +187,6 @@ bool kfusion::KinFu::operator()(const kfusion::cuda::Depth& depth, const kfusion
     // ICP
     Affine3f affine; // cuur -> prev
 
-
     {
         //ScopeTime time("icp");
 #if defined USE_DEPTH
@@ -198,13 +197,6 @@ bool kfusion::KinFu::operator()(const kfusion::cuda::Depth& depth, const kfusion
         if (!ok)
             return reset(), false;
     }
-
-//    affine.matrix(0,0) =  0.999740; affine.matrix(0,1) =  0.010197; affine.matrix(0,2) = 0.020410;
-//    affine.matrix(1,0) = -0.011238; affine.matrix(1,1) = 0.998605; affine.matrix(1,2) = 0.051584;
-//    affine.matrix(2,0) = -0.019855; affine.matrix(2,1) = -0.051799; affine.matrix(2,2) = 0.998460;
-//    affine.matrix(0,3) = -289.853486/1000;
-//    affine.matrix(1,3) = -130.066471/1000;
-//    affine.matrix(2,3) =   -8.394523/1000;
 
     poses_.push_back(poses_.back() * affine); // curr -> global
 
@@ -240,54 +232,49 @@ bool kfusion::KinFu::operator()(const kfusion::cuda::Depth& depth, const kfusion
     return ++frame_counter_, true;
 }
 
-void kfusion::KinFu::renderImage(cuda::Image& image, int flag)
-{
-    const KinFuParams& p = params_;
-    //image.create(p.rows, flag != 3 ? p.cols : p.cols * 2);
-    image.create(720, flag != 3 ? 1280 : 1280 * 2);
-
-#if defined USE_DEPTH
-    #define PASS1 prev_.depth_pyr
-#else
-    #define PASS1 prev_.points_pyr
-#endif
-
-    if (flag == 1)
-    {
-		//cuda::renderImage(PASS1[0], prev_.normals_pyr[0], params_.intr, params_.light_pose, image);
-        cuda::renderImage(PASS1[0], prev_.normals_pyr[0], Intr(1732.798623, 1731.965514, 658.178905, 369.409351), params_.light_pose, image);
-    }
-    else if (flag == 2)
-    {
-    	cuda::renderTangentColors(prev_.normals_pyr[0], image);
-    }
-    else /* if (flag == 3) */
-    {
-//        DeviceArray2D<RGB> i1(p.rows, p.cols, image.ptr(), image.step());
-//        DeviceArray2D<RGB> i2(p.rows, p.cols, image.ptr() + p.cols, image.step());
-        DeviceArray2D<RGB> i1(720, 1280, image.ptr(), image.step());
-        DeviceArray2D<RGB> i2(720, 1280, image.ptr() + 1280, image.step());
-
-//        cuda::renderImage(PASS1[0], prev_.normals_pyr[0], params_.intr, params_.light_pose, i1);
-        cuda::renderImage(PASS1[0], prev_.normals_pyr[0], Intr(1732.798623, 1731.965514, 658.178905, 369.409351), params_.light_pose, i1);
-        cuda::renderTangentColors(prev_.normals_pyr[0], i2);
-    }
-#undef PASS1
-}
+//void kfusion::KinFu::renderImage(cuda::Image& image, int flag)
+//{
+//    const KinFuParams& p = params_;
+//    //image.create(p.rows, flag != 3 ? p.cols : p.cols * 2);
+//    image.create(720, flag != 3 ? 1280 : 1280 * 2);
+//
+//#if defined USE_DEPTH
+//    #define PASS1 prev_.depth_pyr
+//#else
+//    #define PASS1 prev_.points_pyr
+//#endif
+//
+//    if (flag == 1)
+//    {
+//		//cuda::renderImage(PASS1[0], prev_.normals_pyr[0], params_.intr, params_.light_pose, image);
+//        cuda::renderImage(PASS1[0], prev_.normals_pyr[0], Intr(1743.929952 , 1743.807237, 656.807706, 369.265013), params_.light_pose, image);
+//    }
+//    else if (flag == 2)
+//    {
+//    	cuda::renderTangentColors(prev_.normals_pyr[0], image);
+//    }
+//    else /* if (flag == 3) */
+//    {
+////        DeviceArray2D<RGB> i1(p.rows, p.cols, image.ptr(), image.step());
+////        DeviceArray2D<RGB> i2(p.rows, p.cols, image.ptr() + p.cols, image.step());
+//        DeviceArray2D<RGB> i1(720, 1280, image.ptr(), image.step());
+//        DeviceArray2D<RGB> i2(720, 1280, image.ptr() + 1280, image.step());
+//
+////        cuda::renderImage(PASS1[0], prev_.normals_pyr[0], params_.intr, params_.light_pose, i1);
+//        cuda::renderImage(PASS1[0], prev_.normals_pyr[0], Intr(1743.929952 , 1743.807237, 656.807706, 369.265013), params_.light_pose, i1);
+//        cuda::renderTangentColors(prev_.normals_pyr[0], i2);
+//    }
+//#undef PASS1
+//}
 
 
 void kfusion::KinFu::renderImage(cuda::Image& image, const Affine3f& pose, int flag)
 {
     const KinFuParams& p = params_;
-//    image.create(p.rows, flag != 3 ? p.cols : p.cols * 2);
-//    depths_.create(p.rows, p.cols);
-//    normals_.create(p.rows, p.cols);
-//    points_.create(p.rows, p.cols);
     image.create(720, flag != 3 ? 1280 : 1280 * 2);
 	depths_.create(720, 1280);
 	normals_.create(720, 1280);
 	points_.create(720, 1280);
-
 
 #if defined USE_DEPTH
     #define PASS1 depths_
@@ -297,30 +284,30 @@ void kfusion::KinFu::renderImage(cuda::Image& image, const Affine3f& pose, int f
 #endif
 
 //    volume_->raycast(pose, p.intr, PASS1, normals_);
-	volume_->raycast(pose, Intr(1740.965819, 1741.002940, 663.619522, 367.065100), PASS1, normals_);
+	volume_->raycast(pose, Intr(1743.929952 , 1743.807237, 656.807706, 369.265013), PASS1, normals_);
 
 
     if (flag == 1)
     {
 //    	cuda::renderImage(PASS1, normals_, p.intr, params_.light_pose, image);
-      cuda::renderImage(PASS1, normals_, Intr(1740.965819, 1741.002940, 663.619522, 367.065100), params_.light_pose, image);
+      cuda::renderImage(PASS1, normals_, Intr(1743.929952 , 1743.807237, 656.807706, 369.265013), params_.light_pose, image);
     }
-    else if (flag == 2)
-    {
-        cuda::renderTangentColors(normals_, image);
-    }
-    else /* if (flag == 3) */
-    {
-//        DeviceArray2D<RGB> i1(p.rows, p.cols, image.ptr(), image.step());
-//        DeviceArray2D<RGB> i2(p.rows, p.cols, image.ptr() + p.cols, image.step());
-    	DeviceArray2D<RGB> i1(720, 1280, image.ptr(), image.step());
-    	DeviceArray2D<RGB> i2(720, 1280, image.ptr() + 1280, image.step());
-
-//        cuda::renderImage(PASS1, normals_, params_.intr, params_.light_pose, i1);
-        cuda::renderImage(PASS1, normals_, Intr(1740.965819, 1741.002940, 663.619522, 367.065100), params_.light_pose, i1);
-
-        cuda::renderTangentColors(normals_, i2);
-    }
+//    else if (flag == 2)
+//    {
+//        cuda::renderTangentColors(normals_, image);
+//    }
+//    else /* if (flag == 3) */
+//    {
+////        DeviceArray2D<RGB> i1(p.rows, p.cols, image.ptr(), image.step());
+////        DeviceArray2D<RGB> i2(p.rows, p.cols, image.ptr() + p.cols, image.step());
+//    	DeviceArray2D<RGB> i1(720, 1280, image.ptr(), image.step());
+//    	DeviceArray2D<RGB> i2(720, 1280, image.ptr() + 1280, image.step());
+//
+////        cuda::renderImage(PASS1, normals_, params_.intr, params_.light_pose, i1);
+//        cuda::renderImage(PASS1, normals_, Intr(1743.929952 , 1743.807237, 656.807706, 369.265013), params_.light_pose, i1);
+//
+//        cuda::renderTangentColors(normals_, i2);
+//    }
 #undef PASS1
 }
 
